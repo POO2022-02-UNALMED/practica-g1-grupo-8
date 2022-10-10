@@ -1,4 +1,4 @@
-package gestorAplicacion;
+package gestorAplicacion.Hija;
 
 public class ContactoUsuario {
 
