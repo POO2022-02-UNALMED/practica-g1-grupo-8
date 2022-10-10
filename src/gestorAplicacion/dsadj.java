@@ -1,4 +1,5 @@
 package gestorAplicacion;
 
-public class dsadj {
+public class dd {
+
 }

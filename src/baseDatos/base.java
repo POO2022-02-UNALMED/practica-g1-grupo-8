@@ -1,4 +1,5 @@
 package baseDatos;
 
-public class asdads {
+public class base {
+
 }
