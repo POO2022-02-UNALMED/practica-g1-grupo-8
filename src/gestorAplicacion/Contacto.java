@@ -1,5 +1,5 @@
 package gestorAplicacion;
 
-public class dd {
+public class Contacto {
 
 }

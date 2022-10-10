@@ -1,5 +1,5 @@
 package baseDatos;
 
-public class base {
+public class Guardar {
 
 }
