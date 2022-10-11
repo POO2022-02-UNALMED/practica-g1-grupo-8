@@ -1,5 +1,19 @@
 package gestorAplicacion.Padre;
 
 public class Contacto {
-
+	private Integer NumeroID;
+	private Usuario usuario;
+	
+	public Integer getNumeroID() {
+		return this.NumeroID;
+	}
+	public void setNumeroID(Integer s) {
+		this.NumeroID=s;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario=usuario;
+	} 
 }
