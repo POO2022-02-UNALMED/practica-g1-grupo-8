@@ -1,4 +1,4 @@
-package gestorAplicacion.Padre;
+package gestorAplicacion.Hija;
 
 public class ContactosPendientes {
 
