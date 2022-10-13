@@ -10,10 +10,6 @@ public abstract class Contactoboolean extends Contacto {
 		this.NombreContacto=nombrecontacto;
 	}
 	
-	public abstract void  personalcomp();
-	public abstract void socialcomp();
-	public abstract void negocioscomp();
-	
 	public boolean getTarjetaPersonalCompartida() {
 		return this.TarjetaPersonalCompartida;
 	}
