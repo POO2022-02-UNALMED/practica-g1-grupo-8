@@ -4,6 +4,10 @@ public class Contacto {
 	private Integer NumeroID;
 	private Usuario usuario;
 	
+	public Contacto(Integer numeroid,Usuario usuario) {
+		this.NumeroID=numeroid;
+		this.usuario=usuario;
+	}
 	public Integer getNumeroID() {
 		return this.NumeroID;
 	}

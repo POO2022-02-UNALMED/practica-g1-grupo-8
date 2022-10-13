@@ -6,6 +6,13 @@ public abstract class Tarjeta {
 	private String sitioweb; // este atriburo es urlcompañia y sitioweb
 	private String AcercaDe; // este atributo representa el acerca de mi y acerca de empresa
 	
+	public Tarjeta(Integer NumeroID,Usuario usuario,String sitioweb,String AcercaDe) {
+		this.NumeroID=NumeroID;
+		this.usuario=usuario;
+		this.sitioweb=sitioweb;
+		this.AcercaDe=AcercaDe;
+	}
+	
 	public Integer getNumeroID() {
 		return this.NumeroID;
 	}
