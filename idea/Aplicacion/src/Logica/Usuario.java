@@ -179,10 +179,21 @@ class Usuario {
 	}
 	
 	void empezarChat(Scanner sc, Scanner scl) {
-		System.out.println("Elige un contacto");
-		for (int i = 0; i < contactosPendientes.size(); i++) {
-			System.out.println(i+contactosPendientes.get(i).toString());
-		}
-		if ()
+		int opcion;
+		do {
+			System.out.println("Elige un contacto");
+			System.out.println("0 cancelar");
+			for (int i = 1; i < contactosPendientes.size()+1; i++) {
+				System.out.println(i + " " + contactosPendientes.get(i - 1).toString());
+			}
+			opcion = sc.nextInt();
+			if ((opcion > 0) || (opcion <= contactosPendientes.size())) {
+				System.out.println(contactosPendientes.get(opcion - 1).getEmail());
+			} else if (opcion != 0) {
+				System.out.println("Seleccione un numero entre 0 y " + contactosPendientes.size());
+			} else {
+				System.out.println("Termino empezar chat");
+			}
+		} while (opcion != 0);
 	}
 }
