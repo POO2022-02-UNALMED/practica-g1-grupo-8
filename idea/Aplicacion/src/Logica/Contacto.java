@@ -34,5 +34,10 @@ class Contacto {
 	protected void setNombreCompleto(String nombreCompleto) {
 		this.nombreCompleto = nombreCompleto;
 	}
+
+	@Override
+	public String toString() {
+		return "Contacto [nombre=" + nombre + ", email=" + email + ", nombreCompleto=" + nombreCompleto + "]";
+	}
 	
 }

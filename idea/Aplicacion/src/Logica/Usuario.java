@@ -117,7 +117,7 @@ class Usuario {
 				+ ", contactosLocales=" + contactosLocales + ", contactosPendientes=" + contactosPendientes + "]";
 	}
 	
-	void cambiarValores(Scanner sc, Scanner sc1) {
+	void editarPerfil(Scanner sc, Scanner scl) {
 		int opcion;
 		
 		do {
@@ -134,7 +134,7 @@ class Usuario {
 				case 1:
 					System.out.println("Nombre actual: " + getNombre());
 					System.out.print("Nuevo nombre: ");
-					setNombre(sc1.nextLine());
+					setNombre(scl.nextLine());
 					break;
 					
 				case 2:
@@ -146,25 +146,25 @@ class Usuario {
 				case 3:
 					System.out.println("Nombre completo actual: " + getNombreCompleto());
 					System.out.print("Nuevo nombre completo: ");
-					setNombreCompleto(sc1.nextLine());
+					setNombreCompleto(scl.nextLine());
 					break;
 					
 				case 4:
 					System.out.println("Logo de negocio actual: " + getLogoNegocio());
 					System.out.print("Nuevo logo de negocio: ");
-					setLogoNegocio(sc1.nextLine());
+					setLogoNegocio(scl.nextLine());
 					break;
 					
 				case 5:
 					System.out.println("Descripcion de negocio actual: " + getDescripcionNegocio());
 					System.out.print("Nueva descripcion de negocio: ");
-					setDescripcionNegocio(sc1.nextLine());
+					setDescripcionNegocio(scl.nextLine());
 					break;
 					
 				case 6:
 					System.out.println("Terminos de negocio actual: " + getTerminosNegocio());
 					System.out.print("Nuevo terminos de negocio: ");
-					setTerminosNegocio(sc1.nextLine());
+					setTerminosNegocio(scl.nextLine());
 					break;
 					
 				default:
@@ -176,6 +176,13 @@ class Usuario {
 	
 	void crearNuevoContacto(Scanner sc, Scanner sc1) {
 		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc, sc1));
-		
+	}
+	
+	void empezarChat(Scanner sc, Scanner scl) {
+		System.out.println("Elige un contacto");
+		for (int i = 0; i < contactosPendientes.size(); i++) {
+			System.out.println(i+contactosPendientes.get(i).toString());
+		}
+		if ()
 	}
 }

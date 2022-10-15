@@ -14,6 +14,11 @@ class ContactosPendientes extends Contacto{
 		return targeta;
 	}
 	
+	@Override
+	public String toString() {
+		return super.toString() + "\nContactosPendientes [targeta=" + targeta + "]";
+	}
+
 	protected static ContactosPendientes crearContactoPendiente(Scanner sc, Scanner scl) {
 		System.out.println("Crear Contacto");
 		System.out.print("Nombre: ");
@@ -21,7 +26,9 @@ class ContactosPendientes extends Contacto{
 		System.out.print("Email: ");
 		String email = sc.next();
 		System.out.print("Nombre completo: ");
-		String nombreCompleto = sc.nextLine();
-		return new ContactosPendientes(nombre, email, nombreCompleto);
+		String nombreCompleto = scl.nextLine();
+		ContactosPendientes contacto = new ContactosPendientes(nombre, email, nombreCompleto);
+		System.out.println(contacto.toString());
+		return contacto;
 	}
 }

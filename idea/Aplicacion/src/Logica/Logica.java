@@ -9,11 +9,16 @@ public class Logica {
 		this.usuario = new Usuario("Andres", "Andres@a.com", "Andres Alvarez Arcila", "Andidas",
 				"No vendo zapatos...", "Solo efectivo");
 	}
-
-	public static void main(String[] args) {
-		Logica logica = new Logica();
-		logica.usuario.cambiarValores(new Scanner(System.in), new Scanner(System.in));
-		
+	
+	public void editarPerfil(Scanner sc, Scanner scl) {
+		usuario.editarPerfil(sc, scl);
 	}
-
+	
+	public void crearNuevoContacto(Scanner sc, Scanner sc1) {
+		usuario.crearNuevoContacto(sc, sc1);
+	}
+	
+	public void empezarChat(Scanner sc, Scanner scl) {
+		usuario.empezarChat(sc, scl);
+	}
 }
