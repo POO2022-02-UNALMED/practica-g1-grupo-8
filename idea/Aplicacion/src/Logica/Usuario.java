@@ -1,6 +1,7 @@
 package Logica;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 class Usuario {
 	private String nombre;
@@ -114,6 +115,66 @@ class Usuario {
 				+ ", logoNegocio=" + logoNegocio + ", descripcionNegocio=" + descripcionNegocio + ", terminosNegocio="
 				+ terminosNegocio + ", notificacion=" + notificacion + ", contactoUsuario=" + contactoUsuario
 				+ ", contactosLocales=" + contactosLocales + ", contactosPendientes=" + contactosPendientes + "]";
+	}
+	
+	protected void cambiarValores(Scanner sc) {
+		int opcion;
+		
+		do {
+			System.out.println(this);
+			System.out.println("Cambiar:\n0 Cancela\n1 nombre\n2 email\n3 nombreCompleto\n4 logoNegocio\n5 descripcionNegocio"
+					+ "\n6 terminosNegocio");
+			opcion = sc.nextInt();
+			
+			switch (opcion) {
+				case 0:
+					System.out.println("Termino modificacion de Perfil");
+					break;
+					
+				case 1:
+					System.out.println("Nombre actual: " + getNombre());
+					System.out.print("Nuevo nombre: ");
+					setNombre(sc.next());
+					break;
+					
+				case 2:
+					System.out.println("Email actual: " + getEmail());
+					System.out.print("Nuevo Email: ");
+					setEmail(sc.next());
+					break;
+					
+				case 3:
+					System.out.println("Nombre completo actual: " + getNombreCompleto());
+					System.out.print("Nuevo nombre completo: ");
+					setNombreCompleto(sc.nextLine());
+					break;
+					
+				case 4:
+					System.out.println("Logo de negocio actual: " + getLogoNegocio());
+					System.out.print("Nuevo logo de negocio: ");
+					setLogoNegocio(sc.next());
+					break;
+					
+				case 5:
+					System.out.println("Descripcion de negocio actual: " + getDescripcionNegocio());
+					System.out.print("Nueva descripcion de negocio: ");
+					setDescripcionNegocio(sc.next());
+					break;
+					
+				case 6:
+					System.out.println("Terminos de negocio actual: " + getTerminosNegocio());
+					System.out.print("Nuevo terminos de negocio: ");
+					setTerminosNegocio(sc.next());
+					break;
+					
+				default:
+					System.out.println("Seleccione un numero entre 0 y 6");
+					break;
+					
+			}
+			
+		}while (opcion != 0);
+
 	}
 	
 }

@@ -1,5 +1,7 @@
 package Logica;
 
+import java.util.Scanner;
+
 public class Logica {
 	private Usuario usuario;
 
@@ -9,9 +11,10 @@ public class Logica {
 	}
 
 	public static void main(String[] args) {
-		Logica logica = new Logica();
-		System.out.print(logica.usuario);
-
+		try (Scanner sc = new Scanner(System.in)) {
+			Logica logica = new Logica();
+			logica.usuario.cambiarValores(sc);
+		}
 	}
 
 }
