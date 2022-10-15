@@ -11,10 +11,9 @@ public class Logica {
 	}
 
 	public static void main(String[] args) {
-		try (Scanner sc = new Scanner(System.in)) {
-			Logica logica = new Logica();
-			logica.usuario.cambiarValores(sc);
-		}
+		Logica logica = new Logica();
+		logica.usuario.cambiarValores(new Scanner(System.in), new Scanner(System.in));
+		
 	}
 
 }

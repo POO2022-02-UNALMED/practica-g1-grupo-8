@@ -15,7 +15,7 @@ class Usuario {
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;
 
-	protected Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
+	Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
 			String terminosNegocio) {
 		this.nombre = nombre;
 		this.email = email;
@@ -29,83 +29,83 @@ class Usuario {
 		this.contactosPendientes = new ArrayList<ContactosPendientes>();
 	}
 
-	protected String getNombre() {
+	String getNombre() {
 		return nombre;
 	}
 
-	protected void setNombre(String nombre) {
+	void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	protected String getEmail() {
+	String getEmail() {
 		return email;
 	}
 
-	protected void setEmail(String email) {
+	void setEmail(String email) {
 		this.email = email;
 	}
 
-	protected String getNombreCompleto() {
+	String getNombreCompleto() {
 		return nombreCompleto;
 	}
 
-	protected void setNombreCompleto(String nombreCompleto) {
+	void setNombreCompleto(String nombreCompleto) {
 		this.nombreCompleto = nombreCompleto;
 	}
 
-	protected String getLogoNegocio() {
+	String getLogoNegocio() {
 		return logoNegocio;
 	}
 
-	protected void setLogoNegocio(String logoNegocio) {
+	void setLogoNegocio(String logoNegocio) {
 		this.logoNegocio = logoNegocio;
 	}
 
-	protected String getDescripcionNegocio() {
+	String getDescripcionNegocio() {
 		return descripcionNegocio;
 	}
 
-	protected void setDescripcionNegocio(String descripcionNegocio) {
+	void setDescripcionNegocio(String descripcionNegocio) {
 		this.descripcionNegocio = descripcionNegocio;
 	}
 
-	protected String getTerminosNegocio() {
+	String getTerminosNegocio() {
 		return terminosNegocio;
 	}
 
-	protected void setTerminosNegocio(String terminosNegocio) {
+	void setTerminosNegocio(String terminosNegocio) {
 		this.terminosNegocio = terminosNegocio;
 	}
 
-	protected Notificacion getNotificacion() {
+	Notificacion getNotificacion() {
 		return notificacion;
 	}
 
-	protected void setNotificacion(Notificacion notificacion) {
+	void setNotificacion(Notificacion notificacion) {
 		this.notificacion = notificacion;
 	}
 
-	protected ContactoUsuario getContactoUsuario() {
+	ContactoUsuario getContactoUsuario() {
 		return contactoUsuario;
 	}
 
-	protected void setContactoUsuario(ContactoUsuario contactoUsuario) {
+	void setContactoUsuario(ContactoUsuario contactoUsuario) {
 		this.contactoUsuario = contactoUsuario;
 	}
 
-	protected ArrayList<ContactosLocales> getContactosLocales() {
+	ArrayList<ContactosLocales> getContactosLocales() {
 		return contactosLocales;
 	}
 
-	protected void setContactosLocales(ArrayList<ContactosLocales> contactosLocales) {
+	void setContactosLocales(ArrayList<ContactosLocales> contactosLocales) {
 		this.contactosLocales = contactosLocales;
 	}
 
-	protected ArrayList<ContactosPendientes> getContactosPendientes() {
+	ArrayList<ContactosPendientes> getContactosPendientes() {
 		return contactosPendientes;
 	}
 
-	protected void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
+	void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
 		this.contactosPendientes = contactosPendientes;
 	}
 
@@ -117,7 +117,7 @@ class Usuario {
 				+ ", contactosLocales=" + contactosLocales + ", contactosPendientes=" + contactosPendientes + "]";
 	}
 	
-	protected void cambiarValores(Scanner sc) {
+	void cambiarValores(Scanner sc, Scanner sc1) {
 		int opcion;
 		
 		do {
@@ -134,7 +134,7 @@ class Usuario {
 				case 1:
 					System.out.println("Nombre actual: " + getNombre());
 					System.out.print("Nuevo nombre: ");
-					setNombre(sc.next());
+					setNombre(sc1.nextLine());
 					break;
 					
 				case 2:
@@ -146,35 +146,36 @@ class Usuario {
 				case 3:
 					System.out.println("Nombre completo actual: " + getNombreCompleto());
 					System.out.print("Nuevo nombre completo: ");
-					setNombreCompleto(sc.nextLine());
+					setNombreCompleto(sc1.nextLine());
 					break;
 					
 				case 4:
 					System.out.println("Logo de negocio actual: " + getLogoNegocio());
 					System.out.print("Nuevo logo de negocio: ");
-					setLogoNegocio(sc.next());
+					setLogoNegocio(sc1.nextLine());
 					break;
 					
 				case 5:
 					System.out.println("Descripcion de negocio actual: " + getDescripcionNegocio());
 					System.out.print("Nueva descripcion de negocio: ");
-					setDescripcionNegocio(sc.next());
+					setDescripcionNegocio(sc1.nextLine());
 					break;
 					
 				case 6:
 					System.out.println("Terminos de negocio actual: " + getTerminosNegocio());
 					System.out.print("Nuevo terminos de negocio: ");
-					setTerminosNegocio(sc.next());
+					setTerminosNegocio(sc1.nextLine());
 					break;
 					
 				default:
 					System.out.println("Seleccione un numero entre 0 y 6");
-					break;
-					
+					break;	
 			}
-			
 		}while (opcion != 0);
-
 	}
 	
+	void crearNuevoContacto(Scanner sc, Scanner sc1) {
+		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc, sc1));
+		
+	}
 }
