@@ -1,41 +1,43 @@
 package gestorAplicacion.Padre;
 
+import gestorAplicacion.Hija.Usuario;
+
 public abstract class Tarjeta {
-	private Integer NumeroID;
+	private Integer numeroId;
 	private Usuario usuario;
-	private String sitioweb; // este atriburo es urlcompañia y sitioweb
-	private String AcercaDe; // este atributo representa el acerca de mi y acerca de empresa
+	private String sitioWeb; // este atributo es urlcompañia y sitioweb
+	private String acerdaDe; // este atributo representa el acerca de mi y acerca de empresa
 	
-	public Tarjeta(Integer NumeroID,Usuario usuario,String sitioweb,String AcercaDe) {
-		this.NumeroID=NumeroID;
-		this.usuario=usuario;
-		this.sitioweb=sitioweb;
-		this.AcercaDe=AcercaDe;
+	public Tarjeta(Integer numeroId, Usuario usuario, String sitioWeb, String acerdaDe) {
+		this.numeroId = numeroId;
+		this.usuario = usuario;
+		this.sitioWeb = sitioWeb;
+		this.acerdaDe = acerdaDe;
 	}
 	
 	public Integer getNumeroID() {
-		return this.NumeroID;
+		return this.numeroId;
 	}
-	public void setNumeroID(Integer s) {
-		this.NumeroID=s;
+	public void setNumeroID(Integer numeroId) {
+		this.numeroId=numeroId;
 	}
 	public Usuario getUsuario() {
 		return usuario;
 	}
 	public void setUsuario(Usuario usuario) {
-		this.usuario=usuario;
+		this.usuario = usuario;
 	}
 	public String getSitioWeb() {
-		return sitioweb;
+		return sitioWeb;
 	}
-	public void setSitioWeb(String acerca) {
-		this.sitioweb=acerca;
+	public void setSitioWeb(String sitioWeb) {
+		this.sitioWeb = sitioWeb;
 	}
 	
 	public String getAcercaDe() {
-		return AcercaDe;
+		return acerdaDe;
 	}
-	public void setAcercaDe(String acerca) {
-		this.AcercaDe=acerca;
+	public void setAcercaDe(String acercaDe) {
+		this.acerdaDe=acercaDe;
 	}
 }
