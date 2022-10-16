@@ -1,21 +1,20 @@
 package gestorAplicacion.Hija;
 
-import gestorAplicacion.Padre.Contactoboolean;
-
-public class ContactoUsuario extends Contactoboolean {
-	private String NumeroTelefonoContacto;
+import gestorAplicacion.Padre.ContactoBoolean;
+public class ContactoUsuario extends ContactoBoolean {
+	private String numeroTelefonoContacto;
 	
-	public ContactoUsuario(Integer numeroid,Usuario usuario,String nombrecontacto,String numerotelefono) {
-		super(numeroid,usuario,nombrecontacto);
-		this.NumeroTelefonoContacto=numerotelefono;
+	public ContactoUsuario(Integer numeroId, Usuario usuario,String nombreContacto,String numeroTelefonoContacto) {
+		super(numeroId,usuario,nombreContacto);
+		this.numeroTelefonoContacto=numeroTelefonoContacto;
 	}
 	
 	public String getNumeroTelefonoContacto() {
-		return this.NumeroTelefonoContacto;
+		return this.numeroTelefonoContacto;
 	}
 	
 	public void setNumeroTelefonoContacto(String cambiar) {
-		this.NumeroTelefonoContacto=cambiar;
+		this.numeroTelefonoContacto=cambiar;
 	}
 
 }

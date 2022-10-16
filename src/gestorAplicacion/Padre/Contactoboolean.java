@@ -1,11 +1,13 @@
 package gestorAplicacion.Padre;
 
-public abstract class Contactoboolean extends Contacto {
+import gestorAplicacion.Hija.Usuario;
+
+public abstract class ContactoBoolean extends Contacto {
 	private boolean TarjetaPersonalCompartida;
 	private boolean TarjetaSocialCompartida;
 	private boolean TarjetaNegociosCompartida;
 	private String NombreContacto;
-	public Contactoboolean(Integer numeroid,Usuario usuario,String nombrecontacto) {
+	public ContactoBoolean(Integer numeroid, Usuario usuario, String nombrecontacto) {
 		super(numeroid,usuario);
 		this.NombreContacto=nombrecontacto;
 	}
