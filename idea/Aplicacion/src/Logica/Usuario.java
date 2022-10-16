@@ -117,14 +117,14 @@ class Usuario {
 				+ ", contactosLocales=" + contactosLocales + ", contactosPendientes=" + contactosPendientes + "]";
 	}
 	
-	void editarPerfil(Scanner sc, Scanner scl) {
+	void editarPerfil(Scanner sc) {
 		int opcion;
-		
 		do {
 			System.out.println(this);
 			System.out.println("Cambiar:\n0 Cancela\n1 nombre\n2 email\n3 nombreCompleto\n4 logoNegocio\n5 descripcionNegocio"
 					+ "\n6 terminosNegocio");
 			opcion = sc.nextInt();
+			sc.nextLine();
 			
 			switch (opcion) {
 				case 0:
@@ -134,37 +134,38 @@ class Usuario {
 				case 1:
 					System.out.println("Nombre actual: " + getNombre());
 					System.out.print("Nuevo nombre: ");
-					setNombre(scl.nextLine());
+					setNombre(sc.nextLine());
 					break;
 					
 				case 2:
 					System.out.println("Email actual: " + getEmail());
 					System.out.print("Nuevo Email: ");
 					setEmail(sc.next());
+					sc.nextLine();
 					break;
 					
 				case 3:
 					System.out.println("Nombre completo actual: " + getNombreCompleto());
 					System.out.print("Nuevo nombre completo: ");
-					setNombreCompleto(scl.nextLine());
+					setNombreCompleto(sc.nextLine());
 					break;
 					
 				case 4:
 					System.out.println("Logo de negocio actual: " + getLogoNegocio());
 					System.out.print("Nuevo logo de negocio: ");
-					setLogoNegocio(scl.nextLine());
+					setLogoNegocio(sc.nextLine());
 					break;
 					
 				case 5:
 					System.out.println("Descripcion de negocio actual: " + getDescripcionNegocio());
 					System.out.print("Nueva descripcion de negocio: ");
-					setDescripcionNegocio(scl.nextLine());
+					setDescripcionNegocio(sc.nextLine());
 					break;
 					
 				case 6:
 					System.out.println("Terminos de negocio actual: " + getTerminosNegocio());
 					System.out.print("Nuevo terminos de negocio: ");
-					setTerminosNegocio(scl.nextLine());
+					setTerminosNegocio(sc.nextLine());
 					break;
 					
 				default:
@@ -172,28 +173,37 @@ class Usuario {
 					break;	
 			}
 		}while (opcion != 0);
+		
 	}
 	
-	void crearNuevoContacto(Scanner sc, Scanner sc1) {
-		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc, sc1));
+	void crearNuevoContacto(Scanner sc) {
+		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc));
 	}
 	
-	void empezarChat(Scanner sc, Scanner scl) {
+	void empezarChat(Scanner sc) {
 		int opcion;
 		do {
 			System.out.println("Elige un contacto");
 			System.out.println("0 cancelar");
-			for (int i = 1; i < contactosPendientes.size()+1; i++) {
-				System.out.println(i + " " + contactosPendientes.get(i - 1).toString());
+			for (int i = 0; i < contactosPendientes.size(); i++) {
+				System.out.println((i+1) + " " + contactosPendientes.get(i).toString());
 			}
 			opcion = sc.nextInt();
-			if ((opcion > 0) || (opcion <= contactosPendientes.size())) {
+			sc.nextLine();
+			
+			if ((opcion > 0) && (opcion <= contactosPendientes.size())) {
 				System.out.println(contactosPendientes.get(opcion - 1).getEmail());
+				
 			} else if (opcion != 0) {
 				System.out.println("Seleccione un numero entre 0 y " + contactosPendientes.size());
+				
 			} else {
 				System.out.println("Termino empezar chat");
+				
 			}
+			
 		} while (opcion != 0);
+		
 	}
+	
 }

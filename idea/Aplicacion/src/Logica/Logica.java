@@ -10,15 +10,15 @@ public class Logica {
 				"No vendo zapatos...", "Solo efectivo");
 	}
 	
-	public void editarPerfil(Scanner sc, Scanner scl) {
-		usuario.editarPerfil(sc, scl);
+	public void editarPerfil(Scanner sc) {
+		usuario.editarPerfil(sc);
 	}
 	
-	public void crearNuevoContacto(Scanner sc, Scanner sc1) {
-		usuario.crearNuevoContacto(sc, sc1);
+	public void crearNuevoContacto(Scanner sc) {
+		usuario.crearNuevoContacto(sc);
 	}
 	
-	public void empezarChat(Scanner sc, Scanner scl) {
-		usuario.empezarChat(sc, scl);
+	public void empezarChat(Scanner sc) {
+		usuario.empezarChat(sc);
 	}
 }
