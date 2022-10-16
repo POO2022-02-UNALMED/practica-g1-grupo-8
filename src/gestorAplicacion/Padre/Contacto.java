@@ -1,5 +1,7 @@
 package gestorAplicacion.Padre;
 
+import gestorAplicacion.Hija.Usuario;
+
 public class Contacto {
 	private Integer NumeroID;
 	private Usuario usuario;

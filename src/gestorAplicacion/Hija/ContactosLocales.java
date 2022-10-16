@@ -3,29 +3,29 @@ package gestorAplicacion.Hija;
 import gestorAplicacion.Padre.Contacto;
 
 public class ContactosLocales extends Contacto {
-	private String Email;
-	private String NombreCompleto;
+	private String email;
+	private String nombreCompleto;
 
-	public ContactosLocales(Integer numeroid,Usuario usuario,String email,String nombrecompleto) {
-		super(numeroid,usuario);
-		this.Email=email;
-		this.NombreCompleto=nombrecompleto;
+	public ContactosLocales(Integer numeroId, Usuario usuario, String email,String nombreCompleto) {
+		super(numeroId,usuario);
+		this.email=email;
+		this.nombreCompleto= nombreCompleto;
 	}
 	
 	public String getEmail() {
-		return this.Email;
+		return this.email;
 	}
 	
-	public void setEmail(String cambiar) {
-		this.Email=cambiar;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	public String getNombreCompleto() {
-		return this.NombreCompleto;
+		return this.nombreCompleto;
 	}
 	
-	public void setNombreCompleto(String cambiar) {
-		this.NombreCompleto=cambiar;
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
 	}
 	
 }
