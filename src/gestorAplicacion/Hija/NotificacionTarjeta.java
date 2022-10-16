@@ -25,5 +25,24 @@ public class NotificacionTarjeta {
 	public ArrayList<TarjetaNegocios> getTarjetasNegociosLeido(){
 		return tarjetasNegociosLeido;
 	}
+	public ArrayList<TarjetaSocial> getTarjetasSocialesNoLeido(){
+		return tarjetasSocialesNoLeido;
+	}
+	public ArrayList<TarjetaNegocios> getTarjetasNegociosNoLeido(){
+		return tarjetasNegociosNoLeidos;
+	}
 	
+	
+	public void setTarjetasSocialesLeido(ArrayList<TarjetaSocial> tarjetasSocialesLeido) {
+		this.tarjetasSocialesLeido = tarjetasSocialesLeido;
+	}
+	public void setTarjetasNegociosLeido(ArrayList<TarjetaNegocios> tarjetasNegociosLeido) {
+		this.tarjetasNegociosLeido = tarjetasNegociosLeido;
+	}
+	public void setTarjetasSocialesNoLeido(ArrayList<TarjetaSocial> tarjetasSocialesNoLeido) {
+		this.tarjetasSocialesNoLeido = tarjetasSocialesNoLeido;
+	}
+	public void setTarjetasNegociosNoLeido(ArrayList<TarjetaNegocios> tarjetasNegociosNoLeido) {
+		this.tarjetasNegociosNoLeido = tarjetasNegociosNoLeido
+	}
 }
