@@ -1,8 +1,8 @@
 package gestorAplicacion.Hija;
 
-import gestorAplicacion.Padre.Contactoboolean;
+import gestorAplicacion.Padre.ContactoTarjetas;
 
-public class ContactosPendientes extends Contactoboolean {
+public class ContactosPendientes extends ContactoTarjetas {
 
 private String EmailContacto;
 	
