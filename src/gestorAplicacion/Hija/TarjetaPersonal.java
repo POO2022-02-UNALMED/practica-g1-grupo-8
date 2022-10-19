@@ -4,7 +4,7 @@ import gestorAplicacion.Padre.Tarjeta;
 
 public class TarjetaPersonal extends Tarjeta {
 
-    public TarjetaPersonal(Integer numeroId, Usuario usuario, String sitioWeb, String acercaDe) {
+    public TarjetaPersonal(int numeroId, Usuario usuario, String sitioWeb, String acercaDe) {
         super(numeroId, usuario, sitioWeb, acercaDe);
 
     }
