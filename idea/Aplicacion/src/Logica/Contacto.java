@@ -1,6 +1,6 @@
 package Logica;
 
-class Contacto {
+abstract class Contacto {
 	private String nombre;
 	private String email;
 	private String nombreCompleto;
