@@ -2,6 +2,7 @@ package Logica;
 
 import java.time.LocalDateTime;
 
+//Todos los mensajes deben tener "titulo", "cuerpo", fecha, emailA y emailB
 abstract class Targeta {
 	private final LocalDateTime fecha;
 	private String titulo;
@@ -9,7 +10,10 @@ abstract class Targeta {
 	private String emailA;
 	private String emailB;
 
+	//Permite crear un mensaje sin titulo y cuerpo.
+	//Obliga a crear un mensaje con emisor y reseptor.
 	protected Targeta(String emailA, String emailB) {
+		//Toma la fecha en el momento que se creo el mensaje
 		this.fecha = LocalDateTime.now();
 		this.titulo = "Sin titulo";
 		this.cuerpo = "Sin cuerpo";
@@ -17,7 +21,9 @@ abstract class Targeta {
 		this.emailB = emailB;
 	}
 
+	//Permite crear mensajes con titulo y cuerpo.
 	protected Targeta(String titulo, String cuerpo, String emailA, String emailB) {
+		//Toma la fecha en el momento que se creo el mensaje
 		this.fecha = LocalDateTime.now();
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;
