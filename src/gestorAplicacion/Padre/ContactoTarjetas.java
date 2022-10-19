@@ -6,8 +6,8 @@ import gestorAplicacion.Hija.TarjetaNegocio;
 public abstract class ContactoTarjetas extends Contacto {
 	private ArrayList<TarjetaSocial> TarjetasSociales;
 	private ArrayList<TarjetaNegocio> TarjetasNegocios;
-	public ContactoTarjetas(Integer numeroid,Usuario usuario,String email,String nombrecompleto) {
-		super(numeroid,usuario,email,nombrecompleto);
+	protected ContactoTarjetas(Integer numeroid,Usuario usuario,String email,String nombrecompleto) {
+		super(numeroid, usuario, email, nombrecompleto);
 		this.TarjetasNegocios=new ArrayList<TarjetaNegocio>();
 		this.TarjetasSociales=new ArrayList<TarjetaSocial>();
 	}

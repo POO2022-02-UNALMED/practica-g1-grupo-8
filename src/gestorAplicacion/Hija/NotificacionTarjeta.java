@@ -42,7 +42,7 @@ public class NotificacionTarjeta {
 	public void setTarjetasSocialesNoLeido(ArrayList<TarjetaSocial> tarjetasSocialesNoLeido) {
 		this.tarjetasSocialesNoLeido = tarjetasSocialesNoLeido;
 	}
-	public void setTarjetasNegociosNoLeido(ArrayList<TarjetaNegocios> tarjetasNegociosNoLeido) {
-		this.tarjetasNegociosNoLeido = tarjetasNegociosNoLeido
+	public void setTarjetasNegociosNoLeido(ArrayList<TarjetaNegocio> tarjetasNegociosNoLeido) {
+		this.tarjetasNegociosNoLeido = tarjetasNegociosNoLeido;
 	}
 }

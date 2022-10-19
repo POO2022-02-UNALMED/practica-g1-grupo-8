@@ -2,42 +2,64 @@ package gestorAplicacion.Padre;
 
 import gestorAplicacion.Hija.Usuario;
 
+import java.time.LocalDateTime;
+
 public abstract class Tarjeta {
-	private Integer numeroId;
-	private Usuario usuario;
-	private String sitioWeb; // este atributo es urlcompañia y sitioweb
-	private String acerdaDe; // este atributo representa el acerca de mi y acerca de empresa
-	
-	public Tarjeta(Integer numeroId, Usuario usuario, String sitioWeb, String acerdaDe) {
-		this.numeroId = numeroId;
-		this.usuario = usuario;
-		this.sitioWeb = sitioWeb;
-		this.acerdaDe = acerdaDe;
+	private final LocalDateTime fecha;
+	private String titulo;
+	private String cuerpo;
+	private String emailA;
+	private String emailB;
+
+	protected Tarjeta(String emailA, String emailB) {
+		this.fecha = LocalDateTime.now();
+		this.titulo = "Sin titulo";
+		this.cuerpo = "Sin cuerpo";
+		this.emailA = emailA;
+		this.emailB = emailB;
 	}
-	
-	public Integer getNumeroID() {
-		return this.numeroId;
+
+	protected Tarjeta(String titulo, String cuerpo, String emailA, String emailB) {
+		this.fecha = LocalDateTime.now();
+		this.titulo = titulo;
+		this.cuerpo = cuerpo;
+		this.emailA = emailA;
+		this.emailB = emailB;
 	}
-	public void setNumeroID(Integer numeroId) {
-		this.numeroId=numeroId;
+
+	public String getEmailA() {
+		return emailA;
 	}
-	public Usuario getUsuario() {
-		return usuario;
+
+	public void setEmailA(String emailA) {
+		this.emailA = emailA;
 	}
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+
+	public LocalDateTime getFecha() {
+		return fecha;
 	}
-	public String getSitioWeb() {
-		return sitioWeb;
+
+	public String getTitulo() {
+		return titulo;
 	}
-	public void setSitioWeb(String sitioWeb) {
-		this.sitioWeb = sitioWeb;
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
-	
-	public String getAcercaDe() {
-		return acerdaDe;
+
+	public String getEmailB() {
+		return emailB;
 	}
-	public void setAcercaDe(String acercaDe) {
-		this.acerdaDe=acercaDe;
+
+	public void setEmailB(String emailB) {
+		this.emailB = emailB;
+	}
+
+	public String getCuerpo() {
+		return cuerpo;
+	}
+
+	public void setCuerpo(String cuerpo) {
+		this.cuerpo = cuerpo;
 	}
 }
