@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class NotificacionTarjeta {
 	private ArrayList<TarjetaSocial> tarjetasSocialesLeido;
-	private ArrayList<TarjetaNegocios> tarjetasNegociosLeido;
+	private ArrayList<TarjetaNegocio> tarjetasNegociosLeido;
 	private ArrayList<TarjetaSocial> tarjetasSocialesNoLeido;
-	private ArrayList<TarjetaNegocios> tarjetasNegociosNoLeido
+	private ArrayList<TarjetaNegocio> tarjetasNegociosNoLeido;
 	
-	public NotificacionTarjeta(ArrayList<TarjetaSocial> tarjetasSociales,
-			ArrayList<TarjetaNegocios> tarjetasNegociosLeido,
+	public NotificacionTarjeta(ArrayList<TarjetaSocial> tarjetasSocialesLeido,
+			ArrayList<TarjetaNegocio> tarjetasNegociosLeido,
 			ArrayList<TarjetaSocial> tarjetasSocialesNoLeido,
-			ArrayList<TarjetaNegocios> tarjetasNegociosNoLeido) {
+			ArrayList<TarjetaNegocio> tarjetasNegociosNoLeido) {
 		
 		this.tarjetasSocialesLeido = tarjetasSocialesLeido;
 		this.tarjetasNegociosLeido = tarjetasNegociosLeido;
@@ -22,21 +22,21 @@ public class NotificacionTarjeta {
 	public ArrayList<TarjetaSocial> getTarjetasSocialesLeido(){
 		return tarjetasSocialesLeido;
 	}
-	public ArrayList<TarjetaNegocios> getTarjetasNegociosLeido(){
+	public ArrayList<TarjetaNegocio> getTarjetasNegociosLeido(){
 		return tarjetasNegociosLeido;
 	}
 	public ArrayList<TarjetaSocial> getTarjetasSocialesNoLeido(){
 		return tarjetasSocialesNoLeido;
 	}
-	public ArrayList<TarjetaNegocios> getTarjetasNegociosNoLeido(){
-		return tarjetasNegociosNoLeidos;
+	public ArrayList<TarjetaNegocio> getTarjetasNegociosNoLeido(){
+		return tarjetasNegociosNoLeido;
 	}
 	
 	
 	public void setTarjetasSocialesLeido(ArrayList<TarjetaSocial> tarjetasSocialesLeido) {
 		this.tarjetasSocialesLeido = tarjetasSocialesLeido;
 	}
-	public void setTarjetasNegociosLeido(ArrayList<TarjetaNegocios> tarjetasNegociosLeido) {
+	public void setTarjetasNegociosLeido(ArrayList<TarjetaNegocio> tarjetasNegociosLeido) {
 		this.tarjetasNegociosLeido = tarjetasNegociosLeido;
 	}
 	public void setTarjetasSocialesNoLeido(ArrayList<TarjetaSocial> tarjetasSocialesNoLeido) {

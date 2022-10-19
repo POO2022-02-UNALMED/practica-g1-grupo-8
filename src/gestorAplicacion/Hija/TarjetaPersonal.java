@@ -8,8 +8,4 @@ public class TarjetaPersonal extends Tarjeta {
         super(numeroId, usuario, sitioWeb, acercaDe);
 
     }
-
-    public String getNombreComleto() {
-        return getUsuario().
-    }
 }

@@ -5,10 +5,14 @@ import gestorAplicacion.Hija.Usuario;
 public class Contacto {
 	private Integer NumeroID;
 	private Usuario usuario;
+	private String email;
+	private String nombreCompleto;
 	
-	public Contacto(Integer numeroid,Usuario usuario) {
+	public Contacto(Integer numeroid,Usuario usuario,String email,String nombreCompleto) {
 		this.NumeroID=numeroid;
 		this.usuario=usuario;
+		this.email=email;
+		this.nombreCompleto=nombreCompleto;
 	}
 	public Integer getNumeroID() {
 		return this.NumeroID;
@@ -22,4 +26,16 @@ public class Contacto {
 	public void setUsuario(Usuario usuario) {
 		this.usuario=usuario;
 	} 
+	public String getEmail() {
+		return this.email;
+	}
+	public void setEmail(String email) {
+		this.email=email;
+	}
+	public String getNombreCompleto() {
+		return this.nombreCompleto;
+	}
+	public void setNombreCompleto(String nombrecompleto) {
+		this.nombreCompleto=nombrecompleto;
+	}
 }

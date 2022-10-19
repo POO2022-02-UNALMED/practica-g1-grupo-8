@@ -3,29 +3,18 @@ package gestorAplicacion.Hija;
 import gestorAplicacion.Padre.Contacto;
 
 public class ContactosLocales extends Contacto {
-	private String email;
-	private String nombreCompleto;
+	private String tarjeta;
 
-	public ContactosLocales(Integer numeroId, Usuario usuario, String email,String nombreCompleto) {
-		super(numeroId,usuario);
-		this.email=email;
-		this.nombreCompleto= nombreCompleto;
+	public ContactosLocales(Integer numeroid,Usuario usuario,String email,String nombrecompleto,String tarjeta) {
+		super(numeroid,usuario,email,nombrecompleto);
+		this.tarjeta=tarjeta;
 	}
 	
-	public String getEmail() {
-		return this.email;
+	public String getTarjeta() {
+		return this.tarjeta;
 	}
 	
-	public void setEmail(String email) {
-		this.email = email;
+	public void setTarjeta(String tarjeta) {
+		this.tarjeta = tarjeta;
 	}
-	
-	public String getNombreCompleto() {
-		return this.nombreCompleto;
-	}
-	
-	public void setNombreCompleto(String nombreCompleto) {
-		this.nombreCompleto = nombreCompleto;
-	}
-	
 }
