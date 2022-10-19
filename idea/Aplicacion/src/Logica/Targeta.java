@@ -2,7 +2,7 @@ package Logica;
 
 import java.time.LocalDateTime;
 
-class Targeta {
+abstract class Targeta {
 	private final LocalDateTime fecha;
 	private String titulo;
 	private String cuerpo;
