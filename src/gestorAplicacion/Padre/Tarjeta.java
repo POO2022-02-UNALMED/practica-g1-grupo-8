@@ -1,7 +1,5 @@
 package gestorAplicacion.Padre;
 
-import gestorAplicacion.Hija.Usuario;
-
 import java.time.LocalDateTime;
 
 public abstract class Tarjeta {
@@ -11,7 +9,7 @@ public abstract class Tarjeta {
 	private String emailA;
 	private String emailB;
 
-	protected Tarjeta(String emailA, String emailB) {
+	protected Tarjeta (String emailA, String emailB) {
 		this.fecha = LocalDateTime.now();
 		this.titulo = "Sin titulo";
 		this.cuerpo = "Sin cuerpo";
@@ -55,11 +53,4 @@ public abstract class Tarjeta {
 		this.emailB = emailB;
 	}
 
-	public String getCuerpo() {
-		return cuerpo;
-	}
-
-	public void setCuerpo(String cuerpo) {
-		this.cuerpo = cuerpo;
-	}
 }
