@@ -1,48 +1,48 @@
 package gestorAplicacion.Hija;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Usuario {
-    private Long id;
+    private String nombre;
     private String email;
     private String nombreCompleto;
-    private TarjetaPersonal tarjetaPersonal;
-    private TarjetaSocial tarjetaSocial;
-    private TarjetaNegocio tarjetaNegocio;
-    private NotificacionTarjeta notificacionTarjeta;
-    private ArrayList<ContactoUsuario> contactos;
-    private ArrayList<ContactosLocales> contactosLocales;
-    private ArrayList<ContactosPendientes> contactosPendientes;
 
-    public Usuario(Long id,
-                   String email,
-                   String nombreCompleto,
-                   TarjetaPersonal tarjetaPersonal,
-                   TarjetaSocial tarjetaSocial,
-                   TarjetaNegocio tarjetaNegocio,
-                   NotificacionTarjeta notificacionTarjeta,
-                   ArrayList<ContactoUsuario> contactos,
-                   ArrayList<ContactosLocales> contactosLocales,
-                   ArrayList<ContactosPendientes> contactosPendientes
-    ){
-        this.id = id;
+    private ArrayList<TargetaSocial> targetasSociales;
+
+    private ArrayList<TargetaNegocio> targetasNegocios;
+    private String logoNegocio;
+    private String descripcionNegocio;
+    private String terminosNegocio;
+    private Notificacion notificacion;
+    private ContactoUsuario contactoUsuario;
+    private ArrayList<ContactosLocales> contactosLocales;
+    private ArrayList<ContactoPendientes> contactosPendientes;
+
+
+    //Genera al usuario
+    Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
+            String terminosNegocio) {
+        this.nombre = nombre;
         this.email = email;
         this.nombreCompleto = nombreCompleto;
-        this.tarjetaPersonal = tarjetaPersonal;
-        this.tarjetaSocial = tarjetaSocial;
-        this.tarjetaNegocio = tarjetaNegocio;
-        this.notificacionTarjeta = notificacionTarjeta;
-        this.contactos = contactos;
-        this.contactosLocales = contactosLocales;
-        this.contactosPendientes = contactosPendientes;
+        this.logoNegocio = logoNegocio;
+        this.descripcionNegocio = descripcionNegocio;
+        this.terminosNegocio = terminosNegocio;
+        //la siguite linea necesita modificacion
+        this.notificacion = new Notificacion();
+        //Crea su propio contacto
+        this.contactoUsuario = new ContactoUsuario(this);
+        this.contactosLocales = new ArrayList<ContactosLocales>();
+        this.contactosPendientes = new ArrayList<ContactoPendientes>();
     }
 
-    public Long getId() {
-        return id;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getEmail() {
@@ -61,44 +61,44 @@ public class Usuario {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public TarjetaPersonal getTarjetaPersonal() {
-        return tarjetaPersonal;
+    public String getLogoNegocio() {
+        return logoNegocio;
     }
 
-    public void setTarjetaPersonal(TarjetaPersonal tarjetaPersonal) {
-        this.tarjetaPersonal = tarjetaPersonal;
+    public void setLogoNegocio(String logoNegocio) {
+        this.logoNegocio = logoNegocio;
     }
 
-    public TarjetaSocial getTarjetaSocial() {
-        return tarjetaSocial;
+    public String getDescripcionNegocio() {
+        return descripcionNegocio;
     }
 
-    public void setTarjetaSocial(TarjetaSocial tarjetaSocial) {
-        this.tarjetaSocial = tarjetaSocial;
+    public void setDescripcionNegocio(String descripcionNegocio) {
+        this.descripcionNegocio = descripcionNegocio;
     }
 
-    public TarjetaNegocio getTarjetaNegocio() {
-        return tarjetaNegocio;
+    public String getTerminosNegocio() {
+        return terminosNegocio;
     }
 
-    public void setTarjetaNegocio(TarjetaNegocio tarjetaNegocio) {
-        this.tarjetaNegocio = tarjetaNegocio;
+    public void setTerminosNegocio(String terminosNegocio) {
+        this.terminosNegocio = terminosNegocio;
     }
 
-    public NotificacionTarjeta getNotificacionTarjeta() {
-        return notificacionTarjeta;
+    public Notificacion getNotificacion() {
+        return notificacion;
     }
 
-    public void setNotificacionTarjeta(NotificacionTarjeta notificacionTarjeta) {
-        this.notificacionTarjeta = notificacionTarjeta;
+    public void setNotificacion(Notificacion notificacion) {
+        this.notificacion = notificacion;
     }
 
-    public ArrayList<ContactoUsuario> getContactos() {
-        return contactos;
+    public ContactoUsuario getContactoUsuario() {
+        return contactoUsuario;
     }
 
-    public void setContactos(ArrayList<ContactoUsuario> contactos) {
-        this.contactos = contactos;
+    public  void setContactoUsuario(ContactoUsuario contactoUsuario) {
+        this.contactoUsuario = contactoUsuario;
     }
 
     public ArrayList<ContactosLocales> getContactosLocales() {
@@ -109,11 +109,11 @@ public class Usuario {
         this.contactosLocales = contactosLocales;
     }
 
-    public ArrayList<ContactosPendientes> getContactosPendientes() {
+    public ArrayList<ContactoPendientes> getContactosPendientes() {
         return contactosPendientes;
     }
 
-    public void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
+    public void setContactosPendientes(ArrayList<ContactoPendientes> contactosPendientes) {
         this.contactosPendientes = contactosPendientes;
     }
 }

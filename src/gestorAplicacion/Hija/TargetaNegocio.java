@@ -1,13 +1,14 @@
 package gestorAplicacion.Hija;
-
-public class TarjetaNegocio extends gestorAplicacion.Padre.Tarjeta{
+//La Targetas de negocios son mensajes formales, tienen logo, descripcion y terminos del negocio.
+//Ademas del nombre del emisor y receptor.
+public class TargetaNegocio extends gestorAplicacion.Padre.Tarjeta{
     private String logo;
     private String descripcion;
     private String terminos;
     private String nombreCompletoA;
     private String nombreCompletoB;
 
-    public TarjetaNegocio(String emailA, String emailB, String titulo, String cuerpo, String logo, String descripcion, String terminos, String nombreCompletoA, String getNombreCompletoB){
+    public TargetaNegocio(String emailA, String emailB, String titulo, String cuerpo, String logo, String descripcion, String terminos, String nombreCompletoA, String getNombreCompletoB){
         super(emailA, emailB, titulo, cuerpo);
         this.logo=logo;
         this.descripcion=descripcion;
@@ -15,6 +16,9 @@ public class TarjetaNegocio extends gestorAplicacion.Padre.Tarjeta{
         this.nombreCompletoA=nombreCompletoA;
         this.nombreCompletoB=getNombreCompletoB;
     }
+
+
+
 
     public String getNombreCompletoA() {
         return nombreCompletoA;

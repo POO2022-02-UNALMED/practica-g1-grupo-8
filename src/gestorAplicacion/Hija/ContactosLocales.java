@@ -1,8 +1,8 @@
 package gestorAplicacion.Hija;
 
-import gestorAplicacion.Padre.Contacto;
+import gestorAplicacion.Padre.Contactos;
 
-public class ContactosLocales extends Contacto {
+public class ContactosLocales extends Contactos {
 	private String tarjeta;
 
 	public ContactosLocales(Integer numeroid,Usuario usuario,String email,String nombrecompleto,String tarjeta) {

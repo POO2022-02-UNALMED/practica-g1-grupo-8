@@ -2,13 +2,13 @@ package gestorAplicacion.Padre;
 
 import gestorAplicacion.Hija.Usuario;
 
-public class Contacto {
+public class Contactos {
 	private Integer NumeroID;
 	private Usuario usuario;
 	private String email;
 	private String nombreCompleto;
 	
-	public Contacto(Integer numeroid,Usuario usuario,String email,String nombreCompleto) {
+	public Contactos(Integer numeroid, Usuario usuario, String email, String nombreCompleto) {
 		this.NumeroID=numeroid;
 		this.usuario=usuario;
 		this.email=email;
