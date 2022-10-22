@@ -29,6 +29,14 @@ class TargetaNegocios extends Targeta{
 		this.nombreCompletoB = contactoB.getNombreCompleto();
 	}
 
+	@Override
+	public String toString() {
+		return "TargetaNegocios [titulo=" + this.getTitulo() + ", cuerpo=" 
+				+ this.getCuerpo() + ", emailA=" + this.getEmailA() + ", emailB=" + this.getEmailB() 
+				+ ", logo=" + logo + ", descripcion=" + descripcion + ", termino=" + termino + ", nombreCompletoA=" 
+				+ nombreCompletoA + ", nombreCompletoB=" + nombreCompletoB + "]";
+	}
+
 	protected String getLogo() {
 		return logo;
 	}

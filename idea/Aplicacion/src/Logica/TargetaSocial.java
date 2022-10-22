@@ -6,7 +6,7 @@ class TargetaSocial extends Targeta{
 	private String nombreB;
 	
 	//AL  crear un mesaje se tomar los atributos que se definieron en las instacias contacto
-	protected TargetaSocial(String titulo, String cuerpo, ContactoUsuario contactoA, Contacto contactoB) {
+	protected TargetaSocial(String titulo, String cuerpo, Contacto contactoA, Contacto contactoB) {
 		super(titulo, cuerpo, contactoA.getEmail(), contactoB.getEmail());
 		this.nombreA = contactoA.getNombre();
 		this.nombreB = contactoB.getNombre();
@@ -19,6 +19,12 @@ class TargetaSocial extends Targeta{
 		this.nombreB = contactoB.getNombre();
 	}
 	
+	@Override
+	public String toString() {
+		return "TargetaSocial [titulo=" + this.getTitulo() + ", cuerpo="
+				+ this.getCuerpo() + ", emailA=" + this.getEmailA() + ", emailB=" + this.getEmailB()
+				+ ", nombreA=" + nombreA + ", nombreB=" + nombreB + "]";
+	}
 
 	protected String getNombreA() {
 		return nombreA;

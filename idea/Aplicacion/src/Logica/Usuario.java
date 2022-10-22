@@ -119,21 +119,24 @@ class Usuario {
 		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc));
 	}
 	
-	//funcionalidad sin terminar
+	//Permite seleccionar un contacto para iniciar una conversacion.
 	//Resive al unico escaner del programa como parametro.
 	void empezarChat(Scanner sc) {
 		int opcion;
 		do {
 			System.out.println("Elige un contacto");
 			System.out.println("0 cancelar");
+			//Imprime todos los contactos locales con un indce al principio
 			for (int i = 0; i < contactosPendientes.size(); i++) {
 				System.out.println((i+1) + " " + contactosPendientes.get(i).toString());
 			}
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
+			//Revisa si se selecciono un contacto y se realiza en cambio.
 			if ((opcion > 0) && (opcion <= contactosPendientes.size())) {
-				System.out.println(contactosPendientes.get(opcion - 1).getEmail());
+				crearTargeta(sc, contactosPendientes.get(opcion - 1));
+				contactosPendientes.remove(opcion - 1);
 				
 			} else if (opcion != 0) {
 				System.out.println("Seleccione un numero entre 0 y " + contactosPendientes.size());
@@ -145,6 +148,63 @@ class Usuario {
 			
 		} while (opcion != 0);
 		
+	}
+	
+	//crea una targeta de negocios o social, segun la eleccion por consola.
+	//cambia un contacto pendiente a local.
+	//resive el contacto a cambiar y el unico escaner como argumentos.
+	void crearTargeta(Scanner sc, ContactosPendientes contactoP) {
+		int opcion;
+		String titulo;
+		String cuerpo;
+		//crea el contacto local a partir de la informacion del contacto pendiente.
+		ContactosLocales contactoL = new ContactosLocales(contactoP.getNombre(), contactoP.getEmail(),
+				contactoP.getNombreCompleto());
+		System.out.print("Titulo: ");
+		titulo = sc.nextLine();
+		System.out.print("Cuerpo: ");
+		cuerpo = sc.nextLine();
+		System.out.println("Elige el tipo de mensaje:\n0 negocios\n1 Social");
+		opcion = sc.nextInt();
+		sc.nextLine();
+		do {
+			switch (opcion) {
+				case 0:
+					//crea y añade un mesaje de negocios al contacto recien creado
+					contactoL.getTargetasNegocios().add(new TargetaNegocios(titulo, cuerpo,
+							this.getContactoUsuario(), contactoP));
+					break;
+					
+				case 1:
+					//crea y añade un mesaje social al contacto recien creado
+					contactoL.getTargetasSociales().add(new TargetaSocial(titulo, cuerpo,
+							this.getContactoUsuario(), contactoP));
+					break;
+					
+				default:
+					System.out.println("Seleccione un numero entre 0 o 1");
+					break;
+			}
+		} while (opcion != 0 || opcion != 1);
+		//por ultimo guarda en contacto local
+		contactosLocales.add(contactoL);
+		
+	}
+	
+	//Muestra los chat con cada contacto local
+	//Cada chat se divide en targetas sociales y de negocios
+	void mostrarChats() {
+		for(ContactosLocales c: contactosLocales) {
+			System.out.println(c.getEmail());
+			System.out.println("Targetas de Negocios");
+			for (TargetaNegocios tn: c.getTargetasNegocios()) {
+				System.out.println(tn);
+			}
+			System.out.println("Targetas de Sociales");
+			for (TargetaSocial ts: c.getTargetasSociales()) {
+				System.out.println(ts);
+			}
+		}
 	}
 	
 	String getNombre() {

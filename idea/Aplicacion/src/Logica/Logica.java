@@ -29,4 +29,10 @@ public class Logica {
 	public void empezarChat(Scanner sc) {
 		usuario.empezarChat(sc);
 	}
+	
+	//Llama al metodo mostrar chats de usuario.
+	//Resive al unico escaner del programa como parametro.
+	public void mostrarChats() {
+		usuario.mostrarChats();
+	}
 }

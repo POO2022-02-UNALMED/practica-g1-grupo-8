@@ -13,7 +13,8 @@ public class Main {
 		int opcion;
 		do {
 			System.out.println("Programa");
-			System.out.println("Opcion:\n0 salir\n1 modificarPerfil\n2 agregarContacto\n3 empezarConversacion");
+			System.out.println("Opcion:\n0 salir\n1 modificarPerfil\n2 agregarContacto\n3 empezarConversacion"
+					+ "\n4 mostrarChats");
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
@@ -36,8 +37,12 @@ public class Main {
 					logica.empezarChat(sc);
 					break;
 					
+				case 4:
+					logica.mostrarChats();
+					break;
+					
 				default:
-					System.out.println("Seleccione un numero entre 0 y 3");
+					System.out.println("Seleccione un numero entre 0 y 4");
 					break;	
 			}
 			
