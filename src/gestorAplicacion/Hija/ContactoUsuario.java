@@ -1,7 +1,7 @@
 package gestorAplicacion.Hija;
 
 import java.util.ArrayList;
-import gestorAplicacion.padre.Contacto;
+import gestorAplicacion.Padre.*;
 
 //Contacto del Usuario guarda sus datos y sus notificaciones
 public class ContactoUsuario extends Contacto{

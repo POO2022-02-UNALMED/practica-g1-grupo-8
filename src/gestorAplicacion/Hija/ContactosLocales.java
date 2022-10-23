@@ -1,8 +1,8 @@
 package gestorAplicacion.Hija;
+import gestorAplicacion.Padre.*;
 
 import java.util.ArrayList;
-import gestorAplicacion.padre.Contacto;
-import gestorAplicacion.padre.Mensaje;
+
 
 //Los contactos locales son personas con las que ya se inicializo una convesacion
 class ContactosLocales extends Contacto{

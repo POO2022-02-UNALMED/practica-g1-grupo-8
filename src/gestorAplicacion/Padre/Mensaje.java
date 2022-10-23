@@ -1,4 +1,4 @@
-package gestorAplicacion.padre;
+package gestorAplicacion.Padre;
 
 public abstract class Mensaje implements FechaYHora {
 	String titulo;

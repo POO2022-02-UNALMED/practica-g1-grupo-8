@@ -1,4 +1,5 @@
 package gestorAplicacion.Hija;
+import gestorAplicacion.Padre.*;
 
 import java.util.ArrayList;
 import gestorAplicacion.padre.Mensaje;
