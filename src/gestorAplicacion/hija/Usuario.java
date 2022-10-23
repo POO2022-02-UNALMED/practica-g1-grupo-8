@@ -29,9 +29,9 @@ public class Usuario {
 
 	//TODO falta serializar
 	//Añade un nuevo contacto al array de contactos pendites
-	public void crearNuevoContacto(Scanner sc) {
+	public void crearNuevoContacto(String nombre, String email, String nombreCompleto) {
 		//Llama al metodo de clase crear contacto de pendientes que devuelve un contacto 
-		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc));
+		contactosPendientes.add(new ContactosPendientes(nombre, email, nombreCompleto));
 	}
 	
 	//TODO falta serializar

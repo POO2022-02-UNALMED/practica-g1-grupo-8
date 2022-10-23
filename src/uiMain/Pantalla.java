@@ -12,28 +12,28 @@ public class Pantalla {
 		int opcion;
 		do {
 			System.out.println("Programa");
-			System.out.println("Opcion:\n0 salir\n1 modificarPerfil\n2 agregarContacto\n3 empezarConversacion"
-					+ "\n4 mostrarChats\n5 seguirConversacion\n6 verNotificaciones");
+			System.out.println("Opciones:\n\t0 salir\n\t1 modificarPerfil\n\t2 agregarContacto"
+					+ "\n\t3 empezarConversacion\n\t4 mostrarChats\n\t5 seguirConversacion"
+					+ "\n\t6 verNotificaciones");
+			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
 			
 			switch (opcion) {
 				case 0:
-					System.out.println("Se cerro el programa");
+					System.out.println("Fin del programa");
 					break;
 					
 				case 1:
-					//TODO falta serializar
 					ccu.editarPerfil(sc);
 					break;
 					
-				/*case 2:
-					//TODO falta serializar
-					logica.crearNuevoContacto(sc);
+				case 2:
+					cu.crearNuevoContacto(sc);
 					break;
 					
-				case 3:
+				/*case 3:
 					//TODO falta serializar
 					logica.empezarChat(sc);
 					break;
@@ -45,15 +45,14 @@ public class Pantalla {
 				case 5:
 					//TODO falta serializar
 					logica.seguirChat(sc);
-					break;
-					
-				case 6:
-					//TODO falta serializar
-					logica.verNotificaciones(sc);
 					break;*/
 					
+				case 6:
+					ccu.verNotificaciones(sc);
+					break;
+					
 				default:
-					System.out.println("Seleccione un numero entre 0 y 6");
+					System.out.println("\tSeleccione un numero entre 0 y 6");
 					break;	
 			}
 			

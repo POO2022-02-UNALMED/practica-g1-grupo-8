@@ -1,6 +1,5 @@
 package gestorAplicacion.hija;
 
-import java.util.Scanner;
 import gestorAplicacion.padre.Contacto;
 
 //Los contactos pendientes son personas con las que no se a iniciado un conversacion.
@@ -21,22 +20,6 @@ class ContactosPendientes extends Contacto{
 	//FIXME
 	public String toString() {
 		return super.toString() + "\nContactosPendientes [mensajes=" + mensajes + "]";
-	}
-
-	//TODO falta serializar
-	//Permite al Usuario crear un contacto de este tipo por consola.
-	static ContactosPendientes crearContactoPendiente(Scanner sc) {
-		System.out.println("Crear Contacto");
-		System.out.print("Nombre: ");
-		String nombre = sc.nextLine();
-		System.out.print("Email: ");
-		String email = sc.next();
-		sc.nextLine();
-		System.out.print("Nombre completo: ");
-		String nombreCompleto = sc.nextLine();
-		ContactosPendientes contactoP = new ContactosPendientes(nombre, email, nombreCompleto);
-		System.out.println(contactoP);
-		return contactoP;
 	}
 
 	@Override

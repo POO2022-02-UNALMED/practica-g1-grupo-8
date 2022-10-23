@@ -6,8 +6,7 @@ import gestorAplicacion.hija.ContactoUsuario;
 public class ConexionContactoUsuario {
 	public static ContactoUsuario contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
 	
-	//TODO falta serializar
-	//Cambia los atributos del usuario, menos notificaciones y contactos
+	//Cambia los atributos del contacto de usuario, menos notificaciones
 	public void editarPerfil(Scanner sc) {
 		int opcion;
 		do {
@@ -64,12 +63,10 @@ public class ConexionContactoUsuario {
 					break;	
 			}
 		}while (opcion != 0);
-		//falta serializar
-			
+
 	}
-	
-	//TODO falta sereializar
-	//permite ver las notificaciones en el contacto de usurio, y crear nuevas
+
+	//permite ver las notificaciones del contacto de usurio, y crear nuevas
 	public void verNotificaciones(Scanner sc) {
 		int opcion;
 		String titulo;
@@ -100,6 +97,7 @@ public class ConexionContactoUsuario {
 					break;	
 			}
 		}while (opcion != 0);
+		
 	}
 
 }

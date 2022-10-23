@@ -1,7 +1,6 @@
 package gestorAplicacion.hija;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import gestorAplicacion.padre.Contacto;
 
 //Contacto del Usuario guarda sus datos y sus notificaciones
