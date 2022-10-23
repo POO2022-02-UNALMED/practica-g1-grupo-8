@@ -3,11 +3,14 @@ package gestorAplicacion.Padre;
 import java.time.LocalDateTime;
 
 public abstract class Tarjeta {
-	private final LocalDateTime fecha;
+	private LocalDateTime fecha;
 	private String titulo;
 	private String cuerpo;
 	private String emailA;
 	private String emailB;
+
+
+	protected Tarjeta() {}
 
 	protected Tarjeta (String emailA, String emailB) {
 		this.fecha = LocalDateTime.now();

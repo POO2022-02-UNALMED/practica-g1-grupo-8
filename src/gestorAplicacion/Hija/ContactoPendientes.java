@@ -4,8 +4,8 @@ import gestorAplicacion.Padre.ContactoTarjetas;
 
 public class ContactoPendientes extends ContactoTarjetas {
 	
-	public ContactoPendientes(Integer numeroid, Usuario usuario, String email, String nombrecompleto) {
-		super(numeroid,usuario,email,nombrecompleto);
+	public ContactoPendientes(Usuario usuario, String telefono, String nombreContacto) {
+		super(usuario, telefono, nombreContacto);
 	}
 	
 }

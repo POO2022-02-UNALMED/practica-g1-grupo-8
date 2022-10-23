@@ -3,39 +3,38 @@ package gestorAplicacion.Padre;
 import gestorAplicacion.Hija.Usuario;
 
 public class Contactos {
-	private Integer NumeroID;
+
+
 	private Usuario usuario;
-	private String email;
-	private String nombreCompleto;
-	
-	public Contactos(Integer numeroid, Usuario usuario, String email, String nombreCompleto) {
-		this.NumeroID=numeroid;
+	private String telefono;
+	private String nombreContacto;
+
+	public Contactos(Usuario usuario, String telefono, String nombreContacto) {
+		this.telefono = telefono;
+		this.nombreContacto = nombreContacto;
 		this.usuario=usuario;
-		this.email=email;
-		this.nombreCompleto=nombreCompleto;
 	}
-	public Integer getNumeroID() {
-		return this.NumeroID;
-	}
-	public void setNumeroID(Integer s) {
-		this.NumeroID=s;
-	}
+
 	public Usuario getUsuario() {
 		return usuario;
 	}
 	public void setUsuario(Usuario usuario) {
 		this.usuario=usuario;
-	} 
-	public String getEmail() {
-		return this.email;
 	}
-	public void setEmail(String email) {
-		this.email=email;
+
+	public String getTelefono() {
+		return telefono;
 	}
-	public String getNombreCompleto() {
-		return this.nombreCompleto;
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
-	public void setNombreCompleto(String nombrecompleto) {
-		this.nombreCompleto=nombrecompleto;
+
+	public String getNombreContacto() {
+		return nombreContacto;
+	}
+
+	public void setNombreContacto(String nombreContacto) {
+		this.nombreContacto = nombreContacto;
 	}
 }

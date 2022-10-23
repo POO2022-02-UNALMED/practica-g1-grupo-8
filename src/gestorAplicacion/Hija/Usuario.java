@@ -1,40 +1,68 @@
 package gestorAplicacion.Hija;
 
-import java.lang.reflect.Array;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Usuario {
+public class Usuario implements Serializable {
+    private Integer id;
     private String nombre;
     private String email;
     private String nombreCompleto;
-
-    private ArrayList<TargetaSocial> targetasSociales;
-
-    private ArrayList<TargetaNegocio> targetasNegocios;
-    private String logoNegocio;
-    private String descripcionNegocio;
-    private String terminosNegocio;
-    private Notificacion notificacion;
-    private ContactoUsuario contactoUsuario;
+    private TarjetaSocial tarjetaSocial;
+    private TarjetaNegocio tarjetaNegocio;
+    private ArrayList<Notificacion> notificaciones;
+    private ArrayList<ContactoUsuario> contactoUsuario;
     private ArrayList<ContactosLocales> contactosLocales;
     private ArrayList<ContactoPendientes> contactosPendientes;
 
-
     //Genera al usuario
-    Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
-            String terminosNegocio) {
+    public Usuario(
+            Integer id,
+            String nombre,
+            String email,
+            String nombreCompleto,
+            TarjetaSocial tarjetaSocial,
+            TarjetaNegocio tarjetaNegocio,
+            ArrayList<Notificacion> notificaciones,
+            ArrayList<ContactoUsuario> contactoUsuario,
+            ArrayList<ContactosLocales> contactosLocales,
+            ArrayList<ContactoPendientes> contactosPendientes
+
+    ) {
+        this.id =  id;
         this.nombre = nombre;
         this.email = email;
         this.nombreCompleto = nombreCompleto;
-        this.logoNegocio = logoNegocio;
-        this.descripcionNegocio = descripcionNegocio;
-        this.terminosNegocio = terminosNegocio;
-        //la siguite linea necesita modificacion
-        this.notificacion = new Notificacion();
-        //Crea su propio contacto
-        this.contactoUsuario = new ContactoUsuario(this);
-        this.contactosLocales = new ArrayList<ContactosLocales>();
-        this.contactosPendientes = new ArrayList<ContactoPendientes>();
+        this.tarjetaSocial = tarjetaSocial;
+        this.tarjetaNegocio = tarjetaNegocio;
+        this.notificaciones = notificaciones;
+        this.contactoUsuario = contactoUsuario;
+        this.contactosLocales = contactosLocales;
+        this.contactosPendientes = contactosPendientes;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public TarjetaSocial getTarjetaSocial() {
+        return tarjetaSocial;
+    }
+
+    public void setTarjetaSocial(TarjetaSocial tarjetaSocial) {
+        this.tarjetaSocial = tarjetaSocial;
+    }
+
+    public TarjetaNegocio getTarjetaNegocio() {
+        return tarjetaNegocio;
+    }
+
+    public void setTarjetaNegocio(TarjetaNegocio tarjetaNegocio) {
+        this.tarjetaNegocio = tarjetaNegocio;
     }
 
     public String getNombre() {
@@ -61,43 +89,19 @@ public class Usuario {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public String getLogoNegocio() {
-        return logoNegocio;
+    public ArrayList<Notificacion> getNotificaciones() {
+        return notificaciones;
     }
 
-    public void setLogoNegocio(String logoNegocio) {
-        this.logoNegocio = logoNegocio;
+    public void setNotificaciones(ArrayList<Notificacion> notificaciones) {
+        this.notificaciones = notificaciones;
     }
 
-    public String getDescripcionNegocio() {
-        return descripcionNegocio;
-    }
-
-    public void setDescripcionNegocio(String descripcionNegocio) {
-        this.descripcionNegocio = descripcionNegocio;
-    }
-
-    public String getTerminosNegocio() {
-        return terminosNegocio;
-    }
-
-    public void setTerminosNegocio(String terminosNegocio) {
-        this.terminosNegocio = terminosNegocio;
-    }
-
-    public Notificacion getNotificacion() {
-        return notificacion;
-    }
-
-    public void setNotificacion(Notificacion notificacion) {
-        this.notificacion = notificacion;
-    }
-
-    public ContactoUsuario getContactoUsuario() {
+    public ArrayList<ContactoUsuario> getContactoUsuario() {
         return contactoUsuario;
     }
 
-    public  void setContactoUsuario(ContactoUsuario contactoUsuario) {
+    public void setContactoUsuario(ArrayList<ContactoUsuario> contactoUsuario) {
         this.contactoUsuario = contactoUsuario;
     }
 

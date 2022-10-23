@@ -1,15 +1,24 @@
 package gestorAplicacion.Hija;
 
-public class TargetaSocial extends gestorAplicacion.Padre.Tarjeta {
+import gestorAplicacion.Padre.Tarjeta;
+
+import java.io.Serializable;
+
+public class TarjetaSocial extends Tarjeta implements Serializable {
     private String nombreA;
     private String nombreB;
 
-    public TargetaSocial(String emailA, String emailB, String titulo, String cuerpo, String nombreA, String nombreB){
+
+    public TarjetaSocial() {
+        super();
+    }
+
+    public TarjetaSocial(String emailA, String emailB, String titulo, String cuerpo, String nombreA, String nombreB){
         super(emailA, emailB, titulo, cuerpo);
         this.nombreA=nombreA;
         this.nombreB=nombreB;
     }
-    public TargetaSocial(String emailA, String emailB, String nombreA, String nombreB){
+    public TarjetaSocial(String emailA, String emailB, String nombreA, String nombreB){
         super(emailA,emailB);
     }
 

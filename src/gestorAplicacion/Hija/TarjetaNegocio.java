@@ -1,14 +1,21 @@
 package gestorAplicacion.Hija;
+
+import gestorAplicacion.Padre.Tarjeta;
+
+import java.io.Serializable;
+
 //La Targetas de negocios son mensajes formales, tienen logo, descripcion y terminos del negocio.
 //Ademas del nombre del emisor y receptor.
-public class TargetaNegocio extends gestorAplicacion.Padre.Tarjeta{
+public class TarjetaNegocio extends Tarjeta implements Serializable {
     private String logo;
     private String descripcion;
     private String terminos;
     private String nombreCompletoA;
     private String nombreCompletoB;
 
-    public TargetaNegocio(String emailA, String emailB, String titulo, String cuerpo, String logo, String descripcion, String terminos, String nombreCompletoA, String getNombreCompletoB){
+    public TarjetaNegocio() {}
+
+    public TarjetaNegocio(String emailA, String emailB, String titulo, String cuerpo, String logo, String descripcion, String terminos, String nombreCompletoA, String getNombreCompletoB){
         super(emailA, emailB, titulo, cuerpo);
         this.logo=logo;
         this.descripcion=descripcion;

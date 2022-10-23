@@ -1,27 +1,28 @@
 package gestorAplicacion.Padre;
 import java.util.ArrayList;
+
+import gestorAplicacion.Hija.TarjetaSocial;
 import gestorAplicacion.Hija.Usuario;
-import gestorAplicacion.Hija.TargetaSocial;
-import gestorAplicacion.Hija.TargetaNegocio;
+import gestorAplicacion.Hija.TarjetaNegocio;
 public abstract class ContactoTarjetas extends Contactos {
-	private ArrayList<TargetaSocial> TarjetasSociales;
-	private ArrayList<TargetaNegocio> TarjetasNegocios;
-	protected ContactoTarjetas(Integer numeroid,Usuario usuario,String email,String nombrecompleto) {
-		super(numeroid, usuario, email, nombrecompleto);
-		this.TarjetasNegocios=new ArrayList<TargetaNegocio>();
-		this.TarjetasSociales=new ArrayList<TargetaSocial>();
+	private ArrayList<TarjetaSocial> TarjetasSociales;
+	private ArrayList<TarjetaNegocio> TarjetasNegocios;
+	protected ContactoTarjetas(Usuario usuario, String telefono, String nombreContacto) {
+		super(usuario, telefono, nombreContacto);
+		this.TarjetasNegocios= new ArrayList<>();
+		this.TarjetasSociales= new ArrayList<>();
 	}
 	
-	public ArrayList<TargetaNegocio> getTarjetasNegocios() {
+	public ArrayList<TarjetaNegocio> getTarjetasNegocios() {
 		return this.TarjetasNegocios;
 	}
-	public void setTarjetasNegocios(ArrayList<TargetaNegocio> cambiar) {
+	public void setTarjetasNegocios(ArrayList<TarjetaNegocio> cambiar) {
 		this.TarjetasNegocios=cambiar;
 	}
-	public ArrayList<TargetaSocial> getTarjetasSociales() {
+	public ArrayList<TarjetaSocial> getTarjetasSociales() {
 		return this.TarjetasSociales;
 	}
-	public void setTarjetasSociales(ArrayList<TargetaSocial> cambiar) {
+	public void setTarjetasSociales(ArrayList<TarjetaSocial> cambiar) {
 		this.TarjetasSociales=cambiar;
 	}
 }
