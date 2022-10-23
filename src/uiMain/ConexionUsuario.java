@@ -1,5 +1,5 @@
 package uiMain;
-
+import gestorAplicacion.Hija.*;
 import java.util.Scanner;
 import gestorAplicacion.hija.Usuario;
 

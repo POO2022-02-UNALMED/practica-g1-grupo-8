@@ -1,4 +1,4 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.Hija;
 
 //Son los mensajes que el usuario se envia a si mismo
 class Notificacion {

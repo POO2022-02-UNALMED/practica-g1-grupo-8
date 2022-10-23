@@ -1,6 +1,6 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.Hija;
 
-import gestorAplicacion.padre.Mensaje;
+import gestorAplicacion.Padre.Mensaje;
 
 //Es un mensaje formal, tiene informacion sobre el negocio del usuario
 class MensajeNegocio extends Mensaje{

@@ -1,6 +1,6 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.Hija;
 
-import gestorAplicacion.padre.Contacto;
+import gestorAplicacion.Padre.Contacto;
 
 //Los contactos pendientes son personas con las que no se a iniciado un conversacion.
 class ContactosPendientes extends Contacto{

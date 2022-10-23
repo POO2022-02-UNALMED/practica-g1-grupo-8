@@ -1,4 +1,4 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.Hija;
 
 import java.util.ArrayList;
 import gestorAplicacion.padre.Mensaje;
