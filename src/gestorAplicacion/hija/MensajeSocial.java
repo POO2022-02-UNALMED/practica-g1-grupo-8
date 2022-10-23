@@ -16,14 +16,12 @@ class MensajeSocial extends Mensaje{
 	
 	//Crea mensajes por default
 	MensajeSocial( String nombreA, String nombreB) {
-		super("sin titulo", "sin cuerpo");
-		this.nombreA = nombreA;
-		this.nombreB = nombreB;
+		this("sin titulo", "sin cuerpo", nombreA, nombreB);
 	}
 	
 	@Override
 	public String toString() {
-		return "MensajeSocial [titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
+		return "MensajeSocial [fechaYHora=" + this.getFechaYHora() + ", titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
 		+ ", nombreA=" + nombreA + ", nombreB=" + nombreB + "]";
 	}
 
