@@ -4,7 +4,7 @@ import gestorAplicacion.Padre.*;
 import java.util.ArrayList;
 
 
-//Los contactos locales son personas con las que ya se inicializo una convesacion
+//Los contactos locales son personas con las que ya se inicio una convesacion
 class ContactosLocales extends Contacto{
 	private ArrayList<Mensaje> mensajes;
 

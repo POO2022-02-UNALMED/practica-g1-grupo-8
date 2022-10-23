@@ -13,9 +13,9 @@ public class Pantalla {
 		int opcion;
 		do {
 			System.out.println("Programa");
-			System.out.println("Opciones:\n\t0 salir\n\t1 modificarPerfil\n\t2 agregarContacto"
-					+ "\n\t3 empezarConversacion\n\t4 mostrarChats\n\t5 seguirConversacion"
-					+ "\n\t6 verNotificaciones");
+			System.out.println("Opciones:\n\t0. salir\n\t1. modificarPerfil\n\t2. agregarContacto"
+					+ "\n\t3. empezarConversacion\n\t4. mostrarChats\n\t5. seguirConversacion"
+					+ "\n\t6. verNotificaciones");
 			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
