@@ -1,13 +1,12 @@
 package baseDatos;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-
+import baseDatos.interfaces.*;
 import gestorAplicacion.Hija.Usuario;
+import java.io.*;
 
-public class CargarImpl {
+public class CargarImpl implements RepositorioCargar {
 	@Override
+	public void cargar() {
         try {
             FileInputStream fi = new FileInputStream("usuario");
             ObjectInputStream oi = new ObjectInputStream(fi);
@@ -19,5 +18,5 @@ public class CargarImpl {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }
+        }}
 }

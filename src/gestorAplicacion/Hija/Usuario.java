@@ -2,7 +2,6 @@ package gestorAplicacion.Hija;
 import gestorAplicacion.Padre.*;
 
 import java.util.ArrayList;
-import gestorAplicacion.padre.Mensaje;
 
 //Descrive al usuario del programa
 public class Usuario {
@@ -35,8 +34,7 @@ public class Usuario {
 	//vuele un contacto pendiente en local
 	public void volverContactoLocal(int indice) {
 		ContactosPendientes contactoP = contactosPendientes.remove(indice);
-		ContactosLocales contactoL = new ContactosLocales(contactoP.getNombre(), contactoP.getEmail(),
-				contactoP.getNombreCompleto());
+		ContactosLocales contactoL = new ContactosLocales(contactoP.getNombre(), contactoP.getEmail(),contactoP.getNombreCompleto());
 		contactosLocales.add(contactoL);
 	}
 	
