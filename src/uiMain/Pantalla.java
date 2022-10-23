@@ -2,10 +2,11 @@ package uiMain;
 
 import java.util.Scanner;
 
+//El main del programa
 public class Pantalla {
 
 	public static void main(String[] args) {
-		//Crea la conexion con el paquete Logica, atravez de una instacia de la clase Logica
+		//Crea la conexion con usuario y contacto de usuario
 		Scanner sc = new Scanner(System.in);
 		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
 		ConexionUsuario cu = new ConexionUsuario();
@@ -41,10 +42,9 @@ public class Pantalla {
 					cu.mostrarChats();
 					break;
 					
-				/*case 5:
-					//TODO falta serializar
-					logica.seguirChat(sc);
-					break;*/
+				case 5:
+					cu.seguirChat(sc);
+					break;
 					
 				case 6:
 					ccu.verNotificaciones(sc);

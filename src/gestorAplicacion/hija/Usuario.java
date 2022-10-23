@@ -18,58 +18,17 @@ public class Usuario {
 		this.contactosPendientes = new ArrayList<ContactosPendientes>();
 	}
 
-	//FIXME
 	@Override
 	public String toString() {
 		return "Usuario [contactoUsuario=" + contactoUsuario + ", contactosLocales=" + contactosLocales
 				+ ", contactosPendientes=" + contactosPendientes + "]";
 	}
 
-	//TODO falta serializar
 	//Añade un nuevo contacto al array de contactos pendites
 	public void crearNuevoContacto(String nombre, String email, String nombreCompleto) {
 		//Llama al metodo de clase crear contacto de pendientes que devuelve un contacto 
 		contactosPendientes.add(new ContactosPendientes(nombre, email, nombreCompleto));
 	}
-	
-	//TODO falta serializar
-	//Permite seleccionar un chat para seguir una conversacion
-	/*public void seguirChat(Scanner sc) {
-		int opcion;
-		ContactosLocales contactoL;
-		do {
-			System.out.println("Elige un contacto");
-			System.out.println("0 cancelar");
-			//Imprime todos los contactos locales con un indce al principio
-			for (int i = 0; i < contactosLocales.size(); i++) {
-				System.out.println((i+1) + " " + contactosLocales.get(i).toString());
-			}
-			opcion = sc.nextInt();
-			sc.nextLine();
-			
-			//Revisa si se selecciono un contacto y se realiza en cambio.
-			if ((opcion > 0) && (opcion <= contactosLocales.size())) {
-				contactoL = contactosLocales.get(opcion - 1);
-				System.out.println("email: " + contactoL.getEmail());
-				System.out.println("Mensajes");
-				for (Mensaje m: contactoL.getMensajes()) {
-					System.out.println(m);
-				}
-					
-				contactoL.getMensajes().add(crearMensaje(sc, contactoL.getNombre(),
-						contactoL.getNombreCompleto()));
-				
-			} else if (opcion != 0) {
-				System.out.println("Seleccione un numero entre 0 y " + contactosLocales.size());
-				
-			} else {
-				System.out.println("Termino seguir chat");
-				
-			}
-			
-		} while (opcion != 0);
-		
-	}*/
 	
 	//Depende del metodo empezarChat para optener el indice del contacto
 	//vuele un contacto pendiente en local
@@ -98,6 +57,22 @@ public class Usuario {
 		);
 	}
 	
+	//le agrega un mensaje de negocios al contacto local recien creado
+	public void anadirMensajeNegocio(int i, String titulo, String cuerpo) {
+		contactosLocales.get(i).getMensajes().add(
+			new MensajeNegocio(titulo, cuerpo, contactoUsuario.getLogoNegocio(),
+					contactoUsuario.getDescripcionNegocio(), contactoUsuario.getTerminosNegocio(),
+					contactoUsuario.getNombreCompleto(), contactosLocales.get(i).getNombreCompleto())
+		);
+	}
+	
+	//le agrega un mensaje social al contacto local recien creado
+	public void anadirMensajeSocial(int i, String titulo, String cuerpo) {
+		contactosLocales.get(i).getMensajes().add(
+				new MensajeSocial(titulo, cuerpo, contactoUsuario.getNombre(), contactosLocales.get(i).getNombre())
+		);
+	}
+	
 	//Muestra los chat con cada contacto local
 	//Cada chat se divide en targetas sociales y de negocios
 	public String mostrarChats() {
@@ -107,16 +82,19 @@ public class Usuario {
 			texto += "Mensajes: " + "\n";
 			for (Mensaje m: c.getMensajes()) {
 				texto += m + "\n";
-			}
-			
+			}	
 		}
-		
-		return texto;
-		
+		return texto;	
 	}
 	
+	//Devuelve en contacto pendiente en la pocision i
 	public Object getContactoPendiente(int i) {
 		return contactosPendientes.get(i);
+	}
+	
+	//Devuelve en contacto local en la pocision i
+	public Object getContactoLocal(int i) {
+		return contactosLocales.get(i);
 	}
 
 	public ContactoUsuario getContactoUsuario() {

@@ -20,7 +20,7 @@ public class ContactoUsuario extends Contacto{
 		this.notificaciones = new ArrayList<Notificacion>();
 	}
 	
-	//agraga una nueva notificacion al Contacto de Usuario
+	//agrega una nueva notificacion al Contacto de Usuario
 	public void anadirNotificaciones(String titulo, String cuerpo) {
 		notificaciones.add(new Notificacion(titulo, cuerpo));
 	}

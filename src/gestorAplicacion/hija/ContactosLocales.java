@@ -8,7 +8,7 @@ import gestorAplicacion.padre.Mensaje;
 class ContactosLocales extends Contacto{
 	private ArrayList<Mensaje> mensajes;
 
-	//Genera los contactos locales con los mensajes sociales y de negocios
+	//Genera los contactos locales con la capacidad de resiver mensajes
 	ContactosLocales(String nombre, String email, String nombreCompleto) {
 		super(nombre, email, nombreCompleto);
 		mensajes = new ArrayList<Mensaje>();

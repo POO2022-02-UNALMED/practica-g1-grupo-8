@@ -66,7 +66,7 @@ public class ConexionContactoUsuario {
 
 	}
 
-	//permite ver las notificaciones del contacto de usurio, y crear nuevas
+	//permite ver las notificaciones del contacto de usurio y crear nuevas
 	public void verNotificaciones(Scanner sc) {
 		int opcion;
 		String titulo;
