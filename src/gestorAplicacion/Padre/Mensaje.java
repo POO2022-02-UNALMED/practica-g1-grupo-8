@@ -1,6 +1,6 @@
 package gestorAplicacion.Padre;
 
-public abstract class Mensaje implements FechaYHora {
+public abstract class Mensaje {
 	String titulo;
 	String cuerpo;
 		
