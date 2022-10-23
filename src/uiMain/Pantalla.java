@@ -1,13 +1,14 @@
 package uiMain;
 
 import java.util.Scanner;
-import gestorAplicacion.hija.Usuario;
 
 public class Pantalla {
 
 	public static void main(String[] args) {
 		//Crea la conexion con el paquete Logica, atravez de una instacia de la clase Logica
 		Scanner sc = new Scanner(System.in);
+		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
+		ConexionUsuario cu = new ConexionUsuario();
 		int opcion;
 		do {
 			System.out.println("Programa");
@@ -24,10 +25,10 @@ public class Pantalla {
 					
 				case 1:
 					//TODO falta serializar
-					logica.editarPerfil(sc);
+					ccu.editarPerfil(sc);
 					break;
 					
-				case 2:
+				/*case 2:
 					//TODO falta serializar
 					logica.crearNuevoContacto(sc);
 					break;
@@ -49,7 +50,7 @@ public class Pantalla {
 				case 6:
 					//TODO falta serializar
 					logica.verNotificaciones(sc);
-					break;
+					break;*/
 					
 				default:
 					System.out.println("Seleccione un numero entre 0 y 6");

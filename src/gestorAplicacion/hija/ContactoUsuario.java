@@ -2,18 +2,17 @@ package gestorAplicacion.hija;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import gestorAplicacion.padre.Contacto;
 
-//Contacto del Usuario, contiene los mensajes enviados a si mismo
-class ContactoUsuario extends Contacto{
+//Contacto del Usuario guarda sus datos y sus notificaciones
+public class ContactoUsuario extends Contacto{
 	private String logoNegocio;
 	private String descripcionNegocio;
 	private String terminosNegocio;
 	private ArrayList<Notificacion> notificaciones;
 	
-	//Al momento de ser el creado contacto de Usuario toma los atributos del Usuario 
-	ContactoUsuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
+	//Guarda la informacion del Usuario
+	public ContactoUsuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
 			String terminosNegocio) {
 		super(nombre, email, nombreCompleto);
 		this.logoNegocio = logoNegocio;
@@ -22,100 +21,9 @@ class ContactoUsuario extends Contacto{
 		this.notificaciones = new ArrayList<Notificacion>();
 	}
 	
-	//TODO falta serializar
-	//Cambia los atributos del usuario, menos notificaciones y contactos
-	void editarPerfil(Scanner sc) {
-		int opcion;
-		do {
-			System.out.println(this);
-			System.out.println("Cambiar:\n0 Cancela\n1 nombre\n2 email\n3 nombreCompleto\n4 logoNegocio\n5 descripcionNegocio"
-					+ "\n6 terminosNegocio");
-			opcion = sc.nextInt();
-			sc.nextLine();
-				
-			switch (opcion) {
-				case 0:
-					System.out.println("Termino modificacion de Perfil");
-					break;
-					
-				case 1:
-					System.out.println("Nombre actual: " + getNombre());
-					System.out.print("Nuevo nombre: ");
-					setNombre(sc.nextLine());
-					break;
-					
-				case 2:
-					System.out.println("Email actual: " + getEmail());
-					System.out.print("Nuevo Email: ");
-					setEmail(sc.next());
-					sc.nextLine();
-					break;
-						
-				case 3:
-					System.out.println("Nombre completo actual: " + getNombreCompleto());
-					System.out.print("Nuevo nombre completo: ");
-					setNombreCompleto(sc.nextLine());
-					break;
-						
-				case 4:
-					System.out.println("Logo de negocio actual: " + getLogoNegocio());
-					System.out.print("Nuevo logo de negocio: ");
-					setLogoNegocio(sc.nextLine());
-					break;
-						
-				case 5:
-					System.out.println("Descripcion de negocio actual: " + getDescripcionNegocio());
-					System.out.print("Nueva descripcion de negocio: ");
-					setDescripcionNegocio(sc.nextLine());
-					break;
-						
-				case 6:
-					System.out.println("Terminos de negocio actual: " + getTerminosNegocio());
-					System.out.print("Nuevo terminos de negocio: ");
-					setTerminosNegocio(sc.nextLine());
-					break;
-						
-				default:
-					System.out.println("Seleccione un numero entre 0 y 6");
-					break;	
-			}
-		}while (opcion != 0);
-		//falta serializar
-			
-	}
-	
-	//TODO falta sereializar
-	//permite ver las notificaciones en el contacto de usurio, y crear nuevas
-	void verNotificaciones(Scanner sc) {
-		int opcion;
-		String titulo;
-		String cuerpo;
-		do {
-			System.out.println("Notificaciones: ");
-			for(Notificacion n: notificaciones) {
-				System.out.println(n);
-			}
-			System.out.println("Crear una nueva:\n0 no\n1 si");
-			opcion = sc.nextInt();
-			sc.nextLine();
-				
-			switch (opcion) {
-				case 0:
-					System.out.println("Termino modificacion de Perfil");
-					break;
-					
-				case 1:
-					System.out.print("titulo: ");
-					titulo = sc.nextLine();
-					System.out.print("cuerpo: ");
-					cuerpo = sc.nextLine();
-					notificaciones.add(new Notificacion(titulo, cuerpo));
-						
-				default:
-					System.out.println("Seleccione un numero entre 0 o 1");
-					break;	
-			}
-		}while (opcion != 0);
+	//agraga una nueva notificacion al Contacto de Usuario
+	public void anadirNotificaciones(String titulo, String cuerpo) {
+		notificaciones.add(new Notificacion(titulo, cuerpo));
 	}
 	
 	//FIXME
@@ -125,65 +33,65 @@ class ContactoUsuario extends Contacto{
 				+ descripcionNegocio + ", terminosNegocio=" + terminosNegocio + "]";
 	}
 
-	String getLogoNegocio() {
+	public String getLogoNegocio() {
 		return logoNegocio;
 	}
 
-	void setLogoNegocio(String logoNegocio) {
+	public void setLogoNegocio(String logoNegocio) {
 		this.logoNegocio = logoNegocio;
 	}
 
-	String getDescripcionNegocio() {
+	public String getDescripcionNegocio() {
 		return descripcionNegocio;
 	}
 
-	void setDescripcionNegocio(String descripcionNegocio) {
+	public void setDescripcionNegocio(String descripcionNegocio) {
 		this.descripcionNegocio = descripcionNegocio;
 	}
 
-	String getTerminosNegocio() {
+	public String getTerminosNegocio() {
 		return terminosNegocio;
 	}
 
-	void setTerminosNegocio(String terminosNegocio) {
+	public void setTerminosNegocio(String terminosNegocio) {
 		this.terminosNegocio = terminosNegocio;
 	}
 
-	ArrayList<Notificacion> getNotificaciones() {
+	public ArrayList<Notificacion> getNotificaciones() {
 		return notificaciones;
 	}
 
-	void setNotificaciones(ArrayList<Notificacion> notificaciones) {
+	public void setNotificaciones(ArrayList<Notificacion> notificaciones) {
 		this.notificaciones = notificaciones;
 	}
 
 	@Override
-	protected String getNombre() {
+	public String getNombre() {
 		return super.getNombre();
 	}
 
 	@Override
-	protected void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		super.setNombre(nombre);
 	}
 
 	@Override
-	protected String getEmail() {
+	public String getEmail() {
 		return super.getEmail();
 	}
 
 	@Override
-	protected void setEmail(String email) {
+	public void setEmail(String email) {
 		super.setEmail(email);
 	}
 
 	@Override
-	protected String getNombreCompleto() {
+	public String getNombreCompleto() {
 		return super.getNombreCompleto();
 	}
 
 	@Override
-	protected void setNombreCompleto(String nombreCompleto) {
+	public void setNombreCompleto(String nombreCompleto) {
 		super.setNombreCompleto(nombreCompleto);
 	}
 	

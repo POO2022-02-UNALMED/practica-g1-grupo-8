@@ -1,56 +1,62 @@
 package uiMain;
 
 import java.util.Scanner;
-import gestorAplicacion.hija.Usuario;
+import gestorAplicacion.hija.ContactoUsuario;
 
 public class ConexionContactoUsuario {
-	public static Usuario usuario = ConexionUsuario.usuario;
+	public static ContactoUsuario contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
 	
-		//TODO falta serializar
-		//Cambia los atributos del usuario, menos notificaciones y contactos
-		void editarPerfil(Scanner sc) {
+	//TODO falta serializar
+	//Cambia los atributos del usuario, menos notificaciones y contactos
+	public void editarPerfil(Scanner sc) {
 		int opcion;
-		String respuesta;
 		do {
-			System.out.println(usuario.getContactoUsuario());
+			System.out.println(contactoUsuario);
 			System.out.println("Cambiar:\n0 Cancela\n1 nombre\n2 email\n3 nombreCompleto\n4 logoNegocio\n5 descripcionNegocio"
 					+ "\n6 terminosNegocio");
 			opcion = sc.nextInt();
 			sc.nextLine();
-			
+				
 			switch (opcion) {
 				case 0:
 					System.out.println("Termino modificacion de Perfil");
 					break;
 					
 				case 1:
+					System.out.println("Nombre actual: " + contactoUsuario.getNombre());
 					System.out.print("Nuevo nombre: ");
-					respuesta = sc.nextLine();
+					contactoUsuario.setNombre(sc.nextLine());
 					break;
 					
 				case 2:
+					System.out.println("Email actual: " + contactoUsuario.getEmail());
 					System.out.print("Nuevo Email: ");
-					respuesta = sc.next();
+					contactoUsuario.setEmail(sc.next());
 					sc.nextLine();
 					break;
 						
 				case 3:
-					respuesta = sc.nextLine();
+					System.out.println("Nombre completo actual: " + contactoUsuario.getNombreCompleto());
+					System.out.print("Nuevo nombre completo: ");
+					contactoUsuario.setNombreCompleto(sc.nextLine());
 					break;
-							
+						
 				case 4:
+					System.out.println("Logo de negocio actual: " + contactoUsuario.getLogoNegocio());
 					System.out.print("Nuevo logo de negocio: ");
-					respuesta = sc.nextLine();
+					contactoUsuario.setLogoNegocio(sc.nextLine());
 					break;
 						
 				case 5:
+					System.out.println("Descripcion de negocio actual: " + contactoUsuario.getDescripcionNegocio());
 					System.out.print("Nueva descripcion de negocio: ");
-					respuesta = sc.nextLine();
+					contactoUsuario.setDescripcionNegocio(sc.nextLine());
 					break;
 						
 				case 6:
+					System.out.println("Terminos de negocio actual: " + contactoUsuario.getTerminosNegocio());
 					System.out.print("Nuevo terminos de negocio: ");
-					respuesta = sc.nextLine();
+					contactoUsuario.setTerminosNegocio(sc.nextLine());
 					break;
 						
 				default:
@@ -61,4 +67,39 @@ public class ConexionContactoUsuario {
 		//falta serializar
 			
 	}
+	
+	//TODO falta sereializar
+	//permite ver las notificaciones en el contacto de usurio, y crear nuevas
+	public void verNotificaciones(Scanner sc) {
+		int opcion;
+		String titulo;
+		String cuerpo;
+		do {
+			System.out.println("Notificaciones: ");
+			for(Object n: contactoUsuario.getNotificaciones()) {
+				System.out.println(n);
+			}
+			System.out.println("Crear una nueva:\n0 no\n1 si");
+			opcion = sc.nextInt();
+			sc.nextLine();
+				
+			switch (opcion) {
+				case 0:
+					System.out.println("Termino modificacion de Perfil");
+					break;
+					
+				case 1:
+					System.out.print("titulo: ");
+					titulo = sc.nextLine();
+					System.out.print("cuerpo: ");
+					cuerpo = sc.nextLine();
+					contactoUsuario.anadirNotificaciones(titulo, cuerpo);
+						
+				default:
+					System.out.println("Seleccione un numero entre 0 o 1");
+					break;	
+			}
+		}while (opcion != 0);
+	}
+
 }
