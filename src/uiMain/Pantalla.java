@@ -33,16 +33,15 @@ public class Pantalla {
 					cu.crearNuevoContacto(sc);
 					break;
 					
-				/*case 3:
-					//TODO falta serializar
-					logica.empezarChat(sc);
+				case 3:
+					cu.empezarChat(sc);
 					break;
 					
 				case 4:
-					logica.mostrarChats();
+					cu.mostrarChats();
 					break;
 					
-				case 5:
+				/*case 5:
 					//TODO falta serializar
 					logica.seguirChat(sc);
 					break;*/
