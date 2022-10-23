@@ -1,4 +1,6 @@
-package Logica;
+package gestorAplicacion.hija;
+
+import gestorAplicacion.padre.Mensaje;
 
 class MensajeSocial extends Mensaje{
 	private String nombreA;

@@ -1,16 +1,18 @@
-package Logica;
+package gestorAplicacion.hija;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import gestorAplicacion.padre.Mensaje;
+
 //Descrive al usuario del programa
-class Usuario {
+public class Usuario {
 	private ContactoUsuario contactoUsuario;
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;
 
 	//Genera al Usuario y crea su ContactoUsuario
-	Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
+	public Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
 			String terminosNegocio) {
 		this.contactoUsuario = new ContactoUsuario(nombre, email, nombreCompleto, logoNegocio, descripcionNegocio,
 				terminosNegocio);
@@ -27,14 +29,14 @@ class Usuario {
 
 	//TODO falta serializar
 	//Añade un nuevo contacto al array de contactos pendites
-	void crearNuevoContacto(Scanner sc) {
+	public void crearNuevoContacto(Scanner sc) {
 		//Llama al metodo de clase crear contacto de pendientes que devuelve un contacto 
 		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc));
 	}
 	
 	//TODO falta serializar
 	//Permite seleccionar un contacto para iniciar una conversacion.
-	void empezarChat(Scanner sc) {
+	public void empezarChat(Scanner sc) {
 		int opcion;
 		ContactosLocales contactoL;
 		do {
@@ -68,7 +70,7 @@ class Usuario {
 	
 	//TODO falta serializar
 	//Permite seleccionar un chat para seguir una conversacion
-	void seguirChat(Scanner sc) {
+	public void seguirChat(Scanner sc) {
 		int opcion;
 		ContactosLocales contactoL;
 		do {
@@ -107,7 +109,7 @@ class Usuario {
 	
 	//Depende del metodo empezarChat para optener el indice del contacto
 	//vuele un contacto pendiente en local
-	ContactosLocales volverContactoLocal(int indice) {
+	public ContactosLocales volverContactoLocal(int indice) {
 		ContactosPendientes contactoP = contactosPendientes.remove(indice);
 		ContactosLocales contactoL = new ContactosLocales(contactoP.getNombre(), contactoP.getEmail(),
 				contactoP.getNombreCompleto());
@@ -116,7 +118,7 @@ class Usuario {
 	
 	//TODO falta serializar
 	//Crea un mensaje social o local, segun la decision del usuario
-	Mensaje crearMensaje(Scanner sc, String nombre, String nombreCompleto) {
+	public Mensaje crearMensaje(Scanner sc, String nombre, String nombreCompleto) {
 		int opcion;
 		String titulo;
 		String cuerpo;
@@ -153,7 +155,7 @@ class Usuario {
 	//FIXME
 	//Muestra los chat con cada contacto local
 	//Cada chat se divide en targetas sociales y de negocios
-	void mostrarChats() {
+	public void mostrarChats() {
 		for(ContactosLocales c: contactosLocales) {
 			System.out.println("email: " + c.getEmail());
 			System.out.println("Mensajes");
@@ -165,27 +167,27 @@ class Usuario {
 		
 	}
 
-	ContactoUsuario getContactoUsuario() {
+	public ContactoUsuario getContactoUsuario() {
 		return contactoUsuario;
 	}
 
-	void setContactoUsuario(ContactoUsuario contactoUsuario) {
+	public void setContactoUsuario(ContactoUsuario contactoUsuario) {
 		this.contactoUsuario = contactoUsuario;
 	}
 
-	ArrayList<ContactosLocales> getContactosLocales() {
+	public ArrayList<ContactosLocales> getContactosLocales() {
 		return contactosLocales;
 	}
 
-	void setContactosLocales(ArrayList<ContactosLocales> contactosLocales) {
+	public void setContactosLocales(ArrayList<ContactosLocales> contactosLocales) {
 		this.contactosLocales = contactosLocales;
 	}
 
-	ArrayList<ContactosPendientes> getContactosPendientes() {
+	public ArrayList<ContactosPendientes> getContactosPendientes() {
 		return contactosPendientes;
 	}
 
-	void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
+	public void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
 		this.contactosPendientes = contactosPendientes;
 	}
 		

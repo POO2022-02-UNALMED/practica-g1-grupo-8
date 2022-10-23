@@ -1,4 +1,4 @@
-package Logica;
+package gestorAplicacion.hija;
 
 class Notificacion {
 	String titulo;

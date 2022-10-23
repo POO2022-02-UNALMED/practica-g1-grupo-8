@@ -1,4 +1,6 @@
-package Logica;
+package gestorAplicacion.hija;
+
+import gestorAplicacion.padre.Mensaje;
 
 class MensajeNegocio extends Mensaje{
 	private String logo;

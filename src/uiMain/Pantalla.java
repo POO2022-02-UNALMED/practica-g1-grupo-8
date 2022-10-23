@@ -1,13 +1,12 @@
-package Intefaz;
+package uiMain;
 
 import java.util.Scanner;
-import Logica.Logica;
+import gestorAplicacion.hija.Usuario;
 
-public class Main {
+public class Pantalla {
 
 	public static void main(String[] args) {
 		//Crea la conexion con el paquete Logica, atravez de una instacia de la clase Logica
-		Logica logica = new Logica();
 		Scanner sc = new Scanner(System.in);
 		int opcion;
 		do {

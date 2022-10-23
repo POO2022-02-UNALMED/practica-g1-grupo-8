@@ -1,6 +1,7 @@
-package Logica;
+package gestorAplicacion.hija;
 
 import java.util.Scanner;
+import gestorAplicacion.padre.Contacto;
 
 //Los contactos pendientes son personas con las que no se a iniciado un conversacion.
 class ContactosPendientes extends Contacto{
@@ -37,4 +38,35 @@ class ContactosPendientes extends Contacto{
 		System.out.println(contactoP);
 		return contactoP;
 	}
+
+	@Override
+	protected String getNombre() {
+		return super.getNombre();
+	}
+
+	@Override
+	protected void setNombre(String nombre) {
+		super.setNombre(nombre);
+	}
+
+	@Override
+	protected String getEmail() {
+		return super.getEmail();
+	}
+
+	@Override
+	protected void setEmail(String email) {
+		super.setEmail(email);
+	}
+
+	@Override
+	protected String getNombreCompleto() {
+		return super.getNombreCompleto();
+	}
+
+	@Override
+	protected void setNombreCompleto(String nombreCompleto) {
+		super.setNombreCompleto(nombreCompleto);
+	}
+	
 }

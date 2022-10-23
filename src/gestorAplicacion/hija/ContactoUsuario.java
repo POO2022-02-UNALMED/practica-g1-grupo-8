@@ -1,7 +1,9 @@
-package Logica;
+package gestorAplicacion.hija;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import gestorAplicacion.padre.Contacto;
 
 //Contacto del Usuario, contiene los mensajes enviados a si mismo
 class ContactoUsuario extends Contacto{
@@ -153,6 +155,36 @@ class ContactoUsuario extends Contacto{
 
 	void setNotificaciones(ArrayList<Notificacion> notificaciones) {
 		this.notificaciones = notificaciones;
+	}
+
+	@Override
+	protected String getNombre() {
+		return super.getNombre();
+	}
+
+	@Override
+	protected void setNombre(String nombre) {
+		super.setNombre(nombre);
+	}
+
+	@Override
+	protected String getEmail() {
+		return super.getEmail();
+	}
+
+	@Override
+	protected void setEmail(String email) {
+		super.setEmail(email);
+	}
+
+	@Override
+	protected String getNombreCompleto() {
+		return super.getNombreCompleto();
+	}
+
+	@Override
+	protected void setNombreCompleto(String nombreCompleto) {
+		super.setNombreCompleto(nombreCompleto);
 	}
 	
 }
