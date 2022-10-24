@@ -81,7 +81,7 @@ public class ConexionContactoUsuario {
 				
 			switch (opcion) {
 				case 0:
-					System.out.println("Termino modificacion de Perfil");
+					System.out.println("Termino  modificacion de Perfil");
 					break;
 					
 				case 1:
