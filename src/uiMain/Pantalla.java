@@ -2,16 +2,13 @@ package uiMain;
 
 import java.util.Scanner;
 
-import baseDatos.Deserializador;
-import baseDatos.Serializador;
 import gestorAplicacion.inferior.Usuario;
 
 //El main del programa
 public class Pantalla {
 
 	public static void main(String[] args) {
-		//ConexionUsuario.usuario = new Usuario();
-		//Crea la conexion con usuario y contacto de usuario
+		ConexionContactoUsuario.cargarContactoUsuario();
 		Scanner sc = new Scanner(System.in);
 		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
 		ConexionUsuario cu = new ConexionUsuario();
@@ -61,7 +58,7 @@ public class Pantalla {
 			}
 			
 		}while (opcion != 0);
-		Serializador.serializar(ConexionUsuario.usuario.getContactoUsuario());
+		ConexionContactoUsuario.guardarContactoUsuario();
 		sc.close();
 	}
 }
