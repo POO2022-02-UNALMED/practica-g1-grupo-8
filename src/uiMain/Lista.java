@@ -34,33 +34,36 @@ public static Usuario crearUsuario(Scanner sc) {
 	int desicion = sc.nextInt();
 	if(desicion==0) {
 	System.out.println("Crear Usuario");
-	System.out.print("Nombre: ");
+	System.out.println("Nombre: ");
 	String nombre = sc.nextLine();
-	System.out.print("Email: ");
-	String email = sc.next();
-	sc.nextLine();
-	System.out.print("Nombre completo: ");
+	System.out.println("Email: ");
+	String email = sc.nextLine();
+	System.out.println("Nombre completo: ");
 	String nombreCompleto = sc.nextLine();
-	System.out.print("Logo Negocio: ");
+	System.out.println("Logo Negocio: ");
 	String logoNegocio = sc.nextLine();
-	System.out.print("Descripcion de Negocio: ");
+	System.out.println("Descripcion de Negocio: ");
 	String descripcionNegocio = sc.nextLine();
-	System.out.print("Terminos Negocio");
+	System.out.println("Terminos Negocio");
 	String terminosnegocio = sc.nextLine();
 	return new Usuario(nombre,email,nombreCompleto,logoNegocio,descripcionNegocio,terminosnegocio);}
 	else {
 		System.out.println("Crear Usuario");
-		System.out.print("Nombre: ");
+		System.out.println("Nombre: ");
 		String nombre = sc.nextLine();
-		System.out.print("Email: ");
-		String email = sc.next();
-		sc.nextLine();
+		System.out.println("Email: ");
+		String email = sc.nextLine();
 		System.out.print("Nombre completo: ");
 		String nombreCompleto = sc.nextLine();
 		return new Usuario(nombre,email,nombreCompleto);
 	}
 }
 public static Usuario cual(Scanner sc,ListaUsuario f) {
+	if(f.getListaUsuario().size()==0) {
+		return Lista.crearUsuario(sc);
+	}
+	
+	else {
 	System.out.println("Escoge un usuario");
 	System.out.println("0 Crear un nuevo usuario");
 	f.toString();
@@ -70,7 +73,7 @@ public static Usuario cual(Scanner sc,ListaUsuario f) {
 		return Lista.cual(sc,f);
 	}
 	else{
-		return f.usuario(usuaario);}
+		return f.usuario(usuaario);}}
 }
 }
 
