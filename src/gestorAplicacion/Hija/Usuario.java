@@ -6,6 +6,7 @@ import java.util.ArrayList;
 //Descrive al usuario del programa
 public class Usuario {
 	private ContactoUsuario contactoUsuario;
+	private TarjetaNegocio tarjetaNegocio;
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;
 
@@ -14,13 +15,13 @@ public class Usuario {
 			String terminosNegocio) {
 		this.contactoUsuario = new ContactoUsuario(nombre, email, nombreCompleto, logoNegocio, descripcionNegocio,
 				terminosNegocio);
-		this.contactosLocales = new ArrayList<ContactosLocales>();
-		this.contactosPendientes = new ArrayList<ContactosPendientes>();
+		this.contactosLocales = new ArrayList<>();
+		this.contactosPendientes = new ArrayList<>();
 	}
 	public Usuario(String nombre, String email, String nombreCompleto) {
 		this.contactoUsuario = new ContactoUsuario(nombre, email, nombreCompleto);
-		this.contactosLocales = new ArrayList<ContactosLocales>();
-		this.contactosPendientes = new ArrayList<ContactosPendientes>();
+		this.contactosLocales = new ArrayList<>();
+		this.contactosPendientes = new ArrayList<>();
 	}
 	
 	@Override
@@ -126,5 +127,12 @@ public class Usuario {
 	public void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
 		this.contactosPendientes = contactosPendientes;
 	}
-		
+
+	public TarjetaNegocio getTarjetaNegocio() {
+		return tarjetaNegocio;
+	}
+
+	public void anadirTarjetaNegocio(TarjetaNegocio tarjetaNegocio) {
+		this.tarjetaNegocio = tarjetaNegocio;
+	}
 }

@@ -7,7 +7,7 @@ public class ListaUsuario implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private static ArrayList<Usuario> ListaUsuario= new ArrayList<Usuario>();
+	private static ArrayList<Usuario> ListaUsuario= new ArrayList<>();
 
 	public ArrayList<Usuario> getListaUsuario() {
 		return ListaUsuario;

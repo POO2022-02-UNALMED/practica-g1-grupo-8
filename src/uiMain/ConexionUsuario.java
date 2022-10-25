@@ -151,5 +151,20 @@ public class ConexionUsuario {
 		} while (opcion != 0 && opcion != 1);
 		
 	}
+
+	public void crearTarjetaNegocio(Scanner sc){
+		System.out.println("Nombre negocio");
+		String nombreNegocio = sc.nextLine();
+		System.out.println("Descripcion negocio:");
+		String descripcionNegocio = sc.nextLine();
+		System.out.println("Telefono negocio");
+		String telefonoNegocio = sc.nextLine();
+		System.out.println("Direccion negocio");
+		String direccionNegocio = sc.nextLine();
+		sc.nextLine();
+
+		TarjetaNegocio tarjetaNegocio = new TarjetaNegocio(nombreNegocio, descripcionNegocio, telefonoNegocio, direccionNegocio);
+		usuario.anadirTarjetaNegocio(tarjetaNegocio);
+	}
 }
 

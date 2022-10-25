@@ -12,7 +12,7 @@ public class Pantalla {
 		Scanner sc = new Scanner(System.in);
 		GuardarImpl guardar=new GuardarImpl();
 		CargarImpl cargar=new CargarImpl();
-		ListaUsuario f= Lista.inicializar();
+		ListaUsuario f = Lista.inicializar();
 		System.out.println("Programa");
 		if (Lista.iniciar()==true) {
 			Lista.cual(sc, f);
@@ -22,7 +22,7 @@ public class Pantalla {
 			f=null;
 			System.out.println("No tienes un usuario");
 			System.out.println("crea uno");
-			ListaUsuario f1=new ListaUsuario();
+			ListaUsuario f1 =new ListaUsuario();
 			Lista.crearUsuario(sc,f1);
 			Lista.cual(sc, f1);
 		}
@@ -30,9 +30,9 @@ public class Pantalla {
 		ConexionUsuario cu = new ConexionUsuario();
 		int opcion;
 		do {
-			System.out.println("Opciones:\n\t0. salir\n\t1. modificarPerfil\n\t2. agregarContacto"
-					+ "\n\t3. empezarConversacion\n\t4. mostrarChats\n\t5. seguirConversacion"
-					+ "\n\t6. verNotificaciones");
+			System.out.println("Opciones:\n\t0. Salir\n\t1. Modificar perfil\n\t2. Agregar Contacto"
+					+ "\n\t3. Empezar conversacion\n\t4. Mostrar chats\n\t5. Seguir conversacion"
+					+ "\n\t6. Ver notificaciones \n\t7. Crear tarjeta negocio");
 			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
@@ -66,9 +66,14 @@ public class Pantalla {
 				case 6:
 					ccu.verNotificaciones(sc);
 					break;
-					
+
+				case 8: cu.crearTarjetaNegocio(sc);
+					break;
+
+
+
 				default:
-					System.out.println("\tSeleccione un numero entre 0 y 6");
+					System.out.println("\tSeleccione un numero entre 0 y 7");
 					break;	
 			}
 			
