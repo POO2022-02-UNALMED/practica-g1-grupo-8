@@ -10,7 +10,8 @@ public class GuardarImpl implements RepositorioGuardar<Usuario> {
     @Override
     public void crear(Usuario objeto) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("usuario");
+            FileOutputStream fileOutputStream;
+            fileOutputStream= new FileOutputStream("\\baseDatos\\temp\\usuario");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(objeto);
 

@@ -1,5 +1,6 @@
 package baseDatos.interfaces;
+import gestorAplicacion.Hija.*;
 
 public interface RepositorioCargar {
-    void cargar();
+    Usuario cargar();
 }

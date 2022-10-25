@@ -6,17 +6,22 @@ import java.io.*;
 
 public class CargarImpl implements RepositorioCargar {
 	@Override
-	public void cargar() {
+	public Usuario cargar() {
         try {
-            FileInputStream fi = new FileInputStream("usuario");
+            FileInputStream fi;
+            fi= new FileInputStream("\\baseDatos\\temp\\usuario");
             ObjectInputStream oi = new ObjectInputStream(fi);
 
             Usuario usuario = (Usuario) oi.readObject();
             //devolver el valor
+            fi.close();
+            oi.close();
+            return usuario;
 
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }}
+        }
+		return null;}
 }
