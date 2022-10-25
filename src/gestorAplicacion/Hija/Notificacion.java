@@ -1,7 +1,9 @@
 package gestorAplicacion.Hija;
 
+import java.io.Serializable;
+
 //Son los mensajes que el usuario se envia a si mismo
-class Notificacion {
+public class Notificacion implements Serializable {
 	String titulo;
 	String cuerpo;
 	
@@ -12,28 +14,21 @@ class Notificacion {
 		this.cuerpo = cuerpo;
 	}
 	
-	//FIXME
 	@Override
 	public String toString() {
-		return "Notificacion [titulo=" + titulo + ", cuerpo=" + cuerpo + "]";
+		return "Notificacion [titulo=" + getTitulo() + ", cuerpo=" + getCuerpo() + "]";
 	}
 
 
 
-	String getTitulo() {
+	public String getTitulo() {
 		return titulo;
 	}
 
-	void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	String getCuerpo() {
+	public String getCuerpo() {
 		return cuerpo;
 	}
 
-	void setCuerpo(String cuerpo) {
-		this.cuerpo = cuerpo;
-	}
+
 		
 }

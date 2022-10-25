@@ -3,23 +3,18 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ListaUsuario implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private static ArrayList<Usuario> ListaUsuario= new ArrayList<>();
+
+
+	private ArrayList<Usuario> ListaUsuario= new ArrayList<>();
 
 	public ArrayList<Usuario> getListaUsuario() {
 		return ListaUsuario;
-	}
-
-	public void setListaUsuario(ArrayList<Usuario> listaUsuario) {
-		ListaUsuario = listaUsuario;
 	}
 	
 	public void añadirUsuario(Usuario usuario) {
 		ListaUsuario.add(usuario);
 	}
+
 	public String toString() {
 		String p="";
 		for(int i=0;i<ListaUsuario.size();i++){

@@ -28,7 +28,7 @@ public class ContactoUsuario extends Contacto{
 		this.descripcionNegocio="";
 		this.logoNegocio="";
 		this.terminosNegocio="";
-		this.notificaciones = new ArrayList<Notificacion>();
+		this.notificaciones = new ArrayList<>();
 	}
 	
 	//agrega una nueva notificacion al Contacto de Usuario
@@ -74,10 +74,6 @@ public class ContactoUsuario extends Contacto{
 
 	public ArrayList<Notificacion> getNotificaciones() {
 		return notificaciones;
-	}
-
-	public void setNotificaciones(ArrayList<Notificacion> notificaciones) {
-		this.notificaciones = notificaciones;
 	}
 
 	@Override

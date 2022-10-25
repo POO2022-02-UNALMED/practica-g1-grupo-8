@@ -3,9 +3,12 @@ import gestorAplicacion.Hija.*;
 import java.util.Scanner;
 
 public class ConexionContactoUsuario {
-	public static ContactoUsuario contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
-	public int i;
-	
+	public ContactoUsuario contactoUsuario;
+
+	public ConexionContactoUsuario(ContactoUsuario contactoUsuario){
+		this.contactoUsuario = contactoUsuario;
+	}
+
 	//Cambia los atributos del contacto de usuario, menos notificaciones
 	public void editarPerfil(Scanner sc) {
 		int opcion;
