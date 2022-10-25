@@ -11,7 +11,8 @@ public class Lista {
 	static boolean elementos=true;
 	public static ListaUsuario inicializar() {
 	CargarImpl p=new CargarImpl();
-	if (p.cargar()==null) {
+	ListaUsuario l=p.cargar();
+	if (l.getListaUsuario().size()==0) {
 		GuardarImpl sf=new GuardarImpl();
 		ListaUsuario mm=new ListaUsuario();
 		sf.crear(mm);
