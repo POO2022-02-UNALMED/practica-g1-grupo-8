@@ -21,7 +21,7 @@ public class ListaUsuario implements Serializable {
 			p="\n"+(i+1)+"Nombre"+ListaUsuario.get(i).getContactoUsuario().getNombre();
 	}
 	return p;}
-	public Usuario usuario(int i) {
+	public static Usuario usuario(int i) {
 		return ListaUsuario.get(i);
 	}
 
