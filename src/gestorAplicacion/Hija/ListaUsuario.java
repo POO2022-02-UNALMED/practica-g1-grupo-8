@@ -9,15 +9,15 @@ public class ListaUsuario implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private static ArrayList<Usuario> ListaUsuario= new ArrayList<>();
 
-	public ArrayList<Usuario> getListaUsuario() {
+	public static ArrayList<Usuario> getListaUsuario() {
 		return ListaUsuario;
 	}
 
-	public void setListaUsuario(ArrayList<Usuario> listaUsuario) {
+	public static void setListaUsuario(ArrayList<Usuario> listaUsuario) {
 		ListaUsuario = listaUsuario;
 	}
 	
-	public void añadirUsuario(Usuario usuario) {
+	public static void añadirUsuario(Usuario usuario) {
 		ListaUsuario.add(usuario);
 	}
 	public String toString() {
@@ -26,7 +26,7 @@ public class ListaUsuario implements Serializable {
 			p="\n"+(i+1)+"Nombre"+ListaUsuario.get(i).getContactoUsuario().getNombre();
 	}
 	return p;}
-	public Usuario usuario(int i) {
+	public static Usuario usuario(int i) {
 		return ListaUsuario.get(i);
 	}
 
