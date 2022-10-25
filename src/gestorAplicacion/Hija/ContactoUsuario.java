@@ -19,6 +19,13 @@ public class ContactoUsuario extends Contacto{
 		this.terminosNegocio = terminosNegocio;
 		this.notificaciones = new ArrayList<Notificacion>();
 	}
+	public ContactoUsuario(String nombre, String email, String nombreCompleto) {
+		super(nombre, email, nombreCompleto);
+		this.descripcionNegocio="";
+		this.logoNegocio="";
+		this.terminosNegocio="";
+		this.notificaciones = new ArrayList<Notificacion>();
+	}
 	
 	//agrega una nueva notificacion al Contacto de Usuario
 	public void anadirNotificaciones(String titulo, String cuerpo) {
@@ -28,8 +35,13 @@ public class ContactoUsuario extends Contacto{
 	//FIXME
 	@Override
 	public String toString() {
-		return super.toString() + "\nContactoUsuario [logoNegocio=" + logoNegocio + ", descripcionNegocio=" 
+		if(!logoNegocio.equals("")) {
+			return super.toString() + "\nContactoUsuario [logoNegocio=" + logoNegocio + ", descripcionNegocio=" 
 				+ descripcionNegocio + ", terminosNegocio=" + terminosNegocio + "]";
+		}
+		else {
+			return super.toString();
+		}
 	}
 
 	public String getLogoNegocio() {

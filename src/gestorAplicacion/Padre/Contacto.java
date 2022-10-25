@@ -1,10 +1,12 @@
 package gestorAplicacion.Padre;
+import gestorAplicacion.Hija.*;
 
 //Todos los contactos tienen nombre, email y nombre completo
 public abstract class Contacto {
 	private String nombre;
 	private String email;
 	private String nombreCompleto;
+	private Usuario usuario;
 
 	//Cada contacto debe tener nombre, email y nombre completo 
 	protected Contacto(String nombre, String email, String nombreCompleto) {
@@ -41,6 +43,17 @@ public abstract class Contacto {
 
 	protected void setNombreCompleto(String nombreCompleto) {
 		this.nombreCompleto = nombreCompleto;
+	}
+	public void enlazarUsuario(Usuario usuario) {
+		this.setUsuario(usuario);
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 }

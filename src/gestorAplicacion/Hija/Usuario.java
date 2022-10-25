@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 //Descrive al usuario del programa
 public class Usuario {
+	private static Usuario
 	private ContactoUsuario contactoUsuario;
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;
@@ -17,7 +18,12 @@ public class Usuario {
 		this.contactosLocales = new ArrayList<ContactosLocales>();
 		this.contactosPendientes = new ArrayList<ContactosPendientes>();
 	}
-
+	public Usuario(String nombre, String email, String nombreCompleto) {
+		this.contactoUsuario = new ContactoUsuario(nombre, email, nombreCompleto);
+		this.contactosLocales = new ArrayList<ContactosLocales>();
+		this.contactosPendientes = new ArrayList<ContactosPendientes>();
+	}
+	
 	@Override
 	public String toString() {
 		return "Usuario [contactoUsuario=" + contactoUsuario + ", contactosLocales=" + contactosLocales
@@ -26,8 +32,10 @@ public class Usuario {
 
 	//Añade un nuevo contacto al array de contactos pendites
 	public void crearNuevoContacto(String nombre, String email, String nombreCompleto) {
+		new Usuario(nombre,email,nombreCompleto);
 		//Llama al metodo de clase crear contacto de pendientes que devuelve un contacto 
 		contactosPendientes.add(new ContactosPendientes(nombre, email, nombreCompleto));
+		
 	}
 	
 	//Depende del metodo empezarChat para optener el indice del contacto
