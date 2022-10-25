@@ -5,6 +5,10 @@ import gestorAplicacion.Padre.*;
 
 //Contacto del Usuario guarda sus datos y sus notificaciones
 public class ContactoUsuario extends Contacto{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String logoNegocio;
 	private String descripcionNegocio;
 	private String terminosNegocio;

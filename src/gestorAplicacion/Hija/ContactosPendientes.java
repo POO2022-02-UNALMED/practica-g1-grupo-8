@@ -4,6 +4,10 @@ import gestorAplicacion.Padre.Contacto;
 
 //Los contactos pendientes son personas con las que no se a iniciado un conversacion.
 class ContactosPendientes extends Contacto{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private final String mensajes;
 
 	//Crea el contacto sin mensajes

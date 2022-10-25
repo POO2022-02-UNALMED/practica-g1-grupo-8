@@ -4,6 +4,10 @@ import gestorAplicacion.Padre.*;
 
 //Son mensajes informales
 class MensajeSocial extends Mensaje{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String nombreA;
 	private String nombreB;
 	

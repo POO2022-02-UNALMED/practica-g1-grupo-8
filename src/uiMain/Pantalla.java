@@ -12,8 +12,17 @@ public class Pantalla {
 		Scanner sc = new Scanner(System.in);
 		ListaUsuario f= Lista.inicializar();
 		System.out.println("Programa");
-		System.out.println("Escoge un usuario");
-		f.toString();
+		if (Lista.iniciar()) {
+			Lista.cual(sc, f);
+		}
+			
+		else{
+			System.out.println("No tienes un usuario");
+			System.out.println("crea uno");
+			f.añadirUsuario(Lista.crearUsuario(sc));
+		}
+		
+		
 		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
 		ConexionUsuario cu = new ConexionUsuario();
 		int opcion;

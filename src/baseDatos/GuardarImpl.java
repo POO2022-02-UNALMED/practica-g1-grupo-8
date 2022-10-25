@@ -6,17 +6,19 @@ import gestorAplicacion.Hija.*;
 import java.io.*;
 
 public class GuardarImpl implements RepositorioGuardar<Usuario> {
-
+	static File archivo =new File("");
     @Override
     public void crear(ListaUsuario objeto) {
+    	
         try {
             FileOutputStream fileOutputStream;
-            fileOutputStream= new FileOutputStream("\\baseDatos\\temp\\listausuario");
+            fileOutputStream= new FileOutputStream(new File(archivo.getAbsolutePath()+"src\\baseDatos\\temp\\listausuario"));
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(objeto);
 
-            fileOutputStream.close();
+            
             objectOutputStream.close();
+            fileOutputStream.close();
 
         } catch (IOException e) {
             e.printStackTrace();

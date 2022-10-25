@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 //Los contactos locales son personas con las que ya se inicio una convesacion
 class ContactosLocales extends Contacto{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ArrayList<Mensaje> mensajes;
 
 	//Genera los contactos locales con la capacidad de recibir mensajes

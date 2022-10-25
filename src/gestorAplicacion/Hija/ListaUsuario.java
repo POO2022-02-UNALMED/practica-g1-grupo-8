@@ -1,7 +1,12 @@
 package gestorAplicacion.Hija;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ListaUsuario {
+public class ListaUsuario implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static ArrayList<Usuario> ListaUsuario= new ArrayList<Usuario>();
 
 	public ArrayList<Usuario> getListaUsuario() {

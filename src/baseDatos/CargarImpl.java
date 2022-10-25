@@ -9,7 +9,7 @@ public class CargarImpl implements RepositorioCargar {
 	public ListaUsuario cargar() {
         try {
             FileInputStream fi;
-            fi= new FileInputStream("\\baseDatos\\temp\\listausuario");
+            fi= new FileInputStream("src\\baseDatos\\temp\\listausuario");
             ObjectInputStream oi = new ObjectInputStream(fi);
 
             ListaUsuario usuario = (ListaUsuario) oi.readObject();

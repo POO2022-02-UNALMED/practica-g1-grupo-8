@@ -1,8 +1,14 @@
 package gestorAplicacion.Padre;
+import java.io.Serializable;
+
 import gestorAplicacion.Hija.*;
 
 //Todos los contactos tienen nombre, email y nombre completo
-public abstract class Contacto {
+public abstract class Contacto implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private String email;
 	private String nombreCompleto;
