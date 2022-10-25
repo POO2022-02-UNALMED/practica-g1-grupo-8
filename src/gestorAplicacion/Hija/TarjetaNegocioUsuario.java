@@ -1,12 +1,12 @@
 package gestorAplicacion.Hija;
 
-public class TarjetaNegocio {
+public class TarjetaNegocioUsuario {
     private String nombreNegocio;
     private String descripcionNegocio;
     private String telefonoNegocio;
     private String direccionNegocio;
 
-    public TarjetaNegocio(String nombreNegocio, String descripcionNegocio, String telefonoNegocio, String direccionNegocio){
+    public TarjetaNegocioUsuario(String nombreNegocio, String descripcionNegocio, String telefonoNegocio, String direccionNegocio){
         this.nombreNegocio = nombreNegocio;
         this.descripcionNegocio = descripcionNegocio;
         this.telefonoNegocio = telefonoNegocio;

@@ -6,7 +6,7 @@ class Notificacion {
 	String cuerpo;
 	
 	//La Notificacion tiene titulo y cuepo
-	Notificacion(String titulo, String cuerpo) {
+	public Notificacion(String titulo, String cuerpo) {
 		super();
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;

@@ -3,11 +3,24 @@ package uiMain;
 import java.util.Scanner;
 
 import baseDatos.*;
+import baseDatos.interfaces.RepositorioCargar;
 import gestorAplicacion.Hija.*;
 //El main del programa
 public class Pantalla {
 
 	public static void main(String[] args) {
+
+		//cargar base de datos
+		RepositorioCargar repositorioCargar = new CargarImpl();
+		ListaUsuario listaUsuario = repositorioCargar.cargar();
+
+		if(listaUsuario != null && !listaUsuario.getListaUsuario().isEmpty()){
+			System.out.println("Usuarios: " + listaUsuario.getListaUsuario().size());
+			//existen usuarios
+		} else {
+			//crear usuarios
+		}
+/*
 		//Crea la conexion con usuario y contacto de usuario
 		Scanner sc = new Scanner(System.in);
 		GuardarImpl guardar=new GuardarImpl();
@@ -79,6 +92,7 @@ public class Pantalla {
 			
 		}while (opcion != 0);
 		sc.close();
+		*/
 	}
 	
 }

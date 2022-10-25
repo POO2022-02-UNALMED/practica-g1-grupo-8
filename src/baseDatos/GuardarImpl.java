@@ -5,7 +5,7 @@ import gestorAplicacion.Hija.*;
 
 import java.io.*;
 
-public class GuardarImpl implements RepositorioGuardar<Usuario> {
+public class GuardarImpl implements RepositorioGuardar {
 	static File archivo =new File("");
     @Override
     public void crear(ListaUsuario objeto) {

@@ -1,11 +1,13 @@
 package gestorAplicacion.Hija;
-import gestorAplicacion.Padre.*;
+
+import gestorAplicacion.Padre.Contacto;
+import gestorAplicacion.Padre.Mensaje;
 
 import java.util.ArrayList;
 
 
 //Los contactos locales son personas con las que ya se inicio una convesacion
-class ContactosLocales extends Contacto{
+class ContactosLocales extends Contacto {
 	/**
 	 * 
 	 */
@@ -15,7 +17,7 @@ class ContactosLocales extends Contacto{
 	//Genera los contactos locales con la capacidad de recibir mensajes
 	ContactosLocales(String nombre, String email, String nombreCompleto) {
 		super(nombre, email, nombreCompleto);
-		mensajes = new ArrayList<Mensaje>();
+		mensajes = new ArrayList<>();
 	}
 
 	ArrayList<Mensaje> getMensajes() {

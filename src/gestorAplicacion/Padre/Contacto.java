@@ -15,7 +15,7 @@ public abstract class Contacto implements Serializable {
 	private Usuario usuario;
 
 	//Cada contacto debe tener nombre, email y nombre completo 
-	protected Contacto(String nombre, String email, String nombreCompleto) {
+	public Contacto(String nombre, String email, String nombreCompleto) {
 		this.nombre = nombre;
 		this.email = email;
 		this.nombreCompleto = nombreCompleto;

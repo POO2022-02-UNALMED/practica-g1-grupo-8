@@ -6,7 +6,7 @@ import java.util.ArrayList;
 //Descrive al usuario del programa
 public class Usuario {
 	private ContactoUsuario contactoUsuario;
-	private TarjetaNegocio tarjetaNegocio;
+	private TarjetaNegocioUsuario tarjetaNegocioUsuario;
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;
 
@@ -128,11 +128,11 @@ public class Usuario {
 		this.contactosPendientes = contactosPendientes;
 	}
 
-	public TarjetaNegocio getTarjetaNegocio() {
-		return tarjetaNegocio;
+	public TarjetaNegocioUsuario getTarjetaNegocio() {
+		return tarjetaNegocioUsuario;
 	}
 
-	public void anadirTarjetaNegocio(TarjetaNegocio tarjetaNegocio) {
-		this.tarjetaNegocio = tarjetaNegocio;
+	public void anadirTarjetaNegocio(TarjetaNegocioUsuario tarjetaNegocioUsuario) {
+		this.tarjetaNegocioUsuario = tarjetaNegocioUsuario;
 	}
 }

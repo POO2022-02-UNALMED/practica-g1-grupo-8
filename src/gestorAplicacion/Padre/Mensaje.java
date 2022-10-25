@@ -10,7 +10,7 @@ public abstract class Mensaje implements Serializable {
 	String titulo;
 	String cuerpo;
 		
-	protected Mensaje(String titulo, String cuerpo) {
+	public Mensaje(String titulo, String cuerpo) {
 		super();
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;

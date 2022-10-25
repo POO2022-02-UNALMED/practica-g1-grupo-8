@@ -163,8 +163,8 @@ public class ConexionUsuario {
 		String direccionNegocio = sc.nextLine();
 		sc.nextLine();
 
-		TarjetaNegocio tarjetaNegocio = new TarjetaNegocio(nombreNegocio, descripcionNegocio, telefonoNegocio, direccionNegocio);
-		usuario.anadirTarjetaNegocio(tarjetaNegocio);
+		TarjetaNegocioUsuario tarjetaNegocioUsuario = new TarjetaNegocioUsuario(nombreNegocio, descripcionNegocio, telefonoNegocio, direccionNegocio);
+		usuario.anadirTarjetaNegocio(tarjetaNegocioUsuario);
 	}
 }
 
