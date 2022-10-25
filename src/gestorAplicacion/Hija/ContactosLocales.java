@@ -8,7 +8,7 @@ import java.util.ArrayList;
 class ContactosLocales extends Contacto{
 	private ArrayList<Mensaje> mensajes;
 
-	//Genera los contactos locales con la capacidad de resiver mensajes
+	//Genera los contactos locales con la capacidad de recibir mensajes
 	ContactosLocales(String nombre, String email, String nombreCompleto) {
 		super(nombre, email, nombreCompleto);
 		mensajes = new ArrayList<Mensaje>();
