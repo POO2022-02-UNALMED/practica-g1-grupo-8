@@ -25,6 +25,5 @@ public class CargarImpl implements RepositorioCargar {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println("dd");
-		return null;}
+       return null; }
 }
