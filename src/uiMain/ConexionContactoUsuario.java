@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ConexionContactoUsuario {
 	public static ContactoUsuario contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
+	public int i;
 	
 	//Cambia los atributos del contacto de usuario, menos notificaciones
 	public void editarPerfil(Scanner sc) {

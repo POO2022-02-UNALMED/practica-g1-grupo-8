@@ -2,17 +2,22 @@ package uiMain;
 
 import java.util.Scanner;
 
+import baseDatos.*;
+import gestorAplicacion.Hija.*;
 //El main del programa
 public class Pantalla {
 
 	public static void main(String[] args) {
 		//Crea la conexion con usuario y contacto de usuario
 		Scanner sc = new Scanner(System.in);
+		ListaUsuario f= Lista.inicializar();
+		System.out.println("Programa");
+		System.out.println("Escoge un usuario");
+		f.toString();
 		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
 		ConexionUsuario cu = new ConexionUsuario();
 		int opcion;
 		do {
-			System.out.println("Programa");
 			System.out.println("Opciones:\n\t0. salir\n\t1. modificarPerfil\n\t2. agregarContacto"
 					+ "\n\t3. empezarConversacion\n\t4. mostrarChats\n\t5. seguirConversacion"
 					+ "\n\t6. verNotificaciones");
@@ -58,4 +63,5 @@ public class Pantalla {
 		}while (opcion != 0);
 		sc.close();
 	}
+	
 }
