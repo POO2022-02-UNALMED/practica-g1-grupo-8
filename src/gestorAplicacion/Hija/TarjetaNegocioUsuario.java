@@ -1,6 +1,8 @@
 package gestorAplicacion.Hija;
 
-public class TarjetaNegocioUsuario {
+import java.io.Serializable;
+
+public class TarjetaNegocioUsuario implements Serializable  {
     private String nombreNegocio;
     private String descripcionNegocio;
     private String telefonoNegocio;
@@ -43,5 +45,15 @@ public class TarjetaNegocioUsuario {
 
     public void setDireccionNegocio(String direccionNegocio) {
         this.direccionNegocio = direccionNegocio;
+    }
+
+    @Override
+    public String toString() {
+        return "TarjetaNegocioUsuario{ \n" +
+                "nombreNegocio='" + getNombreNegocio() + '\'' +
+                ", descripcionNegocio='" + getDescripcionNegocio() + '\'' +
+                ", telefonoNegocio='" + getTelefonoNegocio() + '\'' +
+                ", direccionNegocio='" + getDescripcionNegocio() + '\'' +
+                '}';
     }
 }

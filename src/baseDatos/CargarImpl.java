@@ -8,22 +8,19 @@ public class CargarImpl implements RepositorioCargar {
 
 	@Override
 	public ListaUsuario cargar() {
-        /*try {
-            FileInputStream fi;
-            fi= new FileInputStream(new File("")+"/src/baseDatos/temp/listausuario");
+        try {
+            FileInputStream fi = new FileInputStream("temp/listausuario");
             ObjectInputStream oi = new ObjectInputStream(fi);
 
             ListaUsuario usuario = (ListaUsuario) oi.readObject();
-            //devolver el valor
             fi.close();
             oi.close();
-            System.out.println("cargado");
             return usuario;
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Archivo no encontrado. Debes crear uno nuevo.");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } */
+            System.out.println("Archivo no encontrado. Debes crear uno nuevo.");
+        }
        return null; }
 }

@@ -1,6 +1,6 @@
 package baseDatos.interfaces;
 import gestorAplicacion.Hija.*;
 public interface RepositorioGuardar{
-	   void crear(ListaUsuario T);
+	   void crear(ListaUsuario usuario);
 
 }

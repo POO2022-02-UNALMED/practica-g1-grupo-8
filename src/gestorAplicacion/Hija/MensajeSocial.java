@@ -18,31 +18,18 @@ class MensajeSocial extends Mensaje{
 		this.nombreB = nombreB;
 	}
 	
-	//Crea mensajes por default
-	MensajeSocial( String nombreA, String nombreB) {
-		this("sin titulo", "sin cuerpo", nombreA, nombreB);
-	}
-	
 	@Override
 	public String toString() {
 		return "MensajeSocial [titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
-		+ ", nombreA=" + nombreA + ", nombreB=" + nombreB + "]";
+		+ ", nombreA=" + getNombreA() + ", nombreB=" + getNombreB() + "]";
 	}
 
 	String getNombreA() {
 		return nombreA;
 	}
 
-	void setNombreA(String nombreA) {
-		this.nombreA = nombreA;
-	}
-
 	String getNombreB() {
 		return nombreB;
 	}
 
-	void setNombreB(String nombreB) {
-		this.nombreB = nombreB;
-	}
-	
 }

@@ -1,15 +1,15 @@
 package gestorAplicacion.Hija;
 import gestorAplicacion.Padre.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 //Descrive al usuario del programa
-public class Usuario {
+public class Usuario implements Serializable {
 	private ContactoUsuario contactoUsuario;
 	private TarjetaNegocioUsuario tarjetaNegocioUsuario;
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;
-
 	//Genera al Usuario y crea su ContactoUsuario
 	public Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
 			String terminosNegocio) {
@@ -22,12 +22,6 @@ public class Usuario {
 		this.contactoUsuario = new ContactoUsuario(nombre, email, nombreCompleto);
 		this.contactosLocales = new ArrayList<>();
 		this.contactosPendientes = new ArrayList<>();
-	}
-	
-	@Override
-	public String toString() {
-		return "Usuario [contactoUsuario=" + contactoUsuario + ", contactosLocales=" + contactosLocales
-				+ ", contactosPendientes=" + contactosPendientes + "]";
 	}
 
 	//Añade un nuevo contacto al array de contactos pendites
@@ -134,5 +128,15 @@ public class Usuario {
 
 	public void anadirTarjetaNegocio(TarjetaNegocioUsuario tarjetaNegocioUsuario) {
 		this.tarjetaNegocioUsuario = tarjetaNegocioUsuario;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario{" +
+				"contactoUsuario=" + getContactoUsuario() +
+				", tarjetaNegocioUsuario=" + getTarjetaNegocio().toString() +
+				", contactosLocales=" + getContactosLocales() +
+				", contactosPendientes=" + getContactosPendientes() +
+				'}';
 	}
 }

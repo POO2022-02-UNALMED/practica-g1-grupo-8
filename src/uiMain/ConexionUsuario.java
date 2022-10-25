@@ -4,10 +4,13 @@ import java.util.Scanner;
 
 
 public class ConexionUsuario {
-	public Usuario usuario;
-	 ConexionUsuario(Usuario usuario){
-		 this.usuario=usuario;
-	 };
+
+	private Usuario usuario;
+
+	public ConexionUsuario(Usuario usuario){
+		this.usuario = usuario;
+	}
+
 	//Permite al Usuario crear un contacto de este tipo por consola.
 	public void crearNuevoContacto(Scanner sc) {
 		System.out.println(usuario.getContactosPendientes());
@@ -162,10 +165,43 @@ public class ConexionUsuario {
 		String telefonoNegocio = sc.nextLine();
 		System.out.println("Direccion negocio");
 		String direccionNegocio = sc.nextLine();
-		sc.nextLine();
 
 		TarjetaNegocioUsuario tarjetaNegocioUsuario = new TarjetaNegocioUsuario(nombreNegocio, descripcionNegocio, telefonoNegocio, direccionNegocio);
 		usuario.anadirTarjetaNegocio(tarjetaNegocioUsuario);
+	}
+
+	public void imprimirTarjetaNegocio(){
+		if(this.usuario.getTarjetaNegocio() != null && this.usuario.getTarjetaNegocio().toString() != null){
+			System.out.println(this.usuario.getTarjetaNegocio().toString());
+			return;
+		}
+		System.out.println("No tienes ninguna tarjeta de negocio");
+	}
+
+	public void crearNotificacion(Scanner sc, ListaUsuario usuario){
+		System.out.println("Titulo: ");
+		String titulo = sc.nextLine();
+		System.out.println("Cuerpo: ");
+		String cuerpo = sc.nextLine();
+		if(!usuario.getListaUsuario().isEmpty()){
+			usuario.usuario(0).getContactoUsuario().anadirNotificaciones(titulo, cuerpo);
+		} else {
+			System.out.println("Debes crear un usuario para poder crear notificaciones");
+		}
+	}
+
+	public void listarMensajesDeUsuarios(ListaUsuario usuario){
+		if(!usuario.getListaUsuario().isEmpty()){
+			usuario.usuario(0).getContactoUsuario().getNotificaciones().forEach(notificacion -> {
+					System.out.println(notificacion.toString());
+			});
+		} else {
+			System.out.println("Debes crear un usuario para poder crear notificaciones");
+		}
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
 	}
 }
 
