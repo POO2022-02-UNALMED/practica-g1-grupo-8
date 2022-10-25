@@ -11,8 +11,8 @@ public class Lista {
 	static boolean elementos=true;
 	public static ListaUsuario inicializar() {
 	CargarImpl p=new CargarImpl();
-	GuardarImpl sf=new GuardarImpl();
 	if (p.cargar()==null) {
+		GuardarImpl sf=new GuardarImpl();
 		ListaUsuario mm=new ListaUsuario();
 		sf.crear(mm);
 		CargarImpl f=new CargarImpl();
@@ -64,7 +64,9 @@ public static void crearUsuario(Scanner sc,ListaUsuario f) {
 public static Usuario cual(Scanner sc,ListaUsuario f) {
 	if(f.getListaUsuario().size()==0) {
 		Lista.crearUsuario(sc, f);
-		return Lista.cual(sc,f);
+		CargarImpl p=new CargarImpl();
+		ListaUsuario f1=p.cargar();
+		return Lista.cual(sc,f1);
 	}
 	
 	else {

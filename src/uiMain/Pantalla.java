@@ -19,11 +19,12 @@ public class Pantalla {
 		}
 			
 		else{
+			f=null;
 			System.out.println("No tienes un usuario");
 			System.out.println("crea uno");
-			ListaUsuario f=new ListaUsuario();
-			Lista.crearUsuario(sc,f);
-			Lista.cual(sc, f);
+			ListaUsuario f1=new ListaUsuario();
+			Lista.crearUsuario(sc,f1);
+			Lista.cual(sc, f1);
 		}
 		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
 		ConexionUsuario cu = new ConexionUsuario();

@@ -19,6 +19,7 @@ public class GuardarImpl implements RepositorioGuardar<Usuario> {
             
             objectOutputStream.close();
             fileOutputStream.close();
+            System.out.println("guardar");
 
         } catch (IOException e) {
             e.printStackTrace();

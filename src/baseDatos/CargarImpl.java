@@ -5,17 +5,19 @@ import gestorAplicacion.Hija.*;
 import java.io.*;
 
 public class CargarImpl implements RepositorioCargar {
+	static File archivo =new File("");
 	@Override
 	public ListaUsuario cargar() {
         try {
             FileInputStream fi;
-            fi= new FileInputStream("/src/baseDatos/temp/listausuario");
+            fi= new FileInputStream(archivo.getAbsolutePath()+"/src/baseDatos/temp/listausuario");
             ObjectInputStream oi = new ObjectInputStream(fi);
 
             ListaUsuario usuario = (ListaUsuario) oi.readObject();
             //devolver el valor
             fi.close();
             oi.close();
+            System.out.println("cargado");
             return usuario;
 
         } catch (IOException e) {
@@ -23,5 +25,6 @@ public class CargarImpl implements RepositorioCargar {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        System.out.println("dd");
 		return null;}
 }
