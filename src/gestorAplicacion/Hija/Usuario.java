@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 //Descrive al usuario del programa
 public class Usuario {
-	private static Usuario
 	private ContactoUsuario contactoUsuario;
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;

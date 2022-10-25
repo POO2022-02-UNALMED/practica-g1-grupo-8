@@ -1,17 +1,17 @@
 package baseDatos;
 
 import baseDatos.interfaces.*;
-import gestorAplicacion.Hija.Usuario;
+import gestorAplicacion.Hija.*;
 
 import java.io.*;
 
 public class GuardarImpl implements RepositorioGuardar<Usuario> {
 
     @Override
-    public void crear(Usuario objeto) {
+    public void crear(ListaUsuario objeto) {
         try {
             FileOutputStream fileOutputStream;
-            fileOutputStream= new FileOutputStream("\\baseDatos\\temp\\usuario");
+            fileOutputStream= new FileOutputStream("\\baseDatos\\temp\\listausuario");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(objeto);
 

@@ -1,18 +1,18 @@
 package baseDatos;
 
 import baseDatos.interfaces.*;
-import gestorAplicacion.Hija.Usuario;
+import gestorAplicacion.Hija.*;
 import java.io.*;
 
 public class CargarImpl implements RepositorioCargar {
 	@Override
-	public Usuario cargar() {
+	public ListaUsuario cargar() {
         try {
             FileInputStream fi;
-            fi= new FileInputStream("\\baseDatos\\temp\\usuario");
+            fi= new FileInputStream("\\baseDatos\\temp\\listausuario");
             ObjectInputStream oi = new ObjectInputStream(fi);
 
-            Usuario usuario = (Usuario) oi.readObject();
+            ListaUsuario usuario = (ListaUsuario) oi.readObject();
             //devolver el valor
             fi.close();
             oi.close();
