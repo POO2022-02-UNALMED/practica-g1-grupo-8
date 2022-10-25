@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 
 public class ConexionUsuario {
-	public static Usuario usuario = new Usuario("Andres", "Andres@a.com", "Andres Alvarez Arcila",
-			"Andidas", "No vendo zapatos...", "Solo efectivo");
-	
+	public Usuario usuario;
+	 ConexionUsuario(Usuario usuario){
+		 this.usuario=usuario;
+	 };
 	//Permite al Usuario crear un contacto de este tipo por consola.
 	public void crearNuevoContacto(Scanner sc) {
 		System.out.println(usuario.getContactosPendientes());
