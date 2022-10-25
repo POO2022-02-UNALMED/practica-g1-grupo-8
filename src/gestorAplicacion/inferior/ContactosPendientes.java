@@ -19,7 +19,7 @@ public class ContactosPendientes extends Contacto {
 	@Override
 	//FIXME
 	public String toString() {
-		return super.toString() + "\nContactosPendientes [mensajes=" + mensajes + "]";
+		return super.toString() + "\tTipo: ContactosPendientes [\n\tmensajes :" + mensajes + "\n]\n";
 	}
 
 	@Override

@@ -10,17 +10,18 @@ public class ConexionUsuario {
 	
 	//Permite al Usuario crear un contacto de este tipo por consola.
 	public void crearNuevoContacto(Scanner sc) {
+		System.out.println("-----Crear Contacto-----");
 		System.out.println(usuario.getContactosPendientes());
-		System.out.println("Crear Contacto");
-		System.out.print("Nombre: ");
+		System.out.println("Nuevo Contacto");
+		System.out.print("\tNombre: ");
 		String nombre = sc.nextLine();
-		System.out.print("Email: ");
+		System.out.print("\tEmail: ");
 		String email = sc.next();
 		sc.nextLine();
-		System.out.print("Nombre completo: ");
+		System.out.print("\tNombre completo: ");
 		String nombreCompleto = sc.nextLine();
 		usuario.crearNuevoContacto(nombre, email, nombreCompleto);
-		
+		System.out.println("-----Contacto Creado-----");
 	}
 	
 	//Permite al usuario elegir el tipo de urgencia
@@ -29,9 +30,9 @@ public class ConexionUsuario {
 		String urg = "";
 		do {
 			System.out.println("Tipo de Urgencia:");
-			System.out.println("Opciones:\n\t1 riesgoVital\n\t2 muyUrgente\n\t2 urgente"
-					+ "\n\t4 normal\n\t5 noUrgente");
-			System.out.print("\nTipo: ");
+			System.out.println("\tOpciones:\n\t\t1 Riesgo Vital\n\t\t2 Muy Urgente\n\t\t2 Urgente"
+					+ "\n\t\t4 Normal\n\t\t5 No Urgente");
+			System.out.print("\t\nTipo: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
@@ -71,12 +72,15 @@ public class ConexionUsuario {
 	public void empezarChat(Scanner sc) {
 		int opcion;
 		do {
-			System.out.println("Elige un contacto");
-			System.out.println("0 cancelar");
+			System.out.println("-----Empezar Chat-----");
+			System.out.println("Elige un contacto o Cancela:");
+			System.out.println("\t0 Cancelar\n");
 			//Imprime todos los contactos locales con un indce al principio
 			for (int i = 0; i < usuario.getContactosPendientes().size(); i++) {
-				System.out.println((i+1) + " " + usuario.getContactoPendiente(i).toString());
+				System.out.println("\t" + (i+1) + " "
+						+ usuario.getContactoPendiente(i).toString());
 			}
+			System.out.print("Opcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
@@ -86,10 +90,11 @@ public class ConexionUsuario {
 				crearMensaje(sc);
 				
 			} else if (opcion != 0) {
-				System.out.println("Seleccione un numero entre 0 y " + usuario.getContactosPendientes().size());
+				System.out.println("Seleccione un numero entre 0 y "
+						+ usuario.getContactosPendientes().size());
 				
 			} else {
-				System.out.println("Termino empezar chat");
+				System.out.println("-----Chats Enviados-----");
 				
 			}
 			
@@ -107,7 +112,8 @@ public class ConexionUsuario {
 		titulo = sc.nextLine();
 		System.out.print("Cuerpo: ");
 		cuerpo = sc.nextLine();
-		System.out.println("Elige el tipo de mensaje:\n0 negocios\n1 Social");
+		System.out.println("Elige el tipo de mensaje:\n\t0 Negocios\n\t1 Social");
+		System.out.print("\nOpcion: ");
 		opcion = sc.nextInt();
 		sc.nextLine();
 		do {
@@ -132,19 +138,23 @@ public class ConexionUsuario {
 	
 	//Muestra los chats 
 	public void mostrarChats() {
+		System.out.println("-----Chats-----");
 		System.out.println(usuario.mostrarChats());
+		System.out.println("-----Estos fueron todos los Chats-----");
 	}
 	
 	//Permite elegir a que contacto local enviarle un mensaje adicional
 	public void seguirChat(Scanner sc) {
 		int opcion;
 		do {
-			System.out.println("Elige un contacto");
-			System.out.println("0 cancelar");
+			System.out.println("-----Seguir Chat-----");
+			System.out.println("Elige un contacto o Cancela:");
+			System.out.println("\t0 Cancelar\n");
 			//Imprime todos los contactos locales con un indce al principio
 			for (int i = 0; i < usuario.getContactosLocales().size(); i++) {
-				System.out.println((i+1) + " " + usuario.getContactoLocal(i).toString());
+				System.out.println("\t" + (i+1) + " " + usuario.getContactoLocal(i).toString());
 			}
+			System.out.print("Opcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
@@ -156,7 +166,7 @@ public class ConexionUsuario {
 				System.out.println("Seleccione un numero entre 0 y " + usuario.getContactosLocales().size());
 				
 			} else {
-				System.out.println("Termino empezar chat");
+				System.out.println("-----Chats Enviados-----");
 				
 			}
 			
