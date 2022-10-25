@@ -11,8 +11,8 @@ public class Lista {
 	static boolean elementos=true;
 	public static ListaUsuario inicializar() {
 	CargarImpl p=new CargarImpl();
+	GuardarImpl sf=new GuardarImpl();
 	if (p.cargar()==null) {
-		GuardarImpl sf=new GuardarImpl();
 		ListaUsuario mm=new ListaUsuario();
 		sf.crear(mm);
 		CargarImpl f=new CargarImpl();
@@ -27,7 +27,8 @@ public class Lista {
 public static boolean  iniciar() {
 	return elementos;
 }
-public static Usuario crearUsuario(Scanner sc) {
+public static void crearUsuario(Scanner sc,ListaUsuario f) {
+	GuardarImpl sf=new GuardarImpl();
 	System.out.println("Usuario para negocio o personal");
 	System.out.println("negocio= 0");
 	System.out.println("personal= 1");
@@ -46,21 +47,24 @@ public static Usuario crearUsuario(Scanner sc) {
 	String descripcionNegocio = sc.nextLine();
 	System.out.println("Terminos Negocio");
 	String terminosnegocio = sc.nextLine();
-	return new Usuario(nombre,email,nombreCompleto,logoNegocio,descripcionNegocio,terminosnegocio);}
+	f.añadirUsuario(new Usuario(nombre,email,nombreCompleto,logoNegocio,descripcionNegocio,terminosnegocio));
+	sf.crear(f);}
 	else {
 		System.out.println("Crear Usuario");
-		System.out.println("Nombre: ");
+		System.out.print("Nombre: ");
 		String nombre = sc.nextLine();
-		System.out.println("Email: ");
+		System.out.print("Email: ");
 		String email = sc.nextLine();
 		System.out.print("Nombre completo: ");
 		String nombreCompleto = sc.nextLine();
-		return new Usuario(nombre,email,nombreCompleto);
+		f.añadirUsuario(new Usuario(nombre,email,nombreCompleto));
+		sf.crear(f);
 	}
 }
 public static Usuario cual(Scanner sc,ListaUsuario f) {
 	if(f.getListaUsuario().size()==0) {
-		return Lista.crearUsuario(sc);
+		Lista.crearUsuario(sc, f);
+		return Lista.cual(sc,f);
 	}
 	
 	else {
@@ -69,7 +73,7 @@ public static Usuario cual(Scanner sc,ListaUsuario f) {
 	f.toString();
 	int usuaario=sc.nextInt();
 	if (usuaario==0) {
-		f.añadirUsuario(Lista.crearUsuario(sc));
+		Lista.crearUsuario(sc,f);
 		return Lista.cual(sc,f);
 	}
 	else{

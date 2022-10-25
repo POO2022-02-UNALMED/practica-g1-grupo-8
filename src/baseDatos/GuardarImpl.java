@@ -12,7 +12,7 @@ public class GuardarImpl implements RepositorioGuardar<Usuario> {
     	
         try {
             FileOutputStream fileOutputStream;
-            fileOutputStream= new FileOutputStream(new File(archivo.getAbsolutePath()+"src\\baseDatos\\temp\\listausuario"));
+            fileOutputStream= new FileOutputStream(new File(archivo.getAbsolutePath()+"/src/baseDatos/temp/listausuario"));
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(objeto);
 

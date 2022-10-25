@@ -10,19 +10,21 @@ public class Pantalla {
 	public static void main(String[] args) {
 		//Crea la conexion con usuario y contacto de usuario
 		Scanner sc = new Scanner(System.in);
+		GuardarImpl guardar=new GuardarImpl();
+		CargarImpl cargar=new CargarImpl();
 		ListaUsuario f= Lista.inicializar();
 		System.out.println("Programa");
-		if (Lista.iniciar()) {
+		if (Lista.iniciar()==true) {
 			Lista.cual(sc, f);
 		}
 			
 		else{
 			System.out.println("No tienes un usuario");
 			System.out.println("crea uno");
-			f.añadirUsuario(Lista.crearUsuario(sc));
+			ListaUsuario f=new ListaUsuario();
+			Lista.crearUsuario(sc,f);
+			Lista.cual(sc, f);
 		}
-		
-		
 		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
 		ConexionUsuario cu = new ConexionUsuario();
 		int opcion;

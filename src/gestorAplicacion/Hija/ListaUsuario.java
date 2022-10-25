@@ -22,8 +22,8 @@ public class ListaUsuario implements Serializable {
 	}
 	public String toString() {
 		String p="";
-		for(int i=0;i<= ListaUsuario.size();i++){
-			p="\n"+i+"Nombre"+ListaUsuario.get(i).getContactoUsuario().getNombre();
+		for(int i=0;i<ListaUsuario.size();i++){
+			p="\n"+(i+1)+"Nombre"+ListaUsuario.get(i).getContactoUsuario().getNombre();
 	}
 	return p;}
 	public Usuario usuario(int i) {
