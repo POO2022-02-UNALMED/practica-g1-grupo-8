@@ -1,7 +1,11 @@
 package gestorAplicacion.Padre;
 import java.io.Serializable;
-
+//import pickle
 import gestorAplicacion.Hija.*;
+
+
+
+
 
 //Todos los contactos tienen nombre, email y nombre completo
 public abstract class Contacto implements Serializable {
