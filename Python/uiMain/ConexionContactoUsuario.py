@@ -11,15 +11,14 @@ class ConexionContactoUsuario:
         self.contactoUsuario = contactoUsuario
 
     #Cambia los atributos del contacto de usuario, menos notificaciones
-    def editarPerfil(self, sc):
+    def editarPerfil(self):
         opcion = 0
         condition = True
         while condition:
             print(self.contactoUsuario)
             print("Cambiar:\n0 Cancela\n1 nombre\n2 email\n3 nombreCompleto\n4 logoNegocio\n5 descripcionNegocio" + "\n6 terminosNegocio")
-            opcion = sc.nextInt()
-            sc.nextLine()
-
+            opcion = input()
+ 
             if opcion == 0:
                 print("Termino modificacion de Perfil")
 
@@ -68,8 +67,8 @@ class ConexionContactoUsuario:
             for n in self.contactoUsuario.getNotificaciones():
                 print(n)
             print("Crear una nueva:\n0 no\n1 si")
-            opcion = sc.nextInt()
-            sc.nextLine()
+            opcion = input()
+
             if opcion == 0:
                 print("Termino  modificacion de Perfil")
             elif opcion == 1:
