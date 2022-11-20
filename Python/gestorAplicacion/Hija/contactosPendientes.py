@@ -2,6 +2,8 @@
 
 class ContactosPendientes(Contacto):
 
+        
+        
     #Crea el contacto sin mensajes
     def __init__(self, nombre, email, nombreCompleto):
         super().__init__(nombre, email, nombreCompleto)
