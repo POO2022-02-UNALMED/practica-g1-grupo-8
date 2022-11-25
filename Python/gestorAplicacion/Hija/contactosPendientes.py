@@ -1,3 +1,5 @@
+from Padre.Contacto import Contacto
+
 #Los contactos pendientes son personas con las que no se a iniciado un conversacion.
 
 class ContactosPendientes(Contacto):

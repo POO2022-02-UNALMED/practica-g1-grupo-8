@@ -1,3 +1,5 @@
+from Padre.Contacto import Contacto
+from notificacion import Notificacion
 #Contacto del Usuario guarda sus datos y sus notificaciones
 class ContactoUsuario(Contacto):
     #Guarda la informacion del Usuario
@@ -14,7 +16,7 @@ class ContactoUsuario(Contacto):
 	
     def __str__(self):
         if (self._logoNegocio != ""):
-            return super.__str__() + "\nContactoUsuario [logoNegocio=" + logoNegocio + ", descripcionNegocio=" + descripcionNegocio + ", terminosNegocio=" + terminosNegocio + "]"
+            return super.__str__() + "\nContactoUsuario [logoNegocio=" + self._logoNegocio + ", descripcionNegocio=" + self._descripcionNegocio + ", terminosNegocio=" + self._terminosNegocio + "]"
 		
         else:
             return super.__str__()
