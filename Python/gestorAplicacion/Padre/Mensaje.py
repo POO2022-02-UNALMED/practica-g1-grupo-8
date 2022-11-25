@@ -8,9 +8,6 @@ class Mensaje:
         self.titulo = titulo
         self.cuerpo = cuerpo
 
-    def toString(a):
-        return string(a)
-
     def getTitulo(self):
         return self.titulo
 
