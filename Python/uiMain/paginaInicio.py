@@ -1,42 +1,62 @@
 import tkinter as tk
-ventana=tk.Tk()
-ventana.title("Ventana de inicio")
-
-def descripcion():
-    textdescripcion="hola"
-    descripcion=tk.Label(P3,text=textdescripcion)
-    descripcion.pack(side="bottom",padx=5,pady=5)
-
-def hojadevida():
-    juanpablog=""
+class ventana():
     
+    def __init__(self) -> None:
+        self.ventana=tk.Tk()
+        self.ventana.title("Ventana de inicio")
 
-menuBar=tk.Menu(ventana)
-ventana.config(menu=menuBar)
-menuBar.add_command(label="Salir",command=lambda : ventana.destroy())
-menuBar.add_command(label="Descripcion del sistema",command=descripcion)
+        self.contador=0
+        self.menuBar=tk.Menu(self.ventana)
+        self.ventana.config(menu=self.menuBar)
 
-P1=tk.Frame(ventana)
-P1.pack(side="left",padx=10,pady=5,fill="both")
+        self.menuBar.add_command(label="Salir",command=lambda : self.ventana.destroy())
+        def descripcion(self):
+            self.textdescripcion.config(text="hola")
+        self.menuBar.add_command(label="Descripcion del sistema",command=lambda:descripcion())
 
-P3=tk.Frame(P1)
-P3.pack(side="top")
-saludo=tk.Label(P3,text="Bienvenido a este programa",font=("Roman",30))
-saludo.pack(side="top",padx=5,pady=5)
+        self.P1=tk.Frame(self.ventana)
+        self.P1.pack(side="left",padx=10,pady=5,fill="both")
 
-P4=tk.Frame(P1)
-P4.pack(side="bottom")
+        self.P3=tk.Frame(self.P1)
+        self.P3.pack(side="top")
+        self.saludo=tk.Label(self.P3,text="Bienvenido a este programa",font=("Roman",30))
+        self.saludo.pack(side="top",padx=5,pady=5)
+        self.descripcion=tk.Label(self.P3,text="")
+        self.descripcion.pack(side="bottom",padx=5,pady=5)
 
-botonventanprincipal=tk.Button(P4,text="Ventana principal")
-botonventanprincipal.pack(side="bottom")
+        self.P4=tk.Frame(self.P1)
+        self.P4.pack(side="bottom")
 
-P2=tk.Frame(ventana)
-P2.pack(side="right",padx=10,pady=5,fill="both")
+        self.botonventanprincipal=tk.Button(self.P4,text="Ventana principal")
+        self.botonventanprincipal.pack(side="bottom")
 
-P5=tk.Frame(P2)
-P5.pack(side="top")
+        self.P2=tk.Frame(self.ventana)
+        self.P2.pack(side="right",padx=10,pady=5,fill="both")
+
+        self.P5=tk.Frame(self.P2)
+        self.P5.pack(side="top")
+        juanpabloG="sss"
+        alejandroA="hh"
+        sebastianS=""
+        juansimonZ="{"
+        josemanuelM="++"
+
+        lista=[juanpabloG,alejandroA,sebastianS,juansimonZ,josemanuelM]
+        def mas(self):
+            self.contador=+1
+        def boton(self):
+            mas()
+            self.textovida.config(text=lista[self.contador])
+        self.textovida=tk.Button(self.P5,text=lista[self.contador],command=boton)
+        self.textovida.pack(fill="both")
+        self.textovida.config(relief="flat")
 
 
-P6=tk.Frame(P1)
-P6.pack(side="bottom")
-ventana.mainloop()
+
+        self.P6=tk.Frame(self.P1)
+        self.P6.pack(side="bottom")
+
+        self.ventana.mainloop()
+
+p=ventana()
+
