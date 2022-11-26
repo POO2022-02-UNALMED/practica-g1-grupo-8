@@ -1,5 +1,6 @@
 import tkinter as tk
 class ventana():
+    #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
     juanpabloG=""""""
     alejandroA="hh"
     sebastianS=""
@@ -7,6 +8,8 @@ class ventana():
     josemanuelM="++"
     lista=[juanpabloG,alejandroA,sebastianS,juansimonZ,josemanuelM]
     
+    contador2=0
+    lista2=["uiMain/imagenesdelsistema/imagen1.png","imagenesdelsistema/imagen2.png","imagenesdelsistema/imagen3.png","imagenesdelsistema/imagen4.png","imagenesdelsistema/imagen5.png"]
     def __init__(self) -> None:
         self.ventana=tk.Tk()
         self.ventana.title("Ventana de inicio")
@@ -35,6 +38,12 @@ class ventana():
         self.botonventanprincipal=tk.Button(self.P4,text="Ventana principal")
         self.botonventanprincipal.pack(side="bottom")
 
+        self.imagenesS=tk.Label(self.P4)
+        self.imagenS=tk.PhotoImage(file=self.lista2[self.contador2])
+        self.imagenesS.config(image=self.imagenS)
+        self.imagenesS.bind("<B1-Motion>",self.imasistemas1())
+        self.imagenesS.bind("<B3-Motion>",self.imasistemas2())
+
         self.P2=tk.Frame(self.ventana)
         self.P2.pack(side="right",padx=10,pady=5,fill="both")
 
@@ -51,16 +60,38 @@ class ventana():
         self.P6.pack(side="bottom")
 
         self.ventana.mainloop()
+
     def descripcionn(self):
             self.descripcion.config(text="hola")
+
     def mas(self):
         if self.contador<4:
             self.contador=self.contador+1
         else:
             self.contador=0
+
     def boton(self):
         self.mas()
         self.textovida.config(text=self.lista[self.contador])
+
+    def imasistemas1(self):
+        if self.contador2<4:
+            self.contador2=self.contador2+1
+        else:
+            self.contador2=0
+    def cambiarimagsistemas1(self):
+        self.imasistemas1()
+        self.imagenS.config(file=self.lista2[self.contador2])
+
+    def imasistemas2(self):
+        if self.contador2>0:
+            self.contador2=self.contador2-1
+        else:
+            self.contador2=4
+    def cambiarimagsistemas2(self):
+        self.imasistemas2()
+        self.imagenS.config(file=self.lista2[self.contador2])
+
 
 p=ventana()
 
