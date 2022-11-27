@@ -29,7 +29,7 @@ class ventana():
         self.P3.pack(side="top")
         self.saludo=tk.Label(self.P3,text="Bienvenido a este programa",font=("Roman",30))
         self.saludo.pack(side="top",padx=5,pady=5)
-        self.descripcion=tk.Label(self.P3,text="s")
+        self.descripcion=tk.Label(self.P3,text="")
         self.descripcion.pack(side="bottom",padx=5,pady=5)
 
         self.P4=tk.Frame(self.P1)
@@ -41,7 +41,7 @@ class ventana():
         self.imagenesS=tk.Label(self.P4)
         self.imagenS=tk.PhotoImage(file=self.lista2[self.contador2])
         self.imagenesS.config(image=self.imagenS)
-        self.imagenS.subsample(100)
+        self.imagenesS.subsample(100000000)
         self.imagenesS.pack(side="top")
         self.imagenesS.bind("<B1-Motion>",self.imasistemas1())
         self.imagenesS.bind("<B3-Motion>",self.imasistemas2())
