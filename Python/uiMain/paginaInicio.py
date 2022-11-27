@@ -3,10 +3,10 @@ import os
 class ventana():
     #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
     juanpabloG=""" bbbb"""
-    alejandroA="hh"
-    sebastianS=""
-    juansimonZ="{"
-    josemanuelM="++"
+    alejandroA="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
+    sebastianS="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
+    juansimonZ="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
+    josemanuelM="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
     lista=[juanpabloG,alejandroA,sebastianS,juansimonZ,josemanuelM]
     
     contador2=0
