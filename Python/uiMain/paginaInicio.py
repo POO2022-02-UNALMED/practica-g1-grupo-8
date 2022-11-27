@@ -9,7 +9,7 @@ class ventana():
     lista=[juanpabloG,alejandroA,sebastianS,juansimonZ,josemanuelM]
     
     contador2=0
-    lista2=["uiMain/imagenesdelsistema/imagen1.png","imagenesdelsistema/imagen2.png","imagenesdelsistema/imagen3.png","imagenesdelsistema/imagen4.png","imagenesdelsistema/imagen5.png"]
+    lista2=["uiMain/imagenesdelsistema/imagen1.png","uiMain/imagenesdelsistema/imagen2.png","uiMain/imagenesdelsistema/imagen3.png","uiMain/imagenesdelsistema/imagen4.png","uiMain/imagenesdelsistema/imagen5.png"]
     def __init__(self) -> None:
         self.ventana=tk.Tk()
         self.ventana.title("Ventana de inicio")
