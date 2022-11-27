@@ -85,7 +85,7 @@ class ventana():
         self.imasistemas1()
         imagen=tk.PhotoImage(file=self.lista2[self.contador2])
         imagen=imagen.subsample(10)
-        self.imagenS.config(imagen)
+        self.imagenesS.config(imagen)
 
     def imasistemas2(self):
         if self.contador2>0:
@@ -96,7 +96,7 @@ class ventana():
         self.imasistemas2()
         imagen=tk.PhotoImage(file=self.lista2[self.contador2])
         imagen=imagen.subsample(10)
-        self.imagenS.config(imagen)
+        self.imagenesS.config(imagen)
 
 
 p=ventana()
