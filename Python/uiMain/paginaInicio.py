@@ -2,7 +2,9 @@ import tkinter as tk
 import os
 class ventana():
     #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
-    juanpabloG=""" bbbb"""
+    juanpabloG="""-Estudiante de ingeniería de sistemas e informática
+    -Bachiller técnico de sistemas por parte del Sena
+    Persona proactiva, respetuosa y trabajadora que le gusta velar por el bien del equipo, le gusta aprender temas nuevos y le interesa la tecnología y  como funcionan las cosas, curioso y dispuesto a aceptar retos."""
     alejandroA="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
     sebastianS="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
     juansimonZ="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
