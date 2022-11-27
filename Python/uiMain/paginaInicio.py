@@ -12,11 +12,11 @@ class ventana():
     contador2=0
     lista2=["\\imagenesdelsistema\\imagen1.png","uiMain\\imagenesdelsistema\\imagen2.png","uiMain\\imagenesdelsistema\\imagen3.png","uiMain\\imagenesdelsistema\\imagen4.png","uiMain\\imagenesdelsistema\\imagen5.png"]
 
-    juanpabloG1=["\\imageneshojadevida\\juanpabloG\\imagen1.png","uiMain\\imageneshojadevida\\juanpabloG\\imagen2.png","uiMain\\imageneshojadevida\\juanpabloG\\imagen3.png","uiMain\\imageneshojadevida\\juanpabloG\\imagen4.png"]
-    alejandroA1=["\\imageneshojadevida\\alejandroA\\imagen1.png","uiMain\\imageneshojadevida\\alejandroA\\imagen2.png","uiMain\\imageneshojadevida\\alejandroA\\imagen3.png","uiMain\\imageneshojadevida\\alejandroA\\imagen4.png"]
-    sebastianS1=["\\imageneshojadevida\\sebastianS\\imagen1.png","uiMain\\imageneshojadevida\\sebastianS\\imagen2.png","uiMain\\imageneshojadevida\\sebastianS\\imagen3.png","uiMain\\imageneshojadevida\\sebastianS\\imagen4.png"]
-    juansimonZ1=["\\imageneshojadevida\\juansimonZ\\imagen1.png","uiMain\\imageneshojadevida\\juansimonZ\\imagen2.png","uiMain\\imageneshojadevida\\juansimonZ\\imagen3.png","uiMain\\imageneshojadevida\\juansimonZ\\imagen4.png"]
-    josemanuelM1=["\\imageneshojadevida\\josemanuelM\\imagen1.png","uiMain\\imageneshojadevida\\josemanuelM\\imagen2.png","uiMain\\imageneshojadevida\\josemanuelM\\imagen3.png","uiMain\\imageneshojadevida\\josemanuelM\\imagen4.png"]
+    juanpabloG1=["\\imageneshojadevida\\juanpabloG\\imagen1.png","\\uiMain\\imageneshojadevida\\juanpabloG\\imagen2.png","\\uiMain\\imageneshojadevida\\juanpabloG\\imagen3.png","\\uiMain\\imageneshojadevida\\juanpabloG\\imagen4.png"]
+    alejandroA1=["\\imageneshojadevida\\alejandroA\\imagen1.png","\\uiMain\\imageneshojadevida\\alejandroA\\imagen2.png","\\uiMain\\imageneshojadevida\\alejandroA\\imagen3.png","\\uiMain\\imageneshojadevida\\alejandroA\\imagen4.png"]
+    sebastianS1=["\\imageneshojadevida\\sebastianS\\imagen1.png","\\uiMain\\imageneshojadevida\\sebastianS\\imagen2.png","\\uiMain\\imageneshojadevida\\sebastianS\\imagen3.png","\\uiMain\\imageneshojadevida\\sebastianS\\imagen4.png"]
+    juansimonZ1=["\\imageneshojadevida\\juansimonZ\\imagen1.png","\\uiMain\\imageneshojadevida\\juansimonZ\\imagen2.png","\\uiMain\\imageneshojadevida\\juansimonZ\\imagen3.png","\\uiMain\\imageneshojadevida\\juansimonZ\\imagen4.png"]
+    josemanuelM1=["\\imageneshojadevida\\josemanuelM\\imagen1.png","\\uiMain\\imageneshojadevida\\josemanuelM\\imagen2.png","\\uiMain\\imageneshojadevida\\josemanuelM\\imagen3.png","\\uiMain\\imageneshojadevida\\josemanuelM\\imagen4.png"]
     lista3=[juanpabloG1,alejandroA1,sebastianS1,juansimonZ1,josemanuelM1]
 
     def __init__(self) -> None:
