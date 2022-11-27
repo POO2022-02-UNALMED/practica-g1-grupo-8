@@ -39,9 +39,9 @@ class ventana():
         self.botonventanprincipal.pack(side="bottom")
 
         self.imagenesS=tk.Label(self.P4)
-        self.imagenS=tk.PhotoImage(file=self.lista2[self.contador2])
-        self.imagenesS.config(image=self.imagenS)
-        self.imagenesS.subsample(100000000)
+        imagen=tk.PhotoImage(file=self.lista2[self.contador2])
+        imagen=imagen.subsample(10)
+        self.imagenesS.config(image=imagen)
         self.imagenesS.pack(side="top")
         self.imagenesS.bind("<B1-Motion>",self.imasistemas1())
         self.imagenesS.bind("<B3-Motion>",self.imasistemas2())
@@ -83,7 +83,9 @@ class ventana():
             self.contador2=0
     def cambiarimagsistemas1(self):
         self.imasistemas1()
-        self.imagenS.config(file=self.lista2[self.contador2])
+        imagen=tk.PhotoImage(file=self.lista2[self.contador2])
+        imagen=imagen.subsample(10)
+        self.imagenS.config(imagen)
 
     def imasistemas2(self):
         if self.contador2>0:
@@ -92,7 +94,9 @@ class ventana():
             self.contador2=4
     def cambiarimagsistemas2(self):
         self.imasistemas2()
-        self.imagenS.config(file=self.lista2[self.contador2])
+        imagen=tk.PhotoImage(file=self.lista2[self.contador2])
+        imagen=imagen.subsample(10)
+        self.imagenS.config(imagen)
 
 
 p=ventana()
