@@ -89,11 +89,17 @@ class ventana():
         self.mas()
         self.textovida.config(text=self.lista[self.contador])
 
+        imagen=tk.PhotoImage(file=self.lista3[self.contador][0])
+        imagen=imagen.subsample(10)
+        self.imagen1.config(imagen)
+
+
     def imasistemas1(self):
         if self.contador2<4:
             self.contador2=self.contador2+1
         else:
             self.contador2=0
+
     def cambiarimagsistemas1(self):
         self.imasistemas1()
         imagen=tk.PhotoImage(file=path)
@@ -105,6 +111,7 @@ class ventana():
             self.contador2=self.contador2-1
         else:
             self.contador2=4
+
     def cambiarimagsistemas2(self):
         self.imasistemas2()
         imagen=tk.PhotoImage(file= os.getcwd() + self.lista2[self.contador2])
