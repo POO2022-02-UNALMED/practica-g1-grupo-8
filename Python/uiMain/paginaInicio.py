@@ -11,13 +11,13 @@ class ventana():
     contador2=0
     lista2=["uiMain/imagenesdelsistema/imagen1.png","uiMain/imagenesdelsistema/imagen2.png","uiMain/imagenesdelsistema/imagen3.png","uiMain/imagenesdelsistema/imagen4.png","uiMain/imagenesdelsistema/imagen5.png"]
 
-    juanpabloG1=["uiMain/imageneshojadevida/imagen1.png","uiMain/imageneshojadevida/imagen2.png","uiMain/imageneshojadevida/imagen3.png","uiMain/imageneshojadevida/imagen4.png"]
+    juanpabloG1=["uiMain/imageneshojadevida/juanpabloG/imagen1.png","uiMain/imageneshojadevida/imagen2.png","uiMain/imageneshojadevida/imagen3.png","uiMain/imageneshojadevida/imagen4.png"]
     alejandroA1=["uiMain/imageneshojadevida/imagen1.png","uiMain/imageneshojadevida/imagen2.png","uiMain/imageneshojadevida/imagen3.png","uiMain/imageneshojadevida/imagen4.png"]
     sebastianS1=["uiMain/imageneshojadevida/imagen1.png","uiMain/imageneshojadevida/imagen2.png","uiMain/imageneshojadevida/imagen3.png","uiMain/imageneshojadevida/imagen4.png"]
     juansimonZ1=["uiMain/imageneshojadevida/imagen1.png","uiMain/imageneshojadevida/imagen2.png","uiMain/imageneshojadevida/imagen3.png","uiMain/imageneshojadevida/imagen4.png"]
     josemanuelM1=["uiMain/imageneshojadevida/imagen1.png","uiMain/imageneshojadevida/imagen2.png","uiMain/imageneshojadevida/imagen3.png","uiMain/imageneshojadevida/imagen4.png"]
     lista3=[juanpabloG1,alejandroA1,sebastianS1,juansimonZ1,josemanuelM1]
-    
+
     def __init__(self) -> None:
         self.ventana=tk.Tk()
         self.ventana.title("Ventana de inicio")
@@ -67,8 +67,10 @@ class ventana():
 
         self.P6=tk.Frame(self.P1)
         self.P6.pack(side="bottom")
-        imagen=tk.PhotoImage(file=self.lista[self.])
-        imagen=imagen.subsample(10)
+        imagen1=tk.PhotoImage(file=self.lista3[self.contador][0])
+        imagen1=imagen1.subsample(10)
+        self.imagen1=tk.Label(self.P6,image=imagen1)
+        self.imagen1.grid(row=0,column=0)
 
         self.ventana.mainloop()
 
