@@ -12,11 +12,11 @@ class ventana():
     contador2=0
     lista2=["\\imagenesdelsistema\\imagen1.png","uiMain\\imagenesdelsistema\\imagen2.png","uiMain\\imagenesdelsistema\\imagen3.png","uiMain\\imagenesdelsistema\\imagen4.png","uiMain\\imagenesdelsistema\\imagen5.png"]
 
-    juanpabloG1=["\\imageneshojadevida\\juanpabloG\\imagen1.png","uiMain\\imageneshojadevida\\imagen2.png","uiMain\\imageneshojadevida\\imagen3.png","uiMain\\imageneshojadevida\\imagen4.png"]
-    alejandroA1=["\\imageneshojadevida\\imagen1.png","uiMain\\imageneshojadevida\\imagen2.png","uiMain\\imageneshojadevida\\imagen3.png","uiMain\\imageneshojadevida\\imagen4.png"]
-    sebastianS1=["\\imageneshojadevida\\imagen1.png","uiMain\\imageneshojadevida\\imagen2.png","uiMain\\imageneshojadevida\\imagen3.png","uiMain\\imageneshojadevida\\imagen4.png"]
-    juansimonZ1=["\\imageneshojadevida\\imagen1.png","uiMain\\imageneshojadevida\\imagen2.png","uiMain\\imageneshojadevida\\imagen3.png","uiMain\\imageneshojadevida\\imagen4.png"]
-    josemanuelM1=["\\imageneshojadevida\\imagen1.png","uiMain\\imageneshojadevida\\imagen2.png","uiMain\\imageneshojadevida\\imagen3.png","uiMain\\imageneshojadevida\\imagen4.png"]
+    juanpabloG1=["\\imageneshojadevida\\juanpabloG\\imagen1.png","uiMain\\imageneshojadevida\\juanpabloG\\imagen2.png","uiMain\\imageneshojadevida\\juanpabloG\\imagen3.png","uiMain\\imageneshojadevida\\juanpabloG\\imagen4.png"]
+    alejandroA1=["\\imageneshojadevida\\alejandroA\\imagen1.png","uiMain\\imageneshojadevida\\alejandroA\\imagen2.png","uiMain\\imageneshojadevida\\alejandroA\\imagen3.png","uiMain\\imageneshojadevida\\alejandroA\\imagen4.png"]
+    sebastianS1=["\\imageneshojadevida\\sebastianS\\imagen1.png","uiMain\\imageneshojadevida\\sebastianS\\imagen2.png","uiMain\\imageneshojadevida\\sebastianS\\imagen3.png","uiMain\\imageneshojadevida\\sebastianS\\imagen4.png"]
+    juansimonZ1=["\\imageneshojadevida\\juansimonZ\\imagen1.png","uiMain\\imageneshojadevida\\juansimonZ\\imagen2.png","uiMain\\imageneshojadevida\\juansimonZ\\imagen3.png","uiMain\\imageneshojadevida\\juansimonZ\\imagen4.png"]
+    josemanuelM1=["\\imageneshojadevida\\josemanuelM\\imagen1.png","uiMain\\imageneshojadevida\\josemanuelM\\imagen2.png","uiMain\\imageneshojadevida\\josemanuelM\\imagen3.png","uiMain\\imageneshojadevida\\josemanuelM\\imagen4.png"]
     lista3=[juanpabloG1,alejandroA1,sebastianS1,juansimonZ1,josemanuelM1]
 
     def __init__(self) -> None:
@@ -67,12 +67,28 @@ class ventana():
 
 
 
-        self.P6=tk.Frame(self.P1)
+        self.P6=tk.Frame(self.P2)
         self.P6.pack(side="bottom")
+
         imagen1=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][0])
         imagen1=imagen1.subsample(10)
         self.imagen1=tk.Label(self.P6,image=imagen1)
         self.imagen1.grid(row=0,column=0)
+
+        imagen2=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][1])
+        imagen2=imagen2.subsample(10)
+        self.imagen2=tk.Label(self.P6,image=imagen2)
+        self.imagen2.grid(row=0,column=1)
+
+        imagen3=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][2])
+        imagen3=imagen3.subsample(10)
+        self.imagen3=tk.Label(self.P6,image=imagen3)
+        self.imagen3.grid(row=1,column=0)
+
+        imagen4=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][3])
+        imagen4=imagen4.subsample(10)
+        self.imagen4=tk.Label(self.P6,image=imagen4)
+        self.imagen4.grid(row=0,column=0)
 
         self.ventana.mainloop()
 
@@ -102,7 +118,7 @@ class ventana():
 
     def cambiarimagsistemas1(self):
         self.imasistemas1()
-        imagen=tk.PhotoImage(file=path)
+        imagen=tk.PhotoImage(file= os.getcwd() + self.lista2[self.contador2])
         imagen=imagen.subsample(10)
         self.imagenesS.config(imagen)
 
