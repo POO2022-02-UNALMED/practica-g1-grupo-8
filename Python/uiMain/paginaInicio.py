@@ -1,7 +1,7 @@
 import tkinter as tk
 class ventana():
     #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
-    juanpabloG=""""""
+    juanpabloG=""" bbbb"""
     alejandroA="hh"
     sebastianS=""
     juansimonZ="{"
