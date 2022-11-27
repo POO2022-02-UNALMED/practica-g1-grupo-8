@@ -19,7 +19,7 @@ class ventana():
     josemanuelM1=["\\uiMain\\imageneshojadevida\\josemanuelM\\imagen1.png","\\uiMain\\imageneshojadevida\\josemanuelM\\imagen2.png","\\uiMain\\imageneshojadevida\\josemanuelM\\imagen1.png","\\uiMain\\imageneshojadevida\\josemanuelM\\imagen4.png"]
     lista3=[juanpabloG1,alejandroA1,sebastianS1,juansimonZ1,josemanuelM1]
 
-    def __init__(self) -> None:
+    def __init__(self) :
         
         self.ventana=tk.Tk()
         self.ventana.title("Ventana de inicio")
@@ -52,7 +52,7 @@ class ventana():
         imagen=imagen.subsample(10)
         self.imagenesS.config(image=imagen)
         self.imagenesS.pack(side="top")
-        self.imagenesS.bind("<B1-Motion>",self.imasistemas1())
+        self.imagenesS.bind("<Motion>",self.imasistemas1())
         self.imagenesS.bind("<B3-Motion>",self.imasistemas2())
 
         self.P2=tk.Frame(self.ventana)
@@ -154,4 +154,3 @@ class ventana():
 
 
 p=ventana()
-
