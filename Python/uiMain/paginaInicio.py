@@ -9,7 +9,9 @@ class ventana():
     le gusta aprender temas nuevos,la tecnología y  como funcionan las cosas,
     curioso y dispuesto a aceptar retos."""
 
-    alejandroA="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
+    alejandroA="""Soy estudiante de ingeniería de sistemas e infórmatica, soy curioso, amigable, inteligente y positivo,
+     de fácil aprendizaje me interesan todo tipo de temas, desde la música hasta la médicina, y sus aplicaciones tecnológicas, 
+     me gusta tener nuevas experiencias, y no me le quito a na' """
 
     sebastianS="""Me considero una persona responable,
     dinánmica y creativa, con facilidad de

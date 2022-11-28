@@ -7,7 +7,8 @@ class ventana2():
         
         self.ventana=tk.Tk()
         self.ventana.title("Ventana Principal")
-
+        self.ventana.configure(bg="blue")
+             
         self.P1=tk.Frame(self.ventana)
         self.P1.pack(side="top",padx=5,pady=5,fill="both")
 
