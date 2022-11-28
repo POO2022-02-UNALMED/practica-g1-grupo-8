@@ -1,5 +1,6 @@
 import tkinter as tk
 import os
+from paginaPrincipal import ventana2
 class ventana():
     #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
     juanpabloG="""-Estudiante de ingeniería de sistemas e informática
@@ -54,7 +55,7 @@ class ventana():
         self.P4=tk.Frame(self.P1)
         self.P4.pack(side="bottom")
 
-        self.botonventanprincipal=tk.Button(self.P4,text="Ventana principal")
+        self.botonventanprincipal=tk.Button(self.P4,text="Ventana principal",command=self.paginaprincipal)
         self.botonventanprincipal.pack(side="bottom")
 
         self.imagenesS=tk.Label(self.P4)
@@ -162,5 +163,7 @@ class ventana():
         imagen=imagen.subsample(10)
         self.imagenesS.config(image=imagen)
 
-
+    def paginaprincipal(self):
+        self.ventana.destroy()
+        ventana2()
 p=ventana()
