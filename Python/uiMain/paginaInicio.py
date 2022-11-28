@@ -8,7 +8,8 @@ class ventana():
     le gusta aprender temas nuevos,la tecnología y  como funcionan las cosas,
     curioso y dispuesto a aceptar retos."""
     alejandroA="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
-    sebastianS="""Me considero una persona responable,
+    sebastianS="""Sebastián Soto Arcila:
+    Me considero una persona responable,
     dinánmica y creativa, con facilidad de
     adaptación y capacidad de trabajar en
     equipo, en codiciones de alta presión,

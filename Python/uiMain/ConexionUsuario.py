@@ -23,33 +23,35 @@ class ConexionUsuario:
 
 		#Todo falta serializar
 		#Permite seleccionar un contacto para iniciar una conversacion.
+
 def empezarChat(self, sc):
-			opcion = None
-			condition = True
-			while condition:
-				print("Elige un contacto")
-				print("0 cancelar")
-				#Imprime todos los contactos locales con un indce al principio
-				i = 0
-				while i < self._usuario.getContactosPendientes().size():
-					print(str(i+1) + " " + str(self._usuario.getContactoPendiente(i)))
-					i += 1
-				opcion = int(input())
+		opcion = None
+		condition = True
+		while condition:
+			print("Elige un contacto")
+			print("0 cancelar")
+			#Imprime todos los contactos locales con un indce al principio
+			i = 0
+			while i < self._usuario.getContactosPendientes().size():
+				print(str(i+1) + " " + str(self._usuario.getContactoPendiente(i)))
+				i += 1
+			opcion = int(input())
 
 	
-				#Revisa si se selecciono un contacto y se realiza en cambio.
-				if (opcion > 0) and (opcion <= self._usuario.getContactosPendientes().size()):
-					self._usuario.volverContactoLocal(opcion - 1)
-					crearMensaje(sc)
+			#Revisa si se selecciono un contacto y se realiza en cambio.
+			if (opcion > 0) and (opcion <= self._usuario.getContactosPendientes().size()):
+				self._usuario.volverContactoLocal(opcion - 1)
+				crearMensaje(sc)
 	
-				elif opcion != 0:
-					print("Seleccione un numero entre 0 y " + str(self._usuario.getContactosPendientes().size()))
+			elif opcion != 0:
+				print("Seleccione un numero entre 0 y " + str(self._usuario.getContactosPendientes().size()))
 	
-				else:
-					print("Termino empezar chat")
+			else:
+				print("Termino empezar chat")
 	
 	
-				condition = opcion != 0
+			condition = opcion != 0
+
 def crearMensaje(self):
 		print("Titulo: ", end = '')
 		titulo = input()
