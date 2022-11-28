@@ -104,7 +104,12 @@ class ventana():
         self.ventana.mainloop()
 
     def descripcionn(self):
-            self.descripcion.config(text="hola")
+            texto1="""Este programa esta hecho para ser una forma de comunicacion privada,
+                    realizado para ser usado en un mismo pc, 
+                    en el cual los datos no pueden ser enviados por ninguna red,
+                    sino que solo pueden verse de forma local por medio de Kontakte
+            """
+            self.descripcion.config(text=texto1)
 
     def mas(self):
         if self.contador<4:
