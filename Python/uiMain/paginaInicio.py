@@ -1,5 +1,6 @@
 import tkinter as tk
 import os
+from paginaPrincipal import ventana2
 class ventana():
     #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
     juanpabloG="""-Estudiante de ingeniería de sistemas e informática
@@ -7,17 +8,26 @@ class ventana():
     Persona proactiva, respetuosa y trabajadora que le gusta velar por el bien del equipo,
     le gusta aprender temas nuevos,la tecnología y  como funcionan las cosas,
     curioso y dispuesto a aceptar retos."""
-    alejandroA="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
-    sebastianS="""Sebastián Soto Arcila:
+
+    alejandroA="""Soy estudiante de ingeniería de sistemas e infórmatica, soy curioso, amigable, inteligente y positivo,
+     de fácil aprendizaje me interesan todo tipo de temas, desde la música hasta la médicina, y sus aplicaciones tecnológicas, 
+     me gusta tener nuevas experiencias, y no me le quito a na'. A falta de imágenes serias, les pongo unas bien bacanas."""
+
+    sebastianS="""Sebastián Soto Arcila
     Me considero una persona responable,
     dinánmica y creativa, con facilidad de
     adaptación y capacidad de trabajar en
-    equipo, en codiciones de alta presión,
+    equipo, en condiciones de alta presión,
     con iniciativa para resolver problemas
     eficientemente y lograr las metas y
     objetivos trazados por la empreza"""
+
     juansimonZ="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
-    josemanuelM="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
+
+    josemanuelM="""Soy estudiante de ingeniería de sistemas e infórmatica, sobresalgo por mi proactividad, mi resiliencia 
+    y capacidad de mantener la calma bajo presión, me interesa la investigación, el desarrollo de tecnología y la adquisición 
+    de conocimientos propios de la carrera e intereses varios"""
+
     lista=[juanpabloG,alejandroA,sebastianS,juansimonZ,josemanuelM]
     
     contador2=0
@@ -55,12 +65,12 @@ class ventana():
         self.P4=tk.Frame(self.P1)
         self.P4.pack(side="bottom")
 
-        self.botonventanprincipal=tk.Button(self.P4,text="Ventana principal")
+        self.botonventanprincipal=tk.Button(self.P4,text="Ventana principal",command=self.paginaprincipal)
         self.botonventanprincipal.pack(side="bottom")
 
         self.imagenesS=tk.Label(self.P4)
         imagen=tk.PhotoImage(file= os.getcwd() + self.lista2[self.contador2])
-        imagen=imagen.subsample(10)
+        imagen=imagen.subsample(8)
         self.imagenesS.config(image=imagen)
         self.imagenesS.pack(side="top")
         self.imagenesS.bind("<Motion>",self.imasistemas1())
@@ -82,29 +92,32 @@ class ventana():
         self.P6.pack(side="bottom")
 
         imagen1=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][0])
-        imagen1=imagen1.subsample(11)
+        imagen1=imagen1.subsample(8)
         self.imagen1=tk.Label(self.P6,image=imagen1)
         self.imagen1.grid(row=0,column=0)
 
         imagen2=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][1])
-        imagen2=imagen2.subsample(11)
+        imagen2=imagen2.subsample(8)
         self.imagen2=tk.Label(self.P6,image=imagen2)
         self.imagen2.grid(row=0,column=1)
 
         imagen3=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][2])
-        imagen3=imagen3.subsample(11)
+        imagen3=imagen3.subsample(8)
         self.imagen3=tk.Label(self.P6,image=imagen3)
         self.imagen3.grid(row=1,column=0)
 
         imagen4=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][3])
-        imagen4=imagen4.subsample(11)
+        imagen4=imagen4.subsample(8)
         self.imagen4=tk.Label(self.P6,image=imagen4)
         self.imagen4.grid(row=1,column=1)
 
         self.ventana.mainloop()
 
     def descripcionn(self):
-            self.descripcion.config(text="hola")
+            texto1="""Este programa este hecho para ser una forma de comunicación privada,
+            realizado para ser usado en un mismo pc, en el cual los datos no pueden ser enviados por ninguna red,
+            sino que solo pueden verse de forma local por medio de Kontakte"""
+            self.descripcion.config(text=texto1)
 
     def mas(self):
         if self.contador<4:
@@ -121,19 +134,19 @@ class ventana():
         self.textovida.config(text=self.lista[self.contador])
 
         imagen=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][0])
-        imagen=imagen.subsample(11)
+        imagen=imagen.subsample(8)
         self.imagen1.config(image=imagen)
 
         imagen1=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][1])
-        imagen1=imagen1.subsample(11)
+        imagen1=imagen1.subsample(8)
         self.imagen2.config(image=imagen1)
 
         imagen2=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][2])
-        imagen2=imagen2.subsample(11)
+        imagen2=imagen2.subsample(8)
         self.imagen3.config(image=imagen2)
 
         imagen3=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][3])
-        imagen3=imagen3.subsample(11)
+        imagen3=imagen3.subsample(8)
         self.imagen4.config(image=imagen3)
 
 
@@ -163,5 +176,7 @@ class ventana():
         imagen=imagen.subsample(10)
         self.imagenesS.config(image=imagen)
 
-
+    def paginaprincipal(self):
+        self.ventana.destroy()
+        ventana2()
 p=ventana()
