@@ -1,0 +1,2 @@
+class EditarPerfil:
+    pass
