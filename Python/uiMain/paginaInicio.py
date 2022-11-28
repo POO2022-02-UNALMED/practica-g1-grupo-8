@@ -14,13 +14,17 @@ class ventana():
     sebastianS="""Me considero una persona responable,
     dinánmica y creativa, con facilidad de
     adaptación y capacidad de trabajar en
-    equipo, en codiciones de alta presión,
+    equipo, en condiciones de alta presión,
     con iniciativa para resolver problemas
     eficientemente y lograr las metas y
     objetivos trazados por la empreza"""
-    
+
     juansimonZ="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
-    josemanuelM="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
+
+    josemanuelM="""Soy estudiante de ingeniería de sistemas e infórmatica, sobresalgo por mi proactividad, mi resiliencia 
+    y capacidad de mantener la calma bajo presión, me interesa la investigación, el desarrollo de tecnología y la adquisición 
+    de conocimientos propios de la carrera e intereses varios"""
+
     lista=[juanpabloG,alejandroA,sebastianS,juansimonZ,josemanuelM]
     
     contador2=0
