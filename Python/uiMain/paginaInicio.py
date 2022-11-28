@@ -59,7 +59,7 @@ class ventana():
 
         self.imagenesS=tk.Label(self.P4)
         imagen=tk.PhotoImage(file= os.getcwd() + self.lista2[self.contador2])
-        imagen=imagen.subsample(10)
+        imagen=imagen.subsample(8)
         self.imagenesS.config(image=imagen)
         self.imagenesS.pack(side="top")
         self.imagenesS.bind("<Motion>",self.imasistemas1())
@@ -81,22 +81,22 @@ class ventana():
         self.P6.pack(side="bottom")
 
         imagen1=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][0])
-        imagen1=imagen1.subsample(11)
+        imagen1=imagen1.subsample(8)
         self.imagen1=tk.Label(self.P6,image=imagen1)
         self.imagen1.grid(row=0,column=0)
 
         imagen2=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][1])
-        imagen2=imagen2.subsample(11)
+        imagen2=imagen2.subsample(8)
         self.imagen2=tk.Label(self.P6,image=imagen2)
         self.imagen2.grid(row=0,column=1)
 
         imagen3=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][2])
-        imagen3=imagen3.subsample(11)
+        imagen3=imagen3.subsample(8)
         self.imagen3=tk.Label(self.P6,image=imagen3)
         self.imagen3.grid(row=1,column=0)
 
         imagen4=tk.PhotoImage(file=os.getcwd() + self.lista3[self.contador][3])
-        imagen4=imagen4.subsample(11)
+        imagen4=imagen4.subsample(8)
         self.imagen4=tk.Label(self.P6,image=imagen4)
         self.imagen4.grid(row=1,column=1)
 
@@ -120,19 +120,19 @@ class ventana():
         self.textovida.config(text=self.lista[self.contador])
 
         imagen=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][0])
-        imagen=imagen.subsample(11)
+        imagen=imagen.subsample(8)
         self.imagen1.config(image=imagen)
 
         imagen1=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][1])
-        imagen1=imagen1.subsample(11)
+        imagen1=imagen1.subsample(8)
         self.imagen2.config(image=imagen1)
 
         imagen2=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][2])
-        imagen2=imagen2.subsample(11)
+        imagen2=imagen2.subsample(8)
         self.imagen3.config(image=imagen2)
 
         imagen3=tk.PhotoImage(file= os.getcwd() + self.lista3[self.contador][3])
-        imagen3=imagen3.subsample(11)
+        imagen3=imagen3.subsample(8)
         self.imagen4.config(image=imagen3)
 
 
