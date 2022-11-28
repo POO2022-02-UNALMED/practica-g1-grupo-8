@@ -30,7 +30,7 @@ class ventana2():
         self.menu2=tk.Menu(self.menu11,tearoff=False)
         self.menu11["menu"]=self.menu2
         self.menu11.grid(row=0,column=1)
-        self.menu2.add_command(label="dd")
+        self.menu2.add_command(label="dd",command=frame1(self.P2))
 
         self.menu12=ttk.Menubutton(self.P2,text="Ayuda")
         self.menu3=tk.Menu(self.menu12,tearoff=False)
@@ -38,8 +38,7 @@ class ventana2():
         self.menu12.grid(row=0,column=2)
         self.menu3.add_command(label="Acerca de",command=self.ventanadialogo2)
 
-        self.P3=tk.Frame(self.ventana)
-        self.P3.pack(side="top",padx=5,pady=5,fill="both")
+
         
         self.ventana.mainloop()
     
@@ -54,5 +53,10 @@ class ventana2():
         Juan Pablo Garcia Carballo
         Jose Manuel Molina Vásquez
         """)
-
+    
+class frame1():
+    def __init__(self,ventana):
+        self.P3=tk.Frame(ventana)
+        self.P3.grid(row=1,column=0)
+        self.boton=tk.Button(text="dd")
 p=ventana2()
