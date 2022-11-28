@@ -16,7 +16,11 @@ class ventana2():
         self.P2.pack(side="top",padx=5,pady=5,fill="both")
         self.P2.config(relief="ridge")
 
-        
+        self.menu=tk.Menubutton(self.P2)
+        self.menu1=tk.Menu(self.menu)
+        self.menu1.add_command(label="Salir",command=lambda : self.ventana2.destroy())
+        self.menu1.add_command(label="Descripcion del sistema",command=lambda:print("dd"))
+
 
 
         self.P3=tk.Frame(self.ventana)
@@ -24,3 +28,4 @@ class ventana2():
 
 
         self.ventana.mainloop()
+p=ventana2()
