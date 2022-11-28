@@ -13,7 +13,8 @@ class ventana():
      de fácil aprendizaje me interesan todo tipo de temas, desde la música hasta la médicina, y sus aplicaciones tecnológicas, 
      me gusta tener nuevas experiencias, y no me le quito a na'. A falta de imágenes serias, les pongo unas bien bacanas."""
 
-    sebastianS="""Me considero una persona responable,
+    sebastianS="""Sebastián Soto Arcila
+    Me considero una persona responable,
     dinánmica y creativa, con facilidad de
     adaptación y capacidad de trabajar en
     equipo, en condiciones de alta presión,
