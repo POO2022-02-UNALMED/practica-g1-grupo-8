@@ -1,5 +1,4 @@
 import tkinter as tk
-from contactoUsuario import ContactoUsuario
 
 class CrearContacto:
     def __init__(self, frame):
