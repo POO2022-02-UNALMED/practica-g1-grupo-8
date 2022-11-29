@@ -30,10 +30,8 @@ class FieldFrame(tk.Frame):
             
         
     def getValue(self, criterio):
-        return self._entries[criterio].get()
-
-    def clear(self):
-        for key in self._entries:
-            self._entries[key].delete(0, tk.END)
-
+        if self._entries[criterio].get() == None or self._entries[criterio].get() == '':
+            raise Exception("")
+        else:
+            return self._entries[criterio].get()
         
