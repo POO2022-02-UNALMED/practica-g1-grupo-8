@@ -2,6 +2,7 @@ import tkinter as tk
 import os
 from paginaPrincipal import ventana2
 from framesFuncionalidades.cargarUsuario import CargarUsuario
+from framesFuncionalidades.ErrorAplicacion import Excetionc23
 class ventana():
 
     #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
@@ -70,13 +71,11 @@ class ventana():
         self.botonventanprincipal=tk.Button(self.P4,text="Ventana principal",command=self.paginaprincipal)
         self.botonventanprincipal.pack(side="bottom")
 
-        self.imagenesS=tk.Label(self.P4)
+        self.imagenesS=tk.Button(self.P4,command=lambda:self.cambiarimagsistemas1())
         imagen=tk.PhotoImage(file= os.getcwd() + self.lista2[self.contador2])
         imagen=imagen.subsample(8)
         self.imagenesS.config(image=imagen)
         self.imagenesS.pack(side="top")
-        self.imagenesS.bind("<Motion>",self.imasistemas1())
-        self.imagenesS.bind("<B3-Motion>",self.imasistemas2())
 
         self.P2=tk.Frame(self.ventana)
         self.P2.pack(side="right",padx=10,pady=5,fill="both")
@@ -151,32 +150,8 @@ class ventana():
         imagen3=imagen3.subsample(8)
         self.imagen4.config(image=imagen3)
 
-
-    def imasistemas1(self):
-        if self.contador2<4:
-            self.contador2=self.contador2+1
-        else:
-            self.contador2=0
-
     def cambiarimagsistemas1(self):
-        global imagen
-        self.imasistemas1()
-        imagen=tk.PhotoImage(file= os.getcwd() + self.lista2[self.contador2])
-        imagen=imagen.subsample(10)
-        self.imagenesS.config(image=imagen)
-
-    def imasistemas2(self):
-        if self.contador2>0:
-            self.contador2=self.contador2-1
-        else:
-            self.contador2=4
-
-    def cambiarimagsistemas2(self):
-        global imagen
-        self.imasistemas2()
-        imagen=tk.PhotoImage(file= os.getcwd() + self.lista2[self.contador2])
-        imagen=imagen.subsample(10)
-        self.imagenesS.config(image=imagen)
+        raise Excetionc23
 
     def paginaprincipal(self):
         self.ventana.destroy()

@@ -44,11 +44,3 @@ class Excetionc23(Excetionc2):
     def __init__(self):
         error1 = "de codigo, perdon error nuestro sigue usando el programa"
         super().__init__(error1)
-
-try:
-    a=Excetionc11()
-    raise a
-except Excetionc11 as a:
-    print(a.error)
-except Excetionc2 as a:
-    print(a.error)
