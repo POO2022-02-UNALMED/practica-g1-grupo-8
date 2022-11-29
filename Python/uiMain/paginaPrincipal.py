@@ -138,4 +138,3 @@ class ventana2():
         self.P3.pack(padx=5,pady=5,fill="both")
         TarjetaNegocio(self.P3).fTarjetadeNegocio()
     
-p=ventana2()
