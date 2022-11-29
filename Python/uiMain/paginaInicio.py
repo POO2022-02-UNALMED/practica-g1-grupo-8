@@ -25,7 +25,7 @@ class ventana():
     eficientemente y lograr las metas y
     objetivos trazados por la empreza"""
 
-    juansimonZ="Hoja de vida no agregada por el participante, imágenes por defecto añadidas por el grupo."
+    juansimonZ="Juan Simon Zapata Monsalve, estudiante de ingenieria de sistemas, pasion por el desarrollo de software y la adquisicion de nuevos conocimientos que me permitan escalar en el area de la informatica"
 
     josemanuelM="""Soy estudiante de ingeniería de sistemas e infórmatica, sobresalgo por mi proactividad, mi resiliencia 
     y capacidad de mantener la calma bajo presión, me interesa la investigación, el desarrollo de tecnología y la adquisición 
