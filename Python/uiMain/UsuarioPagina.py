@@ -1,1 +1,0 @@
-from gestorAplicacion.Hija import 
