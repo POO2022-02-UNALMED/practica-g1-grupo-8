@@ -124,7 +124,7 @@ class ventana2():
         self.P3.pack(padx=5,pady=5,fill="both")
         MostrarChats(self.P3).fMostrarChatsG()
     
-    def ff(self):
+    def f4(self):
         self.P3.destroy()
         self.P3 = tk.Frame(self.ventana)
         self.P3.pack(padx=5,pady=5,fill="both")

@@ -1,5 +1,5 @@
 import tkinter as tk
-from contactosPendientes import ContactosPendientes
+from gestorAplicacion.Hija.contactosPendientes import ContactosPendientes
 class CrearContacto:
     def __init__(self, frame):
         self.frame = frame
