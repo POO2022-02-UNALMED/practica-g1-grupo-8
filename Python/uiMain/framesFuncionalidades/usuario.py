@@ -13,15 +13,7 @@ class Usuario:
     _contactosPendientes: list[ContactosPendientes]
 
     #Genera al Usuario y crea su ContactoUsuario
-    def __init__(
-        self, 
-        nombre="Nombre",
-        email="Email",
-        nombreCompleto="Nombre completo",
-        logoNegocio="logo",
-        descripcionNegocio="descripcion",
-        terminosNegocio="terminos"
-        ) -> None:
+    def __init__(self, nombre="Nombre",email="Email",nombreCompleto="Nombre completo",logoNegocio="logo",descripcionNegocio="descripcion",terminosNegocio="terminos") -> None:
         self._contactoUsuario = ContactoUsuario(nombre, email, nombreCompleto, logoNegocio, descripcionNegocio, terminosNegocio)
         self._contactosLocales = [],
         self._contactosPendientes = []

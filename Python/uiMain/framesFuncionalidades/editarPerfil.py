@@ -1,11 +1,11 @@
 import tkinter as tk
-from usuario import Usuario
+import usuario as Usuario
 import Guardar 
 import Cargar
 try:
     usuario=Cargar.cargar()
 except:
-    usuario=Usuario()
+    usuario=Usuario.Usuario()
     Guardar.guardar(usuario)
 class EditarPerfil:
     def __init__(self, frame):
