@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from framesFuncionalidades.fieldFrame import FieldFrame
+from framesFuncionalidades.cargarUsuario import CargarUsuario
+from gestorAplicacion.Padre.Mensaje import Mensaje
 class MostrarChats:
     def __init__(self, frame: tk.Frame):
         self.frame = frame
@@ -17,10 +19,15 @@ class MostrarChats:
 
         frame2 = tk.Frame(self.frame, height=200, pady=5, padx=5)
         frame2.pack(fill= "x")
+
+        usuarios = []
+        for i in range(len(CargarUsuario.usuario.getContactosLocales())):
+            usuarios.append(i)
+
         CContacto = ttk.Combobox(
             frame2,
             #Aqui va lista de contactos
-            values=["contacto 1", "contacto 2", "contacto 3"],
+            values=usuarios,
             textvariable=tk.StringVar(frame2, value="Contactos")
             )
 
@@ -29,13 +36,8 @@ class MostrarChats:
             chat.config(state="normal")
             chat.delete('1.0','end')
             chat.insert('end', CContacto.get()+"\n")
-            chat.insert('end', "\n")
-            chat.insert('end', "mensaje 1\n")
-            chat.insert('end', "\n")
-            chat.insert('end', "mensaje 2\n")
-            chat.insert('end', "\n")
-            chat.insert('end', "mensaje 3\n")
-            chat.insert('end', "\n")
+            for mensaje in CargarUsuario.usuario.getContactoLocal(int(CContacto.get())).getMensajes():
+                chat.insert('end', f"{mensaje.getTitulo()}\n")
             chat.config(state="disabled")
 
         CContacto.bind('<<ComboboxSelected>>', eleccionContacto)
@@ -52,8 +54,9 @@ class MostrarChats:
 
         #Funciones
         def fAceptar():
-            for criterio in criterios:
-                print(f"{criterio}: {fp.getValue(criterio)}")
+            CargarUsuario.usuario.getContactoLocal(int(CContacto.get())).setMensajes(Mensaje(fp.getValue(criterios[0]), fp.getValue(criterios[1])))
+            CargarUsuario.guardarUsario(CargarUsuario.usuario)
+            eleccionContacto(None)
 
         def fCancelar():
             self.frame.destroy()

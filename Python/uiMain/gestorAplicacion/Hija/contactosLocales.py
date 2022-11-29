@@ -12,26 +12,8 @@ class ContactosLocales(Contacto):
     def getMensajes(self) -> list[Mensaje]:
         return self._mensajes
 
-    def setMensajes(self, mensajes):
-        self._mensajes = mensajes
+    def setMensajes(self, mensaje):
+        self._mensajes.append(mensaje)
 
     def __str__(self):
         return super.__str__()
-
-    def getNombre(self):
-        return super.getNombre()
-    
-    def setNombre(self, nombre):
-        super.setNombre(nombre)
-
-    def getEmail(self):
-        return super.getEmail()
-    
-    def setEmail(self, email):
-        super.setEmail(email)
-    
-    def getNombreCompleto(self):
-        return super.getNombreCompleto()
-    
-    def setNombreCompleto(self, nombreCompleto):
-        super.setNombreCompleto(nombreCompleto)
