@@ -3,6 +3,7 @@ from tkinter import ttk
 from framesFuncionalidades.fieldFrame import FieldFrame
 from framesFuncionalidades.cargarUsuario import CargarUsuario
 from gestorAplicacion.Padre.Mensaje import Mensaje
+from framesFuncionalidades.ErrorAplicacion import Excetionc12
 class MostrarChats:
     def __init__(self, frame: tk.Frame):
         self.frame = frame
@@ -54,6 +55,8 @@ class MostrarChats:
 
         #Funciones
         def fAceptar():
+            if CContacto.get() == None or CContacto.get() == '':
+                raise Excetionc12()
             CargarUsuario.usuario.getContactoLocal(int(CContacto.get())).setMensajes(Mensaje(fp.getValue(criterios[0]), fp.getValue(criterios[1])))
             CargarUsuario.guardarUsario(CargarUsuario.usuario)
             eleccionContacto(None)
