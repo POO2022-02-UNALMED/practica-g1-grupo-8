@@ -27,6 +27,7 @@ class CrearContacto:
         def fAceptar():
             CargarUsuario.usuario.crearNuevoContacto(fp.getValue(criterios[0]), fp.getValue(criterios[1]), fp.getValue(criterios[2]))
             fp.clear()
+            CargarUsuario.guardarUsario(CargarUsuario.usuario)
             messagebox.showinfo("Crear Nuevo Contacto", "Contacto almacenado correctamente.")
 
 

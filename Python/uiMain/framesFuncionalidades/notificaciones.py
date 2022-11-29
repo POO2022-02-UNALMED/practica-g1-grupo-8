@@ -24,7 +24,7 @@ class Notificaciones:
     
         notificacionesText = tk.Text(self.frame, width=45, height=10)
         notificacionesText.pack(fill="x", padx=10, pady=10)
-
+        
         def cargarNotificaciones():
             notificacionesText.delete('1.0', tk.END)
             notificaciones = CargarUsuario.usuario.getContactoUsuario().getNotificaciones()
@@ -34,7 +34,10 @@ class Notificaciones:
 
         def crearNotificacion():
             CargarUsuario.usuario.getContactoUsuario().anadirNotificaciones(fp.getValue(criterios[0]), fp.getValue(criterios[1]))
+            CargarUsuario.guardarUsario(CargarUsuario.usuario)
             cargarNotificaciones()
+
+        cargarNotificaciones()
 
         #Botones de cancelar y aceptar
         cancelar = tk.Frame(self.frame, pady=5, padx=5, height=100)
@@ -43,4 +46,6 @@ class Notificaciones:
         cancelarButton.pack(side="left")
         aceptar = tk.Button(cancelar, text="Aceptar", command= lambda : crearNotificacion())
         aceptar.pack(side="right")
+
+        
 

@@ -44,3 +44,9 @@ class Excetionc23(Excetionc2):
     def __init__(self):
         error1 = "de codigo, perdon error nuestro sigue usando el programa"
         super().__init__(error1)
+
+
+class ArchivoNoEncontrado(FileNotFoundError):
+    def __init__(self):
+        error1 = "Archivo no encontrado"
+        super().__init__(error1)

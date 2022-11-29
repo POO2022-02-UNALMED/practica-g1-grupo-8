@@ -32,6 +32,7 @@ class EditarPerfil:
             perfil.setLogoNegocio(fp.getValue(criterios[3]))
             perfil.setDescripcionNegocio(fp.getValue(criterios[4]))
             perfil.setTerminosNegocio(fp.getValue(criterios[5]))
+            CargarUsuario.guardarUsario(CargarUsuario.usuario)
             messagebox.showinfo("Editar Perfil", "Perfil guardado exitosamente")
 
         def fCancelar():
