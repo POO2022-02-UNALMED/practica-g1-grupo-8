@@ -1,4 +1,4 @@
-from Padre.Mensaje import Mensaje
+from Mensaje import Mensaje
 #Es un mensaje formal, tiene informacion sobre el negocio del usuario
 class MensajeNegocio(Mensaje):
     #No permite crear mensajes con campos vacios

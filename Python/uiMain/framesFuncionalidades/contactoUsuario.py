@@ -1,4 +1,4 @@
-from Padre.Contacto import Contacto
+from Contacto import Contacto
 from notificacion import Notificacion
 #Contacto del Usuario guarda sus datos y sus notificaciones
 class ContactoUsuario(Contacto):

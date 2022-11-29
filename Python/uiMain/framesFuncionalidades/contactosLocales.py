@@ -1,5 +1,5 @@
-from Padre.Contacto import Contacto
-from Padre.Mensaje import Mensaje
+from Contacto import Contacto
+from Mensaje import Mensaje
 #Los contactos locales son personas con las que ya se inicio una convesacion
 class ContactosLocales(Contacto):
 

@@ -1,4 +1,4 @@
-from Padre.Mensaje import Mensaje
+from Mensaje import Mensaje
 class MensajeSocial(Mensaje):
 
     def __init__(self, titulo: str, cuerpo: str, nombreA: str, nombreB: str):
