@@ -41,21 +41,3 @@ class ContactoUsuario(Contacto):
 
     def getNotificaciones(self):
         return self._notificaciones
-
-    def getNombre(self):
-        return super.getNombre()
-    
-    def setNombre(self, nombre):
-        super.setNombre(nombre)
-
-    def getEmail(self):
-        return super.getEmail()
-
-    def setEmail(self, email):
-        super.setEmail(email)
-
-    def getNombreCompleto(self):
-        return super.getNombreCompleto()
-
-    def setNombreCompleto(self, nombreCompleto):
-        super.setNombreCompleto(nombreCompleto)

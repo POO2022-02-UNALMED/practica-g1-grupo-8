@@ -1,9 +1,4 @@
-
-import pickle
-
-
 class Contacto:
-    _SERIALVERSIONUID = 1
     #Cada contacto debe tener nombre, email y nombre completo 
     def __init__(self, nombre, email, nombreCompleto):
         #instance fields found by Java to Python Converter:

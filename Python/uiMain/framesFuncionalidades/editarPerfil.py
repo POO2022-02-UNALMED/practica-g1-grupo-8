@@ -1,6 +1,8 @@
 import tkinter as tk
-from gestorAplicacion.Hija.usuario import Usuario
+from tkinter import messagebox
+from framesFuncionalidades.cargarUsuario import CargarUsuario
 from framesFuncionalidades.fieldFrame import FieldFrame
+
 class EditarPerfil:
     def __init__(self, frame: tk.Frame):
         self.frame = frame
@@ -15,15 +17,22 @@ class EditarPerfil:
         descripcionFuncion = tk.Label(frame1, text="Descripcion")
         descripcionFuncion.pack()
 
+        perfil = CargarUsuario.usuario.getContactoUsuario()
+
         criterios = ["Nombre", "Email", "Nombre Completo", "Logo Negocio", "Descripcion Negocio", "Terminos Negocio"]
-        valores = ['', '', '', '', '', '']
+        valores = [perfil.getNombre(), perfil.getEmail(), perfil.getNombreCompleto(), perfil.getLogoNegocio(), perfil.getDescripcionNegocio(), perfil.getTerminosNegocio()]
         fp = FieldFrame("Criterios", criterios, "Valores", valores, None)
         fp.crearEntradas(self.frame)
 
         #Funciones
         def fAceptar():
-            for criterio in criterios:
-                print(f"{criterio}: {fp.getValue(criterio)}")
+            perfil.setNombre(fp.getValue(criterios[0]))
+            perfil.setEmail(fp.getValue(criterios[1]))
+            perfil.setNombreCompleto(fp.getValue(criterios[2]))
+            perfil.setLogoNegocio(fp.getValue(criterios[3]))
+            perfil.setDescripcionNegocio(fp.getValue(criterios[4]))
+            perfil.setTerminosNegocio(fp.getValue(criterios[5]))
+            messagebox.showinfo("Editar Perfil", "Perfil guardado exitosamente")
 
         def fCancelar():
             self.frame.destroy()

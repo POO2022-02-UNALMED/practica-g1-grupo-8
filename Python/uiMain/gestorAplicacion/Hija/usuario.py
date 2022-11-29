@@ -20,9 +20,11 @@ class Usuario:
         nombreCompleto: str,
         logoNegocio: str,
         descripcionNegocio: str,
-        terminosNegocio: str
+        terminosNegocio: str,
+        tarjetaNegocio: TarjetaNegocioUsuario
         ) -> None:
         self._contactoUsuario = ContactoUsuario(nombre, email, nombreCompleto, logoNegocio, descripcionNegocio, terminosNegocio)
+        self._tarjetaNegocioUsuario = tarjetaNegocio
         self._contactosLocales = [],
         self._contactosPendientes = []
 
