@@ -6,6 +6,8 @@ from framesFuncionalidades.editarPerfil import EditarPerfil
 from framesFuncionalidades.crearContacto import CrearContacto
 from framesFuncionalidades.mostrarChats import MostrarChats
 
+from framesFuncionalidades.tarjetaNegocio import TarjetaNegocio
+
 class ventana2():
     def __init__(self) :
         
@@ -121,5 +123,12 @@ class ventana2():
         self.P3=tk.Frame(self.ventana)
         self.P3.pack(padx=5,pady=5,fill="both")
         MostrarChats(self.P3).fMostrarChatsG()
+    
+
+    def f5(self):
+        self.P3.destroy()
+        self.P3=tk.Frame(self.ventana)
+        self.P3.pack(padx=5,pady=5,fill="both")
+        TarjetaNegocio(self.P3).fTarjetadeNegocio()
     
 p=ventana2()
