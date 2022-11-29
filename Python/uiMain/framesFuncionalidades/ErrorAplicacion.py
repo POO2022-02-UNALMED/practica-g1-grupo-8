@@ -12,12 +12,12 @@ class Excetionc1(ErrorAplicacion):
 
 class Excetionc11(Excetionc1):
     def __init__(self):
-        error1 =" nombre del negocio o descripcion del negocio" 
+        error1 =" nombre del negocio, descripcion del negocio,telefono o direccion" 
         super().__init__(error1)
 
 class Excetionc12(Excetionc1):
     def __init__(self):
-        error1 =" telefono o direccion" 
+        error1 =" contacto" 
         super().__init__(error1)
 
 class Excetionc13(Excetionc1):
@@ -37,7 +37,7 @@ class Excetionc21(Excetionc2):
 
 class Excetionc22(Excetionc2):
     def __init__(self):
-        error1 = "logo negocio, descripcion negocio o terminos negocio"
+        error1 = "nombre, email, nombre completo,logo negocio, descripcion negocio o terminos negocio"
         super().__init__(error1)
 
 class Excetionc23(Excetionc2):

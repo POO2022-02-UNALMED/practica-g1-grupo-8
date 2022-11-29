@@ -1,4 +1,5 @@
 import tkinter as tk
+from framesFuncionalidades.ErrorAplicacion import Excetionc11,Excetionc13,Excetionc21,Excetionc22
 class FieldFrame(tk.Frame):
 
     _entries = {}
@@ -30,8 +31,23 @@ class FieldFrame(tk.Frame):
             
         
     def getValue(self, criterio):
-        if self._entries[criterio].get() == None or self._entries[criterio].get() == '':
-            raise Exception("")
-        else:
-            return self._entries[criterio].get()
-        
+        if len(self._criterios)==2:
+            if self._entries[criterio].get() == None or self._entries[criterio].get() == '':
+                raise Excetionc13()
+            else:
+                return self._entries[criterio].get()
+        elif len(self._criterios)==3:
+            if self._entries[criterio].get() == None or self._entries[criterio].get() == '':
+                raise Excetionc21()
+            else:
+                return self._entries[criterio].get()
+        elif len(self._criterios)==4:
+            if self._entries[criterio].get() == None or self._entries[criterio].get() == '':
+                raise Excetionc11()
+            else:
+                return self._entries[criterio].get()
+        elif len(self._criterios)>=4:
+            if self._entries[criterio].get() == None or self._entries[criterio].get() == '':
+                raise Excetionc22()
+            else:
+                return self._entries[criterio].get()
