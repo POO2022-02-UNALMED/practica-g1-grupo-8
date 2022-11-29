@@ -5,7 +5,7 @@ class CrearContacto:
         self.frame = frame
 
     #Funcionalidades
-    def fCrearNuevoContacto(self):
+    def fCrearNuevoContactoG(self):
         #Nombre y descripcion de la funcion
         frame1 = tk.Frame(self.frame, height=200, pady=5, padx=5)
         frame1.pack(fill="x")

@@ -4,6 +4,7 @@ from tkinter import messagebox
 import os
 from framesFuncionalidades.editarPerfil import EditarPerfil
 from framesFuncionalidades.crearContacto import CrearContacto
+from framesFuncionalidades.mostrarChats import MostrarChats
 
 class ventana2():
     def __init__(self) :
@@ -38,6 +39,7 @@ class ventana2():
         self.menu11.grid(row=0,column=1)
         self.menu2.add_command(label="Editar Perfil", command=self.f1)
         self.menu2.add_command(label="Crear Nuevo Contacto", command=self.f2)
+        self.menu2.add_command(label="Mostrar Chats", command=self.f3)
 
         self.menu12=ttk.Menubutton(self.P2,text="Ayuda")
         self.menu3=tk.Menu(self.menu12,tearoff=False)
@@ -69,8 +71,12 @@ class ventana2():
         self.P3.destroy()
         self.P3=tk.Frame(self.ventana)
         self.P3.pack(padx=5,pady=5,fill="both")
-        CrearContacto(self.P3).fCrearNuevoContacto()
+        CrearContacto(self.P3).fCrearNuevoContactoG()
 
+    def f3(self):
+        self.P3.destroy()
+        self.P3=tk.Frame(self.ventana)
+        self.P3.pack(padx=5,pady=5,fill="both")
+        MostrarChats(self.P3).fMostrarChatsG()
     
-
 p=ventana2()
