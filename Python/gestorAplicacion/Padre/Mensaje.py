@@ -2,7 +2,6 @@
 #Serializable 
 class Mensaje:
 
-    #_SERIALVERSIONUID = 1
 
     def __init__(self, titulo, cuerpo):
         self.titulo = titulo
