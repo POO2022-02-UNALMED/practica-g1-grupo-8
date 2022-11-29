@@ -86,6 +86,8 @@ class ventana2():
         self.menu2.add_command(label="Crear Nuevo Contacto", command=self.f2)
         self.menu2.add_command(label="Mostrar Chats", command=self.f3)
 
+        self.menu2.add_command(label="Tarjeta de negocios", command=self.f5)
+
         self.menu12=ttk.Menubutton(self.P2,text="Ayuda")
         self.menu3=tk.Menu(self.menu12,tearoff=False)
         self.menu12["menu"]=self.menu3
