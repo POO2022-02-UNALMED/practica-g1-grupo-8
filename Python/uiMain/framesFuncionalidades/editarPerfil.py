@@ -9,7 +9,7 @@ class EditarPerfil:
         #Nombre y descripcion de la funcion
         frame1 = tk.Frame(self.frame, height=200, pady=5, padx=5)
         frame1.pack(fill="x")
-        nombreFuncion = tk.Label(frame1, text="Crear Nuevo Contacto")
+        nombreFuncion = tk.Label(frame1, text="Editar Perfil")
         nombreFuncion.pack(side="top")
         descripcionFuncion = tk.Label(frame1, text="Descripcion")
         descripcionFuncion.pack()
