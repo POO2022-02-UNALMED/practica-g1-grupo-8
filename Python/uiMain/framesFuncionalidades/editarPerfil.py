@@ -1,5 +1,12 @@
 import tkinter as tk
-
+from usuario import Usuario
+import Guardar 
+import Cargar
+try:
+    usuario=Cargar.cargar()
+except:
+    usuario=Usuario()
+    Guardar.guardar(usuario)
 class EditarPerfil:
     def __init__(self, frame):
         self.frame = frame
@@ -46,6 +53,7 @@ class EditarPerfil:
 
         #Funciones
         def fAceptar():
+            usuario.getnom
             print(InNombre.get())
             print(InEmail.get())
             print(InNombreCompleto.get())

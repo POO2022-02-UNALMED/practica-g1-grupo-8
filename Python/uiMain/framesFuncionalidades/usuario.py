@@ -15,12 +15,12 @@ class Usuario:
     #Genera al Usuario y crea su ContactoUsuario
     def __init__(
         self, 
-        nombre: str,
-        email: str,
-        nombreCompleto: str,
-        logoNegocio: str,
-        descripcionNegocio: str,
-        terminosNegocio: str
+        nombre="Nombre",
+        email="Email",
+        nombreCompleto="Nombre completo",
+        logoNegocio="logo",
+        descripcionNegocio="descripcion",
+        terminosNegocio="terminos"
         ) -> None:
         self._contactoUsuario = ContactoUsuario(nombre, email, nombreCompleto, logoNegocio, descripcionNegocio, terminosNegocio)
         self._contactosLocales = [],
