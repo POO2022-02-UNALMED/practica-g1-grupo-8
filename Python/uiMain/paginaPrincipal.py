@@ -25,6 +25,49 @@ class ventana2():
         self.P3=tk.Frame(self.ventana)
         self.P3.pack(padx=5,pady=5,fill="both")
 
+        self.titulo=tk.Label(self.P3,text="Editar perfil",font=("Helvetica",10))
+        self.titulo.grid(row=0,column=0)
+
+        self.titulo2=tk.Label(self.P3,text="Crear contacto",font=("Helvetica",10))
+        self.titulo2.grid(row=1,column=0)
+
+        self.titulo3=tk.Label(self.P3,text="Mostrat chats",font=("Helvetica",10))
+        self.titulo3.grid(row=2,column=0)
+
+        self.titulo4=tk.Label(self.P3,text="Notificaciones",font=("Helvetica",10))
+        self.titulo4.grid(row=3,column=0)
+
+        self.titulo5=tk.Label(self.P3,text="Tarjeta Negocios",font=("Helvetica",10))
+        self.titulo5.grid(row=4,column=0)
+
+        texto="""Opción para modificar las los datos dados cuando se creó el usuario,
+        tales como el nombre o el email"""
+        self.text=tk.Label(self.P3,text=texto,font=("Helvetica",10))
+        self.text.grid(row=0,column=1)
+
+        texto1="""Crear contacto con el cual guardar informacion importante,
+        escribir mensajes y reciba notificaciones creadas"""
+
+        self.text1=tk.Label(self.P3,text=texto1,font=("Helvetica",10))
+        self.text1.grid(row=1,column=1)
+
+        texto2="""Muestra conversaciones y permite crear nuevas,
+        hechas por nosotros y otros contactos"""
+
+        self.text2=tk.Label(self.P3,text=texto2,font=("Helvetica",10))
+        self.text2.grid(row=2,column=1)
+
+        texto3="""Permite ver notificaciones hechas por nosotros o nuestros contactos"""
+
+        self.text3=tk.Label(self.P3,text=texto3,font=("Helvetica",10))
+        self.text3.grid(row=3,column=1)
+
+        texto4="""Permite crear las tarjetas de negocios,
+        que tienen informacion de contacto útil para contactar contigo o tu empresa"""
+
+        self.text4=tk.Label(self.P3,text=texto4,font=("Helvetica",10))
+        self.text4.grid(row=4,column=1)
+
         self.menu=ttk.Menubutton(self.P2,text="Archivo")
         self.menu1=tk.Menu(self.menu,tearoff=False)
         self.menu["menu"]=self.menu1
