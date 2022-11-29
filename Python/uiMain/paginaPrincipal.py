@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import os
+from framesFuncionalidades.editarPerfil import EditarPerfil
+
 class ventana2():
     def __init__(self) :
         
@@ -19,6 +21,9 @@ class ventana2():
         self.P2.pack(side="top",padx=5,pady=5,fill="both")
         self.P2.config(relief="ridge")
 
+        self.P3=tk.Frame(self.ventana)
+        self.P3.pack(padx=5,pady=5,fill="both")
+
         self.menu=ttk.Menubutton(self.P2,text="Archivo")
         self.menu1=tk.Menu(self.menu,tearoff=False)
         self.menu["menu"]=self.menu1
@@ -30,7 +35,7 @@ class ventana2():
         self.menu2=tk.Menu(self.menu11,tearoff=False)
         self.menu11["menu"]=self.menu2
         self.menu11.grid(row=0,column=1)
-        self.menu2.add_command(label="dd")
+        self.menu2.add_command(label="Crear Nuevo Contacto", command=EditarPerfil(self.P3).fEditarPerfilG)
 
         self.menu12=ttk.Menubutton(self.P2,text="Ayuda")
         self.menu3=tk.Menu(self.menu12,tearoff=False)
@@ -38,9 +43,6 @@ class ventana2():
         self.menu12.grid(row=0,column=2)
         self.menu3.add_command(label="Acerca de",command=self.ventanadialogo2)
 
-        self.P3=tk.Frame(self.ventana)
-        self.P3.pack(side="top",padx=5,pady=5,fill="both")
-        
         self.ventana.mainloop()
     
     def ventanadialogo1(self):
