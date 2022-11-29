@@ -1,5 +1,7 @@
 import tkinter as tk
+from tkinter import messagebox
 from framesFuncionalidades.fieldFrame import FieldFrame
+from framesFuncionalidades.cargarUsuario import CargarUsuario
 
 class CrearContacto:
     def __init__(self, frame: tk.Frame):
@@ -15,9 +17,6 @@ class CrearContacto:
         descripcionFuncion = tk.Label(frame1, text="Descripcion")
         descripcionFuncion.pack()
 
-        chat = tk.Text(self.frame, width=45, height=10, state="disabled")
-        chat.grid(row=1, column=1, padx=10, pady=10, sticky="w")
-
         criterios = ["Nombre", "Email", "Nombre Completo"]
         valores = ['', '', '']
         fp = FieldFrame("Criterios", criterios, "Valores", valores, None)
@@ -26,8 +25,10 @@ class CrearContacto:
 
         #Funciones
         def fAceptar():
-            for criterio in criterios:
-                print(f'{criterio}: {fp.getValue(criterio)}')
+            CargarUsuario.usuario.crearNuevoContacto(fp.getValue(criterios[0]), fp.getValue(criterios[1]), fp.getValue(criterios[2]))
+            fp.clear()
+            messagebox.showinfo("Crear Nuevo Contacto", "Contacto almacenado correctamente.")
+
 
 
 
