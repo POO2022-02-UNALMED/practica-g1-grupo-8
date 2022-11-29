@@ -32,19 +32,19 @@ class MostrarChats:
         lCuerpo.grid(row=2, column=0, padx=10, pady=10, sticky="w")
 
         #Entrada de datos
-        chat = tk.Text(frame2, width=55, height=20, state="disabled")
+        chat = tk.Text(frame2, width=55, height=10, state="disabled")
         chat.grid(row=0, column=1, padx=10, pady=10, sticky="w")
         InTitulo = tk.Entry(frame2, textvariable=tk.StringVar(frame2, value="Aqui Va Titulo"), width=55)
         InTitulo.grid(row=1, column=1, columnspan=2, padx=10, pady=10)
-        cuerpo = tk.Entry(frame2, textvariable=tk.StringVar(frame2, value="Aqui Va Cuerpo"), width=55)
-        cuerpo.grid(row=2, column=1, columnspan=2, padx=10, pady=10)
+        cuerpo = tk.Text(frame2, width=55, height=10, state="disabled")
+        cuerpo.grid(row=2, column=1, padx=10, pady=10, sticky="w")
 
         #Funciones
         def fAceptar():
             print(InTitulo.get())
 
         def fCancelar():
-            InTitulo.config(textvariable=tk.StringVar(frame2)
+            InTitulo.config(textvariable=tk.StringVar(frame2, value=""))
 
         def eleccionContacto():
             print(CContacto.get())
