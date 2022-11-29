@@ -25,6 +25,7 @@ class TarjetaNegocio:
         def fAceptar():
             for criterio in criterios:
                 print(f"{criterio}: {fp.getValue(criterio)}")
+                
         def fCancelar():
             self.frame.destroy()
 

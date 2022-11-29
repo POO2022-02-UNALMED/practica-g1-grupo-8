@@ -1,7 +1,9 @@
 import tkinter as tk
 import os
 from paginaPrincipal import ventana2
+from framesFuncionalidades.cargarUsuario import CargarUsuario
 class ventana():
+
     #descripcion hoja de vida de los participantes, ya esta implementado solo es llenar
     juanpabloG="""-Estudiante de ingeniería de sistemas e informática
     -Bachiller técnico de sistemas por parte del Sena
@@ -41,7 +43,7 @@ class ventana():
     lista3=[juanpabloG1,alejandroA1,sebastianS1,juansimonZ1,josemanuelM1]
 
     def __init__(self) :
-        
+        CargarUsuario.crearUsuario()
         self.ventana=tk.Tk()
         self.ventana.title("Ventana de inicio")
 

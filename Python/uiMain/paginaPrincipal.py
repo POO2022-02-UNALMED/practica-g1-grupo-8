@@ -6,9 +6,11 @@ from framesFuncionalidades.crearContacto import CrearContacto
 from framesFuncionalidades.notificaciones import Notificaciones
 from framesFuncionalidades.mostrarChats import MostrarChats
 from framesFuncionalidades.tarjetaNegocio import TarjetaNegocio
-
+from framesFuncionalidades.cargarUsuario import CargarUsuario
 class ventana2():
     def __init__(self) :
+        
+        CargarUsuario.crearUsuario()
         self.ventana=tk.Tk()    
         self.ventana.title("Ventana Principal")
         self.ventana.configure(bg="blue")

@@ -11,5 +11,5 @@ class Notificacion:
         return self._cuerpo
 
     def __str__(self) -> str:
-       return "Notificacion [titulo=" + self.getTitulo() + ",\ncuerpo=" + self.getCuerpo() + "\n]"
+       return "Notificacion: [\ntitulo=" + self.getTitulo() + "\ncuerpo=" + self.getCuerpo() + "\n]"
 

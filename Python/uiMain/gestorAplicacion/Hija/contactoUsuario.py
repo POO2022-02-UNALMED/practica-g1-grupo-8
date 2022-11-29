@@ -4,7 +4,7 @@ from gestorAplicacion.Hija.notificacion import Notificacion
 class ContactoUsuario(Contacto):
     #Guarda la informacion del Usuario
     def __init__(self, nombre, email, nombreCompleto, logoNegocio = "", descripcionNegocio = "", terminosNegocio = ""):
-        super.__init__(nombre, email, nombreCompleto)
+        super().__init__(nombre, email, nombreCompleto)
         self._logoNegocio = logoNegocio
         self._descripcionNegocio = descripcionNegocio
         self._terminosNegocio = terminosNegocio
@@ -40,7 +40,7 @@ class ContactoUsuario(Contacto):
         self._terminosNegocio = terminosNegocio
 
     def getNotificaciones(self):
-        return self.notificaciones
+        return self._notificaciones
 
     def getNombre(self):
         return super.getNombre()

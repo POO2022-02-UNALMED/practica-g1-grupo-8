@@ -15,6 +15,8 @@ class CrearContacto:
         descripcionFuncion = tk.Label(frame1, text="Descripcion")
         descripcionFuncion.pack()
 
+        chat = tk.Text(self.frame, width=45, height=10, state="disabled")
+        chat.grid(row=1, column=1, padx=10, pady=10, sticky="w")
 
         criterios = ["Nombre", "Email", "Nombre Completo"]
         valores = ['', '', '']
