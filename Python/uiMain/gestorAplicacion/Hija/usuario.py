@@ -67,7 +67,7 @@ class Usuario:
                 )
         )
     
-    #
+    #Muestra los chats enviados por el contacto
     def mostrarChats(self) -> str:
         texto: str = ""
         for contactoLocal in self._contactosLocales:
