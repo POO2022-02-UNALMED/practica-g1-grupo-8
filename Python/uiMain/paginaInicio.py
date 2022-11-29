@@ -44,7 +44,7 @@ class ventana():
     lista3=[juanpabloG1,alejandroA1,sebastianS1,juansimonZ1,josemanuelM1]
 
     def __init__(self) :
-        CargarUsuario.crearUsuario()
+        CargarUsuario.cargarUsuario()
         self.ventana=tk.Tk()
         self.ventana.title("Ventana de inicio")
 

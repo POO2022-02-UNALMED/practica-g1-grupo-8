@@ -38,6 +38,7 @@ class TarjetaNegocio:
             tarjetaNegocio.setDescripcionNegocio(fp.getValue(criterios[1]))
             tarjetaNegocio.setTelefonoNegocio(fp.getValue(criterios[2]))
             tarjetaNegocio.setDireccionNegocio(fp.getValue(criterios[3]))
+            CargarUsuario.guardarUsario(CargarUsuario.usuario)
             messagebox.showinfo("Gurdado", "Tarjeta de negocio guardada exitosamente.")
 
                 

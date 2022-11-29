@@ -10,7 +10,7 @@ from framesFuncionalidades.cargarUsuario import CargarUsuario
 class ventana2():
     def __init__(self) :
         
-        CargarUsuario.crearUsuario()
+        CargarUsuario.cargarUsuario()
         self.ventana=tk.Tk()    
         self.ventana.title("Ventana Principal")
         self.ventana.configure(bg="blue")

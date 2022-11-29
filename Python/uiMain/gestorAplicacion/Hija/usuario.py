@@ -95,7 +95,7 @@ class Usuario:
     def getContactosLocales(self) -> list[ContactosLocales]:
         return self._contactosLocales
 
-    def setContactosLocales(self, contactosLocales: ContactosLocales) -> None:
+    def setContactosLocales(self, contactosLocales: list[ContactosLocales]) -> None:
         self._contactosLocales = contactosLocales
 
     def getContactosPendientes(self) -> list[ContactosPendientes]:
