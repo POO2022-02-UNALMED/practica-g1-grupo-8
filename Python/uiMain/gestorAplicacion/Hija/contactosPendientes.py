@@ -1,10 +1,7 @@
 from gestorAplicacion.Padre.Contacto import Contacto
 
 #Los contactos pendientes son personas con las que no se a iniciado un conversacion.
-
 class ContactosPendientes(Contacto):
-
-        
         
     #Crea el contacto sin mensajes
     def __init__(self, nombre, email, nombreCompleto):

@@ -1,7 +1,8 @@
 import tkinter as tk
-from gestorAplicacion.Hija.contactosPendientes import ContactosPendientes
+from framesFuncionalidades.fieldFrame import FieldFrame
+
 class CrearContacto:
-    def __init__(self, frame):
+    def __init__(self, frame: tk.Frame):
         self.frame = frame
 
     #Funcionalidades
@@ -14,40 +15,24 @@ class CrearContacto:
         descripcionFuncion = tk.Label(frame1, text="Descripcion")
         descripcionFuncion.pack()
 
-        #Datos requeriodos
-        frame2 = tk.Frame(self.frame, height=200, pady=5, padx=5)
-        frame2.pack(fill= "x")
-        lNombre = tk.Label(frame2, text="Nombre:")
-        lNombre.grid(row=0, column=0, padx=10, pady=10, sticky="w")
-        lEmail = tk.Label(frame2, text="Email:")
-        lEmail.grid(row=1, column=0, padx=10, pady=10, sticky="w")
-        lNombreCompleto = tk.Label(frame2, text="Nombre Completo:")
-        lNombreCompleto.grid(row=2, column=0, padx=10, pady=10, sticky="w")
 
-        #Entrada de datos
-        InNombre = tk.Entry(frame2, textvariable=tk.StringVar(frame2), width=55)
-        InNombre.grid(row=0, column=1, columnspan=2, padx=10, pady=10)
-        InEmail = tk.Entry(frame2, textvariable=tk.StringVar(frame2), width=55)
-        InEmail.grid(row=1, column=1, columnspan=2, padx=10, pady=10)
-        InNombreCompleto = tk.Entry(frame2, textvariable=tk.StringVar(frame2), width=55)
-        InNombreCompleto.grid(row=2, column=1, columnspan=2, padx=10, pady=10)
+        criterios = ["Nombre", "Email", "Nombre Completo"]
+        valores = ['', '', '']
+        fp = FieldFrame("Criterios", criterios, "Valores", valores, None)
+        fp.crearEntradas(self.frame)
+
 
         #Funciones
         def fAceptar():
-            print(InNombre.get())
-            print(InEmail.get())
-            print(InNombreCompleto.get())
+            for criterio in criterios:
+                print(f'{criterio}: {fp.getValue(criterio)}')
 
-        def fCancelar():
-            InNombre.config(textvariable=tk.StringVar(frame2, value=""))
-            InEmail.config(textvariable=tk.StringVar(frame2, value=""))
-            InNombreCompleto.config(textvariable=tk.StringVar(frame2, value=""))
 
 
         #Botones de cancelar y aceptar
         frame3 = tk.Frame(self.frame, pady=5, padx=5, height=100)
         frame3.pack(side="bottom", fill= "x")
-        cancelar = tk.Button(frame3, text="Cancelar", command=fCancelar)
+        cancelar = tk.Button(frame3, text="Cancelar", command= lambda : self.frame.destroy())
         cancelar.pack(side="left")
-        aceptar = tk.Button(frame3, text="Aceptar", command=fAceptar)
+        aceptar = tk.Button(frame3, text="Aceptar", command= lambda : fAceptar())
         aceptar.pack(side="right")
