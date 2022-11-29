@@ -25,11 +25,11 @@ class CrearContacto:
         lNombreCompleto.grid(row=2, column=0, padx=10, pady=10, sticky="w")
 
         #Entrada de datos
-        InNombre = tk.Entry(frame2, textvariable=tk.StringVar(frame2, value="Aqui Va Nombre"), width=55)
+        InNombre = tk.Entry(frame2, textvariable=tk.StringVar(frame2), width=55)
         InNombre.grid(row=0, column=1, columnspan=2, padx=10, pady=10)
-        InEmail = tk.Entry(frame2, textvariable=tk.StringVar(frame2, value="Aqui Va Email"), width=55)
+        InEmail = tk.Entry(frame2, textvariable=tk.StringVar(frame2), width=55)
         InEmail.grid(row=1, column=1, columnspan=2, padx=10, pady=10)
-        InNombreCompleto = tk.Entry(frame2, textvariable=tk.StringVar(frame2, value="Aqui Va Nombre Completo"), width=55)
+        InNombreCompleto = tk.Entry(frame2, textvariable=tk.StringVar(frame2), width=55)
         InNombreCompleto.grid(row=2, column=1, columnspan=2, padx=10, pady=10)
 
         #Funciones
@@ -39,9 +39,9 @@ class CrearContacto:
             print(InNombreCompleto.get())
 
         def fCancelar():
-            InNombre.config(textvariable=tk.StringVar(frame2, value="Aqui va Nombre"))
-            InEmail.config(textvariable=tk.StringVar(frame2, value="Aqui va Email"))
-            InNombreCompleto.config(textvariable=tk.StringVar(frame2, value="Aqui Va Nombre Completo"))
+            InNombre.config(textvariable=tk.StringVar(frame2, value=""))
+            InEmail.config(textvariable=tk.StringVar(frame2, value=""))
+            InNombreCompleto.config(textvariable=tk.StringVar(frame2, value=""))
 
 
         #Botones de cancelar y aceptar
